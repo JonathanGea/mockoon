@@ -1,12 +1,10 @@
 {
-  "name": "mockoon-server",
+  "name": "mockoon-railway-template",
   "version": "1.0.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "npx mockoon-cli start --data ./mockoon-environment.json --port $PORT"
   },
   "dependencies": {
     "@mockoon/cli": "^9.2.0"
   }
-
-
 }
