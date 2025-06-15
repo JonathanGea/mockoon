@@ -5,6 +5,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@mockoon/cli": "^1.25.0"
+    "@mockoon/cli": "^9.2.0"
   }
+
+
 }
