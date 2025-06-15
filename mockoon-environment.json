@@ -1,63 +1,543 @@
 {
-  "source": "mockoon:environment:1",
-  "uuid": "e7d4db92-1dfc-4e21-9b2c-47f394cb4321",
-  "lastMigration": 20,
-  "name": "Mockoon API Railway",
+  "uuid": "d3f2a334-3e1c-46f3-a07d-6b2b7ba6eeb7",
+  "lastMigration": 33,
+  "name": "company web app",
   "endpointPrefix": "",
   "latency": 0,
-  "port": 3000,
-  "routes": [
+  "port": 3001,
+  "hostname": "",
+  "folders": [
     {
-      "uuid": "get-users",
-      "method": "get",
-      "endpoint": "users",
-      "responses": [
+      "uuid": "b82adbd7-066a-422e-bd80-a00d0c13b3ed",
+      "name": "news",
+      "children": [
         {
-          "uuid": "get-users-res",
-          "body": "[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "Default",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "uuid": "post-login",
-      "method": "post",
-      "endpoint": "login",
-      "responses": [
+          "type": "route",
+          "uuid": "b3ae4d06-5fe5-43d7-8ede-7c41f18d0037"
+        },
         {
-          "uuid": "post-login-res",
-          "body": "{\"status\":\"ok\",\"token\":\"abc123xyz\"}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "Default",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            }
-          ]
+          "type": "route",
+          "uuid": "cab1dc45-4564-4e3f-9832-b2c413091a3f"
         }
       ]
     }
   ],
+  "routes": [
+    {
+      "uuid": "f56cd8bb-122d-4689-acaa-4590390f5546",
+      "type": "crud",
+      "documentation": "Endpoint performing CRUD operations on a data bucket (automatically creates GET, POST, PUT, DELETE routes)",
+      "method": "",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "d951f9ea-c75a-4d31-9ec8-8091e2896100",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Perform CRUD operations on the \"Users\" databucket (\"Data\" tab at the top)",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "wkme",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "2106141f-0f42-4504-b975-4867d2eafdbc",
+      "type": "http",
+      "documentation": "Generate random body (JSON, text, CSV, etc) with templating",
+      "method": "get",
+      "endpoint": "template",
+      "responses": [
+        {
+          "uuid": "7eefedcf-0677-4e09-b664-eda2db25bb0a",
+          "body": "{\n  \"Templating example\": \"For more information about templating, click the blue 'i' above this editor\",\n  \"users\": [\n    {{# repeat (queryParam 'total' '10') }}\n      {\n        \"userId\": \"{{ faker 'number.int' min=10000 max=100000 }}\",\n        \"firstname\": \"{{ faker 'person.firstName' }}\",\n        \"lastname\": \"{{ faker 'person.lastName' }}\",\n        \"friends\": [\n          {{# repeat (faker 'number.int' 5) }}\n            {\n              \"id\": \"{{ faker 'string.uuid' }}\"\n            }\n          {{/ repeat }}\n        ]\n      },\n    {{/ repeat }}\n  ],\n  \"total\": \"{{queryParam 'total' '10'}}\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Creates 10 random users, or the amount specified in the 'total' query param",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "59140094-641e-4f21-b31c-70d1a7caab13",
+      "type": "http",
+      "documentation": "Use multiple responses with rules",
+      "method": "post",
+      "endpoint": "content/:param1",
+      "responses": [
+        {
+          "uuid": "394578cb-a034-41ad-a3c7-f50916f53682",
+          "body": "{\n  \"Rules example\": \"Default response. Served if route param 'param1' is not present.\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Default response",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a0f670d9-f3d8-4ae5-b529-e6e6cd68ee66",
+          "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Content XYZ",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "param1",
+              "value": "xyz",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "928b3274-9192-4343-8afa-a2e55b35669e",
+          "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "Content not found",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "params",
+              "modifier": "param1",
+              "value": "^(?!.*xyz).*$",
+              "invert": false,
+              "operator": "regex"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c35c6e1c-8f20-4d4b-8d78-4ab414c259c8",
+      "type": "http",
+      "documentation": "Path supports various patterns",
+      "method": "put",
+      "endpoint": "path/with/pattern(s)?/*",
+      "responses": [
+        {
+          "uuid": "4ebbdaf3-459f-4028-a83c-f991f5cc8f8d",
+          "body": "The current path will match the following routes: \nhttp://localhost:3000/path/with/pattern/\nhttp://localhost:3000/path/with/patterns/\nhttp://localhost:3000/path/with/patterns/anything-else\n\nLearn more about Mockoon's routing: https://mockoon.com/docs/latest/api-endpoints/routing/",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "6f96c4a8-3409-4d97-b386-d59273e32c69",
+      "type": "http",
+      "documentation": "\"Guard\" route protecting all routes starting with /protected/",
+      "method": "all",
+      "endpoint": "protected/*",
+      "responses": [
+        {
+          "uuid": "dd93ce46-f985-4fdf-a928-f08dd9e49db7",
+          "body": "{\n  \"error\": \"Unauthorized\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "Requires the presence of an 'Authorization' header",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "Authorization",
+              "operator": "null",
+              "invert": false,
+              "value": ""
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": "FALLBACK",
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d09b85c1-7593-4c11-bbf3-050a21e9b3db",
+      "type": "http",
+      "documentation": "Protected route",
+      "method": "get",
+      "endpoint": "protected/path",
+      "responses": [
+        {
+          "uuid": "d1c012bf-53f4-4fa4-b81b-d0a8d3c061ec",
+          "body": "You can serve the same responses based on the same rules for all or part of your endpoints by creating global routes using the fallback mode and a wildcard path. \nThis is useful if you want to protect all your endpoints by checking if an Authorization header is present or if you want to verify that all your requests contain a specific property in their body.\nTo learn more: https://mockoon.com/docs/latest/route-responses/global-routes-with-rules/",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "method": "get",
+      "endpoint": "forward-and-record",
+      "documentation": "Can Mockoon forward or record entering requests?",
+      "responses": [
+        {
+          "uuid": "01736d40-9fd4-4496-898b-87ca4314249d",
+          "body": "Mockoon can also act as a proxy and forward all entering requests that are not caught by declared routes. \nYou can activate this option in the environment settings (\"Settings\" tab at the top). \nTo learn more: https://mockoon.com/docs/latest/server-configuration/proxy-mode/\n\nAll entering requests, and responses from the proxied server will be recorded and can be automatically mocked (\"Logs\" tab at the top).\nTo learn more: https://mockoon.com/docs/latest/logging-and-recording/requests-logging/",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "uuid": "738c89af-8179-447d-97fe-50889400a299",
+      "type": "http",
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "03258f95-d0d8-4934-99c3-73991fdd7cde",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/company-profile",
+      "responses": [
+        {
+          "uuid": "26b00c32-0702-4602-b8bc-a8d14d1cd48b",
+          "body": "{\r\n    \"aboutUs\": \"Perusahaan teknologi yang berfokus pada inovasi dan solusi digital.\",\r\n    \"urlAboutUsImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=about_us_image\",\r\n    \"vision\": \"Menjadi pemimpin global dalam transformasi digital.\",\r\n    \"urlVisionImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=vision_image\",\r\n    \"mission\": [\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        },\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        }\r\n    ],\r\n    \"updatedAt\": \"2025-05-23T18:01:42.187131\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b3ae4d06-5fe5-43d7-8ede-7c41f18d0037",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "news",
+      "responses": [
+        {
+          "uuid": "34263533-2b0f-4590-9d04-876f39ec2522",
+          "body": "{\n  \"isSuccess\": true,\n  \"data\": [\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"size\": 6,\n    \"totalPages\": 9,\n    \"totalItems\": 50\n  },\n  \"timestamp\": \"2025-05-30T12:00:00Z\",\n  \"errors\": null\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "af8444b2-6b9f-474b-b10a-441d00d6fe19",
+          "body": "{\r\n  \"isSuccess\": true,\r\n  \"data\": [\r\n    {{#repeat 5}}\r\n    {\r\n      \"id\": \"{{faker 'random.uuid'}}\",\r\n      \"title\": \"{{faker 'lorem.sentence' 5}}\",\r\n      \"author\": \"{{faker 'name.firstName'}} {{faker 'name.lastName'}}\",\r\n      \"content\": \"{{faker 'lorem.paragraphs' 3}}\",\r\n      \"publishedAt\": \"{{faker 'date.past' 1 '2025-01-01'}}\",\r\n      \"imageUrl\": \"https://picsum.photos/seed/{{faker 'random.number' 1000}}/800/600\"\r\n    }{{#unless @last}},{{/unless}}\r\n    {{/repeat}}\r\n  ],\r\n  \"timestamp\": \"{{faker 'date.recent'}}\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "cab1dc45-4564-4e3f-9832-b2c413091a3f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "news/:id",
+      "responses": [
+        {
+          "uuid": "0d3a57f3-bf31-423c-9e34-54c2146d33b2",
+          "body": "{\n  \"isSuccess\": true,\n  \"data\": {\n    \"newsDetail\": {\n      \"id\": \"86-12-2824\",\n      \"title\": \"Peluncuran Inovasi SmartCity oleh PT Cakrawala Digital\",\n      \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n      \"content\": \"<p><em>PT Cakrawala Digital</em> kembali mencuri perhatian dengan meluncurkan solusi <strong>SmartCity</strong> yang dirancang untuk meningkatkan efisiensi pemerintahan kota dan kualitas hidup masyarakat urban.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1005/800/400\\\" alt=\\\"Smart City Launch\\\" style=\\\"width:100%; border-radius:8px; margin: 16px 0;\\\">\\n\\n<p>Acara ini dihadiri oleh pejabat pemerintah, startup teknologi, serta komunitas pengembang dari seluruh Indonesia. Dalam sambutannya, CEO PT Cakrawala Digital menyampaikan:</p>\\n\\n<blockquote style=\\\"border-left: 4px solid #ccc; padding-left: 16px; font-style: italic;\\\">“Teknologi bukan hanya alat, tapi jembatan menuju masa depan yang lebih baik untuk semua lapisan masyarakat.”</blockquote>\\n\\n<h3>Fitur Unggulan</h3>\\n<ul>\\n  <li>Sensor lingkungan berbasis IoT</li>\\n  <li>Dashboard monitoring kota real-time</li>\\n  <li>Analitik data untuk pengambilan keputusan</li>\\n</ul>\\n\\n<hr>\\n\\n<h3>Contoh Kode Integrasi API</h3>\\n<pre><code>{\\n  \\\"sensor_id\\\": \\\"temp001\\\",\\n  \\\"value\\\": 28.3,\\n  \\\"status\\\": \\\"normal\\\",\\n  \\\"timestamp\\\": \\\"2023-12-12T08:30:00Z\\\"\\n}</code></pre>\\n\\n<p>Dengan API ini, pihak pemerintah dapat langsung mengakses data dari lapangan dalam hitungan detik.</p>\\n\\n<p style=\\\"font-style: italic;\\\">Inisiatif ini diharapkan menjadi batu loncatan bagi transformasi digital perkotaan yang lebih luas di Indonesia.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1027/800/400\\\" alt=\\\"Kota Pintar\\\" style=\\\"width:100%; border-radius:8px; margin-top: 24px;\\\">\",\n      \"datePublished\": \"2023-12-12T00:00:00Z\"\n    },\n    \"anotherNews\": [\n      {\n        \"id\": \"86122823\",\n        \"title\": \"Judul Berita Terkait 1\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait pertama...\",\n        \"datePublished\": \"2023-12-10T00:00:00Z\"\n      },\n      {\n        \"id\": \"86122822\",\n        \"title\": \"Judul Berita Terkait 2\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait kedua...\",\n        \"datePublished\": \"2023-12-08T00:00:00Z\"\n      }\n    ]\n  },\n  \"timestamp\": \"2024-06-16T13:17:33.410+00:00\",\n  \"errors\": null\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "114f40ad-e3c6-47f8-8545-323ea49d3e7c",
+          "body": "{\r\n  \"isSuccess\": true,\r\n  \"data\": [\r\n    {{#repeat 5}}\r\n    {\r\n      \"id\": \"{{faker 'random.uuid'}}\",\r\n      \"title\": \"{{faker 'lorem.sentence' 5}}\",\r\n      \"author\": \"{{faker 'name.firstName'}} {{faker 'name.lastName'}}\",\r\n      \"content\": \"{{faker 'lorem.paragraphs' 3}}\",\r\n      \"publishedAt\": \"{{faker 'date.past' 1 '2025-01-01'}}\",\r\n      \"imageUrl\": \"https://picsum.photos/seed/{{faker 'random.number' 1000}}/800/600\"\r\n    }{{#unless @last}},{{/unless}}\r\n    {{/repeat}}\r\n  ],\r\n  \"timestamp\": \"{{faker 'date.recent'}}\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f56cd8bb-122d-4689-acaa-4590390f5546"
+    },
+    {
+      "type": "route",
+      "uuid": "2106141f-0f42-4504-b975-4867d2eafdbc"
+    },
+    {
+      "type": "route",
+      "uuid": "59140094-641e-4f21-b31c-70d1a7caab13"
+    },
+    {
+      "type": "route",
+      "uuid": "c35c6e1c-8f20-4d4b-8d78-4ab414c259c8"
+    },
+    {
+      "type": "route",
+      "uuid": "6f96c4a8-3409-4d97-b386-d59273e32c69"
+    },
+    {
+      "type": "route",
+      "uuid": "d09b85c1-7593-4c11-bbf3-050a21e9b3db"
+    },
+    {
+      "type": "route",
+      "uuid": "738c89af-8179-447d-97fe-50889400a299"
+    },
+    {
+      "type": "route",
+      "uuid": "03258f95-d0d8-4934-99c3-73991fdd7cde"
+    },
+    {
+      "type": "folder",
+      "uuid": "b82adbd7-066a-422e-bd80-a00d0c13b3ed"
+    }
+  ],
   "proxyMode": false,
+  "proxyHost": "",
   "proxyRemovePrefix": false,
-  "https": false,
-  "cors": true,
-  "headers": [],
-  "proxyReqHeaders": [],
-  "proxyResHeaders": [],
-  "hostname": "0.0.0.0",
   "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
     "keyPath": "",
-    "certPath": ""
-  }
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "4cd73504-57d3-44ca-b555-4b455342fd93",
+      "id": "wkme",
+      "name": "Users",
+      "documentation": "",
+      "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+    }
+  ],
+  "callbacks": []
 }
