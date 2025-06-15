@@ -1,0 +1,10 @@
+{
+  "name": "mockoon-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@mockoon/cli": "^1.25.0"
+  }
+}

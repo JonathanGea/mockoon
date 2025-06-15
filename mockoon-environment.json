@@ -1,0 +1,64 @@
+{
+  "uuid": "mock-env-001",
+  "lastMigration": 20,
+  "name": "Mock API",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "routes": [
+    {
+      "uuid": "route-get-users",
+      "method": "get",
+      "endpoint": "users",
+      "documentation": "Get all users",
+      "responses": [
+        {
+          "uuid": "res-get-users",
+          "body": "[\n  {\"id\": 1, \"name\": \"John Doe\"},\n  {\"id\": 2, \"name\": \"Jane Smith\"}\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Default",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "route-post-login",
+      "method": "post",
+      "endpoint": "login",
+      "documentation": "Login endpoint",
+      "responses": [
+        {
+          "uuid": "res-post-login",
+          "body": "{\n  \"status\": \"success\",\n  \"token\": \"fake-jwt-token\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "proxyMode": false,
+  "proxyRemovePrefix": false,
+  "proxyHost": "",
+  "https": false,
+  "cors": true,
+  "headers": [],
+  "hostname": "",
+  "disableTemplating": false,
+  "randomResponse": false,
+  "envVariables": [],
+  "token": "",
+  "version": "1.25.0"
+}
