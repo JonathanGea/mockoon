@@ -2,7 +2,7 @@
   "name": "mockoon-railway-template",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx mockoon-cli start --data ./mockoon-environment.json --port $PORT"
+    "start": "npx mockoon-cli start --data ./mockoon-environment.json --port $PORT --no-gui --disable-openapi-validation"
   },
   "dependencies": {
     "@mockoon/cli": "^9.2.0"

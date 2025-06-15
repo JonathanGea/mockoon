@@ -1,34 +1,63 @@
 {
-  "uuid": "mock-env-railway",
+  "source": "mockoon:environment:1",
+  "uuid": "e7d4db92-1dfc-4e21-9b2c-47f394cb4321",
+  "lastMigration": 20,
   "name": "Mockoon API Railway",
+  "endpointPrefix": "",
+  "latency": 0,
   "port": 3000,
   "routes": [
     {
-      "uuid": "route-get-users",
+      "uuid": "get-users",
       "method": "get",
       "endpoint": "users",
       "responses": [
         {
-          "uuid": "res-get-users",
+          "uuid": "get-users-res",
           "body": "[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]",
+          "latency": 0,
           "statusCode": 200,
-          "headers":[{"key":"Content-Type","value":"application/json"}]
+          "label": "Default",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
         }
       ]
     },
     {
-      "uuid": "route-post-login",
+      "uuid": "post-login",
       "method": "post",
       "endpoint": "login",
       "responses": [
         {
-          "uuid": "res-post-login",
-          "body": "{\"status\":\"ok\",\"token\":\"fake-token\"}",
+          "uuid": "post-login-res",
+          "body": "{\"status\":\"ok\",\"token\":\"abc123xyz\"}",
+          "latency": 0,
           "statusCode": 200,
-          "headers":[{"key":"Content-Type","value":"application/json"}]
+          "label": "Default",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
         }
       ]
     }
   ],
-  "cors": true
+  "proxyMode": false,
+  "proxyRemovePrefix": false,
+  "https": false,
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "hostname": "0.0.0.0",
+  "tlsOptions": {
+    "keyPath": "",
+    "certPath": ""
+  }
 }
