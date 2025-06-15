@@ -1,202 +1,183 @@
 {
-    "uuid": "d3f2a334-3e1c-46f3-a07d-6b2b7ba6eeb7",
-    "lastMigration": 33,
-    "name": "company web app",
-    "endpointPrefix": "",
-    "latency": 0,
-    "port": 3000,
-    "hostname": "",
-    "folders": [
+  "uuid": "50989d76-73aa-445d-a499-b2e90f0cf988",
+  "lastMigration": 33,
+  "name": "company web app (copy)",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "70dcba06-859f-433d-a5e2-bc349485c25f",
+      "name": "news",
+      "children": [
         {
-            "uuid": "b82adbd7-066a-422e-bd80-a00d0c13b3ed",
-            "name": "news",
-            "children": [
-                {
-                    "type": "route",
-                    "uuid": "b3ae4d06-5fe5-43d7-8ede-7c41f18d0037"
-                },
-                {
-                    "type": "route",
-                    "uuid": "cab1dc45-4564-4e3f-9832-b2c413091a3f"
-                }
-            ]
-        }
-    ],
-    "routes": [
-        {
-            "uuid": "03258f95-d0d8-4934-99c3-73991fdd7cde",
-            "type": "http",
-            "documentation": "",
-            "method": "get",
-            "endpoint": "api/company-profile",
-            "responses": [
-                {
-                    "uuid": "26b00c32-0702-4602-b8bc-a8d14d1cd48b",
-                    "body": "{\r\n    \"aboutUs\": \"Perusahaan teknologi yang berfokus pada inovasi dan solusi digital.\",\r\n    \"urlAboutUsImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=about_us_image\",\r\n    \"vision\": \"Menjadi pemimpin global dalam transformasi digital.\",\r\n    \"urlVisionImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=vision_image\",\r\n    \"mission\": [\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        },\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        }\r\n    ],\r\n    \"updatedAt\": \"2025-05-23T18:01:42.187131\"\r\n}",
-                    "latency": 0,
-                    "statusCode": 200,
-                    "label": "",
-                    "headers": [],
-                    "bodyType": "INLINE",
-                    "filePath": "",
-                    "databucketID": "",
-                    "sendFileAsBody": false,
-                    "rules": [],
-                    "rulesOperator": "OR",
-                    "disableTemplating": false,
-                    "fallbackTo404": false,
-                    "default": true,
-                    "crudKey": "id",
-                    "callbacks": []
-                }
-            ],
-            "responseMode": null,
-            "streamingMode": null,
-            "streamingInterval": 0
+          "type": "route",
+          "uuid": "7e774185-f588-41be-ab89-e19c75617d64"
         },
         {
-            "uuid": "b3ae4d06-5fe5-43d7-8ede-7c41f18d0037",
-            "type": "http",
-            "documentation": "",
-            "method": "get",
-            "endpoint": "news",
-            "responses": [
-                {
-                    "uuid": "34263533-2b0f-4590-9d04-876f39ec2522",
-                    "body": "{\n  \"isSuccess\": true,\n  \"data\": [\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"size\": 6,\n    \"totalPages\": 9,\n    \"totalItems\": 50\n  },\n  \"timestamp\": \"2025-05-30T12:00:00Z\",\n  \"errors\": null\n}",
-                    "latency": 0,
-                    "statusCode": 200,
-                    "label": "",
-                    "headers": [],
-                    "bodyType": "INLINE",
-                    "filePath": "",
-                    "databucketID": "",
-                    "sendFileAsBody": false,
-                    "rules": [],
-                    "rulesOperator": "OR",
-                    "disableTemplating": false,
-                    "fallbackTo404": false,
-                    "default": true,
-                    "crudKey": "id",
-                    "callbacks": []
-                }
-            ],
-            "responseMode": null,
-            "streamingMode": null,
-            "streamingInterval": 0
-        },
-        {
-            "uuid": "cab1dc45-4564-4e3f-9832-b2c413091a3f",
-            "type": "http",
-            "documentation": "",
-            "method": "get",
-            "endpoint": "news/:id",
-            "responses": [
-                {
-                    "uuid": "0d3a57f3-bf31-423c-9e34-54c2146d33b2",
-                    "body": "{\n  \"isSuccess\": true,\n  \"data\": {\n    \"newsDetail\": {\n      \"id\": \"86-12-2824\",\n      \"title\": \"Peluncuran Inovasi SmartCity oleh PT Cakrawala Digital\",\n      \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n      \"content\": \"<p><em>PT Cakrawala Digital</em> kembali mencuri perhatian dengan meluncurkan solusi <strong>SmartCity</strong> yang dirancang untuk meningkatkan efisiensi pemerintahan kota dan kualitas hidup masyarakat urban.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1005/800/400\\\" alt=\\\"Smart City Launch\\\" style=\\\"width:100%; border-radius:8px; margin: 16px 0;\\\">\\n\\n<p>Acara ini dihadiri oleh pejabat pemerintah, startup teknologi, serta komunitas pengembang dari seluruh Indonesia. Dalam sambutannya, CEO PT Cakrawala Digital menyampaikan:</p>\\n\\n<blockquote style=\\\"border-left: 4px solid #ccc; padding-left: 16px; font-style: italic;\\\">“Teknologi bukan hanya alat, tapi jembatan menuju masa depan yang lebih baik untuk semua lapisan masyarakat.”</blockquote>\\n\\n<h3>Fitur Unggulan</h3>\\n<ul>\\n  <li>Sensor lingkungan berbasis IoT</li>\\n  <li>Dashboard monitoring kota real-time</li>\\n  <li>Analitik data untuk pengambilan keputusan</li>\\n</ul>\\n\\n<hr>\\n\\n<h3>Contoh Kode Integrasi API</h3>\\n<pre><code>{\\n  \\\"sensor_id\\\": \\\"temp001\\\",\\n  \\\"value\\\": 28.3,\\n  \\\"status\\\": \\\"normal\\\",\\n  \\\"timestamp\\\": \\\"2023-12-12T08:30:00Z\\\"\\n}</code></pre>\\n\\n<p>Dengan API ini, pihak pemerintah dapat langsung mengakses data dari lapangan dalam hitungan detik.</p>\\n\\n<p style=\\\"font-style: italic;\\\">Inisiatif ini diharapkan menjadi batu loncatan bagi transformasi digital perkotaan yang lebih luas di Indonesia.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1027/800/400\\\" alt=\\\"Kota Pintar\\\" style=\\\"width:100%; border-radius:8px; margin-top: 24px;\\\">\",\n      \"datePublished\": \"2023-12-12T00:00:00Z\"\n    },\n    \"anotherNews\": [\n      {\n        \"id\": \"86122823\",\n        \"title\": \"Judul Berita Terkait 1\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait pertama...\",\n        \"datePublished\": \"2023-12-10T00:00:00Z\"\n      },\n      {\n        \"id\": \"86122822\",\n        \"title\": \"Judul Berita Terkait 2\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait kedua...\",\n        \"datePublished\": \"2023-12-08T00:00:00Z\"\n      }\n    ]\n  },\n  \"timestamp\": \"2024-06-16T13:17:33.410+00:00\",\n  \"errors\": null\n}",
-                    "latency": 0,
-                    "statusCode": 200,
-                    "label": "",
-                    "headers": [],
-                    "bodyType": "INLINE",
-                    "filePath": "",
-                    "databucketID": "",
-                    "sendFileAsBody": false,
-                    "rules": [],
-                    "rulesOperator": "OR",
-                    "disableTemplating": false,
-                    "fallbackTo404": false,
-                    "default": true,
-                    "crudKey": "id",
-                    "callbacks": []
-                },
-                {
-                    "uuid": "114f40ad-e3c6-47f8-8545-323ea49d3e7c",
-                    "body": "{\r\n  \"isSuccess\": true,\r\n  \"data\": [\r\n    {{#repeat 5}}\r\n    {\r\n      \"id\": \"{{faker 'random.uuid'}}\",\r\n      \"title\": \"{{faker 'lorem.sentence' 5}}\",\r\n      \"author\": \"{{faker 'name.firstName'}} {{faker 'name.lastName'}}\",\r\n      \"content\": \"{{faker 'lorem.paragraphs' 3}}\",\r\n      \"publishedAt\": \"{{faker 'date.past' 1 '2025-01-01'}}\",\r\n      \"imageUrl\": \"https://picsum.photos/seed/{{faker 'random.number' 1000}}/800/600\"\r\n    }{{#unless @last}},{{/unless}}\r\n    {{/repeat}}\r\n  ],\r\n  \"timestamp\": \"{{faker 'date.recent'}}\"\r\n}",
-                    "latency": 0,
-                    "statusCode": 200,
-                    "label": "",
-                    "headers": [],
-                    "bodyType": "INLINE",
-                    "filePath": "",
-                    "databucketID": "",
-                    "sendFileAsBody": false,
-                    "rules": [],
-                    "rulesOperator": "OR",
-                    "disableTemplating": false,
-                    "fallbackTo404": false,
-                    "default": false,
-                    "crudKey": "id",
-                    "callbacks": []
-                }
-            ],
-            "responseMode": null,
-            "streamingMode": null,
-            "streamingInterval": 0
+          "type": "route",
+          "uuid": "bb1d2212-183f-492d-8473-e027e2ece68b"
         }
-    ],
-    "rootChildren": [
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "b9093533-dc55-4148-bb88-d06a5cff3057",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/company-profile",
+      "responses": [
         {
-            "type": "route",
-            "uuid": "03258f95-d0d8-4934-99c3-73991fdd7cde"
-        },
-        {
-            "type": "folder",
-            "uuid": "b82adbd7-066a-422e-bd80-a00d0c13b3ed"
+          "uuid": "71c54880-6b0f-476b-b898-b9155ba65243",
+          "body": "{\r\n    \"aboutUs\": \"Perusahaan teknologi yang berfokus pada inovasi dan solusi digital.\",\r\n    \"urlAboutUsImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=about_us_image\",\r\n    \"vision\": \"Menjadi pemimpin global dalam transformasi digital.\",\r\n    \"urlVisionImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=vision_image\",\r\n    \"mission\": [\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        },\r\n        {\r\n            \"title\": \"Inovasi Berkelanjutan\",\r\n            \"description\": \"Terus mengembangkan solusi inovatif yang memenuhi kebutuhan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_1_image\"\r\n        },\r\n        {\r\n            \"title\": \"Kepuasan Pelanggan\",\r\n            \"description\": \"Memberikan layanan terbaik dan solusi yang efektif untuk meningkatkan kepuasan pelanggan.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_2_image\"\r\n        },\r\n        {\r\n            \"title\": \"Pengembangan SDM\",\r\n            \"description\": \"Meningkatkan kompetensi dan kesejahteraan karyawan untuk mencapai kinerja terbaik.\",\r\n            \"urlImage\": \"https://dummyimage.com/600x400/c4c4c4/ffffff.jpg&text=mission_3_image\"\r\n        }\r\n    ],\r\n    \"updatedAt\": \"2025-05-23T18:01:42.187131\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
         }
-    ],
-    "proxyMode": false,
-    "proxyHost": "",
-    "proxyRemovePrefix": false,
-    "tlsOptions": {
-        "enabled": false,
-        "type": "CERT",
-        "pfxPath": "",
-        "certPath": "",
-        "keyPath": "",
-        "caPath": "",
-        "passphrase": ""
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
-    "cors": true,
-    "headers": [
+    {
+      "uuid": "7e774185-f588-41be-ab89-e19c75617d64",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "news",
+      "responses": [
         {
-            "key": "Content-Type",
-            "value": "application/json"
-        },
-        {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-        },
-        {
-            "key": "Access-Control-Allow-Methods",
-            "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-        },
-        {
-            "key": "Access-Control-Allow-Headers",
-            "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+          "uuid": "d6f1b5f6-b7b5-4e39-96ca-418c68f99e09",
+          "body": "{\n  \"isSuccess\": true,\n  \"data\": [\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    },\n    {\n      \"id\": \"1a2b3c\",\n      \"title\": \"Berita Pertama\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/1/400/300\",\n      \"spoilerArticle\": \"Berita pertama mengenai perkembangan teknologi di Indonesia.\",\n      \"datePublished\": \"2025-05-20T10:30:00Z\"\n    },\n    {\n      \"id\": \"2b3c4d\",\n      \"title\": \"Berita Kedua\",\n      \"urlThumbnail\": \"https://picsum.photos/seed/2/400/300\",\n      \"spoilerArticle\": \"Pemerintah meluncurkan program digitalisasi desa.\",\n      \"datePublished\": \"2025-05-19T09:00:00Z\"\n    }\n  ],\n  \"pagination\": {\n    \"page\": 1,\n    \"size\": 6,\n    \"totalPages\": 9,\n    \"totalItems\": 50\n  },\n  \"timestamp\": \"2025-05-30T12:00:00Z\",\n  \"errors\": null\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
         }
-    ],
-    "proxyReqHeaders": [
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "bb1d2212-183f-492d-8473-e027e2ece68b",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "news/:id",
+      "responses": [
         {
-            "key": "",
-            "value": ""
+          "uuid": "0daf7d7a-79f8-4283-ba95-f4435a06fd5a",
+          "body": "{\n  \"isSuccess\": true,\n  \"data\": {\n    \"newsDetail\": {\n      \"id\": \"86-12-2824\",\n      \"title\": \"Peluncuran Inovasi SmartCity oleh PT Cakrawala Digital\",\n      \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n      \"content\": \"<p><em>PT Cakrawala Digital</em> kembali mencuri perhatian dengan meluncurkan solusi <strong>SmartCity</strong> yang dirancang untuk meningkatkan efisiensi pemerintahan kota dan kualitas hidup masyarakat urban.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1005/800/400\\\" alt=\\\"Smart City Launch\\\" style=\\\"width:100%; border-radius:8px; margin: 16px 0;\\\">\\n\\n<p>Acara ini dihadiri oleh pejabat pemerintah, startup teknologi, serta komunitas pengembang dari seluruh Indonesia. Dalam sambutannya, CEO PT Cakrawala Digital menyampaikan:</p>\\n\\n<blockquote style=\\\"border-left: 4px solid #ccc; padding-left: 16px; font-style: italic;\\\">“Teknologi bukan hanya alat, tapi jembatan menuju masa depan yang lebih baik untuk semua lapisan masyarakat.”</blockquote>\\n\\n<h3>Fitur Unggulan</h3>\\n<ul>\\n  <li>Sensor lingkungan berbasis IoT</li>\\n  <li>Dashboard monitoring kota real-time</li>\\n  <li>Analitik data untuk pengambilan keputusan</li>\\n</ul>\\n\\n<hr>\\n\\n<h3>Contoh Kode Integrasi API</h3>\\n<pre><code>{\\n  \\\"sensor_id\\\": \\\"temp001\\\",\\n  \\\"value\\\": 28.3,\\n  \\\"status\\\": \\\"normal\\\",\\n  \\\"timestamp\\\": \\\"2023-12-12T08:30:00Z\\\"\\n}</code></pre>\\n\\n<p>Dengan API ini, pihak pemerintah dapat langsung mengakses data dari lapangan dalam hitungan detik.</p>\\n\\n<p style=\\\"font-style: italic;\\\">Inisiatif ini diharapkan menjadi batu loncatan bagi transformasi digital perkotaan yang lebih luas di Indonesia.</p>\\n\\n<img src=\\\"https://picsum.photos/id/1027/800/400\\\" alt=\\\"Kota Pintar\\\" style=\\\"width:100%; border-radius:8px; margin-top: 24px;\\\">\",\n      \"datePublished\": \"2023-12-12T00:00:00Z\"\n    },\n    \"anotherNews\": [\n      {\n        \"id\": \"86122823\",\n        \"title\": \"Judul Berita Terkait 1\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait pertama...\",\n        \"datePublished\": \"2023-12-10T00:00:00Z\"\n      },\n      {\n        \"id\": \"86122822\",\n        \"title\": \"Judul Berita Terkait 2\",\n        \"urlThumbnail\": \"https://picsum.photos/id/1015/800/400\",\n        \"spoilerArticle\": \"Konten singkat berita terkait kedua...\",\n        \"datePublished\": \"2023-12-08T00:00:00Z\"\n      }\n    ]\n  },\n  \"timestamp\": \"2024-06-16T13:17:33.410+00:00\",\n  \"errors\": null\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
         }
-    ],
-    "proxyResHeaders": [
-        {
-            "key": "",
-            "value": ""
-        }
-    ],
-    "data": [
-        {
-            "uuid": "4cd73504-57d3-44ca-b555-4b455342fd93",
-            "id": "wkme",
-            "name": "Users",
-            "documentation": "",
-            "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
-        }
-    ],
-    "callbacks": []
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "b9093533-dc55-4148-bb88-d06a5cff3057"
+    },
+    {
+      "type": "folder",
+      "uuid": "70dcba06-859f-433d-a5e2-bc349485c25f"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "a99c55f4-e6cf-49fc-a5b3-b332f0322d70",
+      "id": "wkme",
+      "name": "Users",
+      "documentation": "",
+      "value": "[\n  {{#repeat 50}}\n  {\n    \"id\": \"{{faker 'string.uuid'}}\",\n    \"username\": \"{{faker 'internet.userName'}}\"\n  }\n  {{/repeat}}\n]"
+    }
+  ],
+  "callbacks": []
 }
