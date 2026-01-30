@@ -30,29 +30,44 @@ if (files.length === 0) {
   process.exit(1);
 }
 
-let merged = null;
-const names = new Set();
+function extractEnvironments(data) {
+  if (Array.isArray(data.environments)) return data.environments;
+  return [data];
+}
+
+function normalizePrefix(prefix) {
+  if (!prefix) return '';
+  return String(prefix).replace(/^\/+|\/+$/g, '');
+}
+
+let mergedEnv = null;
+let routeIndex = 0;
 
 for (const file of files) {
   const data = readJson(file);
-  if (!Array.isArray(data.environments)) {
-    throw new Error(`Missing environments[] in ${file}`);
+  const envs = extractEnvironments(data);
+  if (!Array.isArray(envs) || envs.length === 0) {
+    throw new Error(`No environment found in ${file}`);
   }
 
-  if (!merged) {
-    merged = { ...data, environments: [] };
-  }
-
-  for (const env of data.environments) {
-    const name = env && env.name ? env.name : null;
-    if (name && names.has(name)) {
-      throw new Error(`Duplicate environment name: ${name} (from ${file})`);
+  for (const env of envs) {
+    if (!mergedEnv) {
+      mergedEnv = { ...env, routes: [], folders: [], rootChildren: [] };
+      mergedEnv.name = process.env.MOCKOON_MERGED_NAME || 'Merged Mockoon';
+      mergedEnv.endpointPrefix = '';
     }
-    if (name) names.add(name);
-    merged.environments.push(env);
+
+    const prefix = normalizePrefix(env.endpointPrefix);
+    const routes = Array.isArray(env.routes) ? env.routes : [];
+    for (const route of routes) {
+      const endpoint = String(route.endpoint || '').replace(/^\/+/, '');
+      const fullEndpoint = prefix ? `${prefix}/${endpoint}` : endpoint;
+      mergedEnv.routes.push({ ...route, endpoint: fullEndpoint });
+      mergedEnv.rootChildren.push({ type: 'route', uuid: route.uuid || `route-${routeIndex++}` });
+    }
   }
 }
 
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
-fs.writeFileSync(outFile, JSON.stringify(merged, null, 2));
+fs.writeFileSync(outFile, JSON.stringify(mergedEnv, null, 2));
 console.log(`Merged ${files.length} file(s) into ${outFile}`);

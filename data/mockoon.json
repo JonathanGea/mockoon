@@ -1,0 +1,1634 @@
+{
+  "uuid": "b675f9d0-9813-433b-aed9-56f29f22675b",
+  "lastMigration": 33,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "1e474758-7d0b-4435-9694-b3cb9d81f4d5",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "auth/login",
+      "responses": [
+        {
+          "uuid": "67714c8b-62a1-40d6-90ff-78f636b7b340",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"accessToken\": \"jwt-or-token\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": 3600,\n    \"user\": {\n      \"id\": \"u_1\",\n      \"name\": \"Admin\",\n      \"roles\": [\n        \"ADMIN\"\n      ]\n    }\n  },\n  \"timestamp\": \"2026-01-30T12:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "686ae0c0-0757-45cb-bbe9-78f6a61d748a",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "auth/logout",
+      "responses": [
+        {
+          "uuid": "342eabe8-7ecd-4b56-9835-6629be0b13eb",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T12:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5f3321ef-c6cb-4611-82f7-33e9c9827390",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/home",
+      "responses": [
+        {
+          "uuid": "a9cfe537-657b-4cc9-9810-c8e8cfc1b91b",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"title\": \"Melayani dengan kasih, bertumbuh dalam iman\",\n      \"description\": \"Informasi ibadah, warta jemaat, kegiatan, dan pelayanan BNKP Jemaat Sion.\",\n      \"ctaPrimary\": {\n        \"label\": \"Jadwal Ibadah\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaSecondary\": {\n        \"label\": \"Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaTertiary\": {\n        \"label\": \"Warta Jemaat\",\n        \"url\": \"/warta\"\n      }\n    },\n    \"scheduleSummary\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"verseText\": \"Kasihilah sesamamu manusia seperti Aku telah mengasihi kamu.\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\",\n      \"location\": \"Gedung Utama\"\n    },\n    \"onlineWorship\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"quickLinks\": [\n        {\n          \"label\": \"Warta\",\n          \"title\": \"Warta Mingguan\",\n          \"description\": \"Unduh warta terbaru.\",\n          \"url\": \"/warta\"\n        },\n        {\n          \"label\": \"Kegiatan\",\n          \"title\": \"Agenda Jemaat\",\n          \"description\": \"Lihat kegiatan terdekat.\",\n          \"url\": \"/kegiatan\"\n        },\n        {\n          \"label\": \"Pelayanan\",\n          \"title\": \"Pelayanan Jemaat\",\n          \"description\": \"Gabung pelayanan.\",\n          \"url\": \"/pelayanan\"\n        }\n      ]\n    },\n    \"quickLinks\": [\n      {\n        \"label\": \"Warta\",\n        \"title\": \"Warta Mingguan\",\n        \"description\": \"Unduh warta terbaru.\",\n        \"url\": \"/warta\"\n      },\n      {\n        \"label\": \"Kegiatan\",\n        \"title\": \"Agenda Jemaat\",\n        \"description\": \"Ikuti kegiatan rohani.\",\n        \"url\": \"/kegiatan\"\n      },\n      {\n        \"label\": \"Pelayanan\",\n        \"title\": \"Pelayanan Jemaat\",\n        \"description\": \"Terlibat dalam pelayanan.\",\n        \"url\": \"/pelayanan\"\n      },\n      {\n        \"label\": \"Kontak\",\n        \"title\": \"Hubungi Sekretariat\",\n        \"description\": \"Alamat & jam layanan.\",\n        \"url\": \"/kontak\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "dbaac0a4-30cc-4f13-88f9-eb1a89bb483d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/about",
+      "responses": [
+        {
+          "uuid": "f7e14380-0d71-47ce-a623-19f64b2fd7ea",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Profil Jemaat\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Gereja yang melayani jemaat di wilayah Gunungsitoli dan sekitarnya.\"\n    },\n    \"history\": {\n      \"summary\": \"BNKP Jemaat Sion bermula dari persekutuan kecil pada pertengahan abad ke-20 dan bertumbuh menjadi jemaat yang aktif melayani berbagai sektor.\",\n      \"establishedYear\": 1954,\n      \"serviceArea\": \"Gunungsitoli & sekitarnya\",\n      \"notes\": \"Saat ini melayani 4 sektor dan beberapa komunitas kategorial.\"\n    },\n    \"vision\": \"Menjadi jemaat yang berakar pada firman, bertumbuh dalam kasih, dan berdampak bagi sesama.\",\n    \"missions\": [\n      \"Memperkuat persekutuan dan pembinaan iman jemaat\",\n      \"Melayani masyarakat dengan kasih dan kepedulian\",\n      \"Mengembangkan pelayanan kategorial dan generasi muda\"\n    ],\n    \"leaders\": [\n      {\n        \"role\": \"Pendeta Jemaat\",\n        \"name\": \"Pdt. Maria Lase\"\n      },\n      {\n        \"role\": \"Ketua Majelis\",\n        \"name\": \"Ephorus A. Zebua\"\n      },\n      {\n        \"role\": \"Sekretaris\",\n        \"name\": \"B. Telaumbanua\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9cdd0de4-08ca-47cd-867d-2d5bd2545126",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/worship",
+      "responses": [
+        {
+          "uuid": "ebcb6d8f-d9b2-41f8-b284-23a9afa61f72",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Ibadah Jemaat\",\n      \"title\": \"Jadwal & Tata Ibadah\",\n      \"description\": \"Informasi jadwal ibadah, ibadah online, dan tema minggu ini.\"\n    },\n    \"schedule\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"liturgy\": {\n      \"wartaUrl\": \"/warta\"\n    },\n    \"online\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Kanal YouTube\",\n        \"url\": \"https://www.youtube.com/@bnkpsion\"\n      }\n    },\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "bf5e9208-be76-46cd-a102-b4797362bc5a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/bulletins",
+      "responses": [
+        {
+          "uuid": "280de476-fee1-446d-b93c-1aea71866d31",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Warta Jemaat\",\n      \"title\": \"Warta Mingguan BNKP Jemaat Sion\",\n      \"description\": \"Informasi ibadah, kegiatan, dan pengumuman jemaat.\"\n    },\n    \"weekly\": {\n      \"id\": \"warta-2026-02-02\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"theme\": \"Hidup dalam Kasih Kristus\",\n      \"pdfUrl\": \"https://example.com/warta-2026-02-02.pdf\"\n    },\n    \"latest\": [\n      {\n        \"id\": \"warta-2026-01-26\",\n        \"dateLabel\": \"Minggu, 26 Jan 2026\",\n        \"theme\": \"Kasih yang Mengampuni\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-26.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-19\",\n        \"dateLabel\": \"Minggu, 19 Jan 2026\",\n        \"theme\": \"Melayani dengan Sukacita\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-19.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-12\",\n        \"dateLabel\": \"Minggu, 12 Jan 2026\",\n        \"theme\": \"Setia dalam Persekutuan\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-12.pdf\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"summary\": \"Kasih menjadi dasar pelayanan, memampukan jemaat bertumbuh dan saling membangun.\"\n    },\n    \"archives\": [\n      {\n        \"month\": \"Januari 2026\",\n        \"count\": 4\n      },\n      {\n        \"month\": \"Desember 2025\",\n        \"count\": 5\n      },\n      {\n        \"month\": \"November 2025\",\n        \"count\": 4\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "64891b88-8dfe-49ce-a3d2-b0ca0d8d653d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/activities",
+      "responses": [
+        {
+          "uuid": "8a06c096-11eb-427f-8603-023292da6a9c",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Agenda Jemaat\",\n      \"title\": \"Kegiatan Jemaat\",\n      \"description\": \"Agenda kegiatan rohani, kategorial, dan sosial jemaat.\"\n    },\n    \"filters\": {\n      \"months\": [\n        \"Januari 2026\",\n        \"Februari 2026\",\n        \"Maret 2026\"\n      ],\n      \"categories\": [\n        \"Kategorial\",\n        \"Pelayanan\",\n        \"Sosial\",\n        \"Pelatihan\"\n      ]\n    },\n    \"upcoming\": [\n      {\n        \"id\": \"katekisasi-2026-1\",\n        \"title\": \"Kelas Katekisasi (Batch 1)\",\n        \"category\": \"Kategorial\",\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"timeLabel\": \"16.00 WIB\",\n        \"location\": \"Ruang Kelas\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        },\n        \"ctaSecondary\": {\n          \"label\": \"Daftar\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        }\n      },\n      {\n        \"id\": \"pelatihan-pelayan-2026\",\n        \"title\": \"Pelatihan Pelayan Ibadah\",\n        \"category\": \"Pelayanan\",\n        \"dateLabel\": \"Sabtu, 15 Feb 2026\",\n        \"timeLabel\": \"09.00 WIB\",\n        \"location\": \"Aula Jemaat\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembekalan untuk liturgis, singer, dan tim multimedia.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/pelatihan-pelayan-2026\"\n        }\n      }\n    ],\n    \"calendar\": [\n      {\n        \"dateLabel\": \"Minggu, 02 Feb 2026\",\n        \"title\": \"Ibadah Raya\",\n        \"timeLabel\": \"08.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Rabu, 05 Feb 2026\",\n        \"title\": \"Ibadah Doa\",\n        \"timeLabel\": \"19.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"title\": \"Katekisasi\",\n        \"timeLabel\": \"16.00 WIB\"\n      }\n    ],\n    \"archives\": [\n      {\n        \"month\": \"Desember 2025\"\n      },\n      {\n        \"month\": \"November 2025\"\n      }\n    ],\n    \"contactCta\": {\n      \"title\": \"Perlu Informasi Kegiatan?\",\n      \"description\": \"Hubungi sekretariat untuk konfirmasi jadwal, lokasi, dan pendaftaran.\",\n      \"label\": \"Kontak Sekretariat\",\n      \"url\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f522a77e-501c-41bc-9027-b147d7f4a196",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/activities/:id",
+      "responses": [
+        {
+          "uuid": "92c52c14-e7e4-4b23-b72c-00de2dc1c4f0",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"katekisasi-2026-1\",\n    \"title\": \"Kelas Katekisasi (Batch 1)\",\n    \"category\": \"Kategorial\",\n    \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n    \"timeLabel\": \"16.00 - 18.00 WIB\",\n    \"location\": \"Ruang Kelas\",\n    \"status\": \"Terbuka\",\n    \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi dengan materi dasar iman dan pembinaan karakter.\",\n    \"highlights\": [\n      \"Materi dasar iman\",\n      \"Sesi tanya jawab\",\n      \"Latihan liturgi\"\n    ],\n    \"agenda\": [\n      \"16.00 - Registrasi\",\n      \"16.20 - Materi\",\n      \"17.30 - Diskusi\",\n      \"18.00 - Penutup\"\n    ],\n    \"contactName\": \"Sekretariat Jemaat\",\n    \"contactPhone\": \"+62 821-1234-5678\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3d9ed157-0160-444e-bf26-313ab96c04ab",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/ministry",
+      "responses": [
+        {
+          "uuid": "59b6867d-94d9-4f2a-813f-16cc8a671165",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Pelayanan Jemaat\",\n      \"title\": \"Pelayanan\",\n      \"description\": \"Pelayanan kategorial dan fungsional untuk memperkuat persekutuan.\"\n    },\n    \"kategorialSection\": {\n      \"title\": \"Pelayanan Kategorial\",\n      \"description\": \"Persekutuan berdasarkan kategori usia dan wilayah.\"\n    },\n    \"kategorialCta\": {\n      \"label\": \"Gabung Pelayanan\",\n      \"url\": \"/kontak\"\n    },\n    \"kategorial\": [\n      {\n        \"label\": \"Pemuda\",\n        \"name\": \"Persekutuan Pemuda\",\n        \"description\": \"Pelayanan dan pembinaan iman pemuda jemaat.\",\n        \"schedule\": \"Sabtu, 18.00 WIB\"\n      },\n      {\n        \"label\": \"Remaja\",\n        \"name\": \"Persekutuan Remaja\",\n        \"description\": \"Pendampingan remaja dalam pertumbuhan iman.\",\n        \"schedule\": \"Minggu, 15.00 WIB\"\n      },\n      {\n        \"label\": \"Kaum Ibu\",\n        \"name\": \"Persekutuan Kaum Ibu\",\n        \"description\": \"Persekutuan doa dan pelayanan keluarga.\",\n        \"schedule\": \"Kamis, 16.00 WIB\"\n      }\n    ],\n    \"fungsionalSection\": {\n      \"title\": \"Pelayanan Fungsional\",\n      \"description\": \"Pelayanan yang mendukung ibadah dan pelayanan sosial.\"\n    },\n    \"fungsional\": [\n      {\n        \"label\": \"Liturgi\",\n        \"name\": \"Tim Liturgi\",\n        \"description\": \"Melayani tata ibadah dan liturgi mingguan.\"\n      },\n      {\n        \"label\": \"Musik\",\n        \"name\": \"Tim Musik & Singer\",\n        \"description\": \"Mendukung pujian dan musik ibadah.\"\n      },\n      {\n        \"label\": \"Diakonia\",\n        \"name\": \"Tim Diakonia\",\n        \"description\": \"Pelayanan sosial dan bantuan jemaat.\"\n      }\n    ],\n    \"ctaSection\": {\n      \"title\": \"Terlibat dalam Pelayanan\",\n      \"description\": \"Kami membuka kesempatan untuk terlibat dalam pelayanan sesuai talenta.\",\n      \"primaryLink\": {\n        \"label\": \"Daftar Pelayanan\",\n        \"url\": \"/kontak\"\n      },\n      \"secondaryLink\": {\n        \"label\": \"Lihat Kegiatan\",\n        \"url\": \"/kegiatan\"\n      },\n      \"note\": \"Koordinasi lebih lanjut akan dilakukan oleh sekretariat.\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "85944802-b973-4aea-8e15-f76ad7f2aacf",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/offerings",
+      "responses": [
+        {
+          "uuid": "8391716b-2cbf-45f6-9052-4b8f01d80cbc",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Persembahan Jemaat\",\n      \"title\": \"Persembahan\",\n      \"description\": \"Informasi persembahan via transfer, QRIS, dan onsite.\"\n    },\n    \"methodsSection\": {\n      \"title\": \"Metode Persembahan\",\n      \"description\": \"Pilih metode yang paling mudah untuk Anda.\"\n    },\n    \"methods\": [\n      {\n        \"type\": \"TRANSFER\",\n        \"title\": \"Transfer Bank\",\n        \"details\": [\n          {\n            \"label\": \"BCA\",\n            \"value\": \"1234567890 a.n. BNKP Jemaat Sion\"\n          },\n          {\n            \"label\": \"Mandiri\",\n            \"value\": \"9876543210 a.n. BNKP Jemaat Sion\"\n          }\n        ],\n        \"note\": \"Cantumkan keterangan (Persembahan/Perpuluhan/Khusus).\"\n      },\n      {\n        \"type\": \"QRIS\",\n        \"title\": \"QRIS\",\n        \"details\": [\n          {\n            \"label\": \"QR Code\",\n            \"value\": \"https://example.com/qris-bnkp-sion.png\"\n          }\n        ],\n        \"note\": \"Scan QR untuk persembahan via e-wallet.\"\n      },\n      {\n        \"type\": \"ONSITE\",\n        \"title\": \"Onsite\",\n        \"details\": [\n          {\n            \"label\": \"Lokasi\",\n            \"value\": \"Kotak Persembahan\"\n          }\n        ],\n        \"note\": \"Persembahan tetap dapat dilakukan saat ibadah berlangsung.\",\n        \"action\": {\n          \"label\": \"Lihat Jadwal Ibadah\",\n          \"url\": \"/ibadah\"\n        }\n      }\n    ],\n    \"guideSection\": {\n      \"title\": \"Panduan Singkat\",\n      \"description\": \"Ikuti panduan berikut untuk pencatatan yang baik.\",\n      \"note\": \"Informasi ini bersifat administratif. Hubungi bendahara untuk bantuan.\"\n    },\n    \"guide\": [\n      \"Gunakan nama lengkap\",\n      \"Tulis keterangan persembahan\",\n      \"Simpan bukti transfer\"\n    ],\n    \"confirmationForm\": {\n      \"isEnabled\": true,\n      \"title\": \"Konfirmasi Persembahan\",\n      \"description\": \"Isi form ini bila diperlukan untuk pencatatan.\",\n      \"contactCta\": {\n        \"label\": \"Kontak Bendahara\",\n        \"url\": \"/kontak\"\n      },\n      \"note\": \"Form ini contoh statis. Dapat dihubungkan ke sistem lain.\"\n    },\n    \"transparency\": {\n      \"isEnabled\": true,\n      \"title\": \"Ringkasan Keuangan\",\n      \"description\": \"Ringkasan keuangan jemaat tersedia setiap bulan.\",\n      \"items\": [\n        {\n          \"label\": \"Laporan Des 2025\",\n          \"url\": \"https://example.com/laporan-des-2025.pdf\"\n        },\n        {\n          \"label\": \"Laporan Nov 2025\",\n          \"url\": \"https://example.com/laporan-nov-2025.pdf\"\n        }\n      ]\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b7cc5890-4c46-41a0-943f-51f73b28abc7",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "public/offerings/confirm",
+      "responses": [
+        {
+          "uuid": "d704aab3-a722-47df-bb8b-a0fa555ae4e8",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T12:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f8ffa3f9-f13d-4c56-8188-aeea30408a6e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/contact",
+      "responses": [
+        {
+          "uuid": "3e16c43e-b08d-4083-9641-ba9fbcd3339c",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Kontak & Lokasi\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Hubungi kantor gereja atau kunjungi lokasi ibadah.\"\n    },\n    \"locationSection\": {\n      \"title\": \"Lokasi Jemaat\",\n      \"description\": \"Alamat dan petunjuk menuju gereja.\"\n    },\n    \"address\": \"Jl. Sisingamangaraja No. 12, Gunungsitoli, Nias\",\n    \"landmark\": \"Dekat Tugu Salib, 200 m dari Pasar\",\n    \"officeContacts\": {\n      \"phone\": \"+62 821-1234-5678\",\n      \"email\": \"sekretariat@bnkpsion.org\",\n      \"whatsapp\": \"https://wa.me/6282112345678\"\n    },\n    \"ctaLabels\": {\n      \"whatsappLabel\": \"WhatsApp Sekretariat\",\n      \"mapLabel\": \"Buka Google Maps\"\n    },\n    \"map\": {\n      \"embedUrl\": \"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.123456789!2d97.6101234!3d1.2823456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3024a4b123456789%3A0xabcdef123456789!2sBNKP%20Jemaat%20Sion!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid\",\n      \"mapUrl\": \"https://maps.google.com/?q=BNKP%20Jemaat%20Sion%20Gunungsitoli\"\n    },\n    \"officeHours\": [\n      {\n        \"label\": \"Senin - Jumat\",\n        \"time\": \"08.00 - 16.00 WIB\"\n      },\n      {\n        \"label\": \"Sabtu\",\n        \"time\": \"08.00 - 12.00 WIB\"\n      },\n      {\n        \"label\": \"Minggu\",\n        \"time\": \"07.00 - 12.00 WIB\"\n      }\n    ],\n    \"officeHoursNote\": \"Di luar jam kantor, silakan hubungi WhatsApp sekretariat.\",\n    \"pastoralService\": {\n      \"isEnabled\": true,\n      \"title\": \"Layanan Pastoral\",\n      \"description\": \"Kunjungan doa dan konseling pastoral berdasarkan kebutuhan jemaat.\",\n      \"ctaLabel\": \"Ajukan Layanan\",\n      \"ctaUrl\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3371b094-b17a-42d4-a0d8-ecfc5afe93d7",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/albums",
+      "responses": [
+        {
+          "uuid": "b89e29ee-446a-407a-9a59-e8a7f1b6d150",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Album\",\n      \"title\": \"Album Kegiatan Jemaat\",\n      \"description\": \"Dokumentasi ibadah dan kegiatan BNKP Jemaat Sion.\"\n    },\n    \"tags\": [\n      \"Ibadah\",\n      \"Pemuda\",\n      \"Pelayanan\",\n      \"Sosial\"\n    ],\n    \"selectedTag\": \"Ibadah\",\n    \"photos\": [\n      {\n        \"id\": \"ibadah-natal-2025\",\n        \"title\": \"Ibadah Natal 2025\",\n        \"count\": 48,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"ibadah-tahun-baru-2026\",\n        \"title\": \"Ibadah Tahun Baru 2026\",\n        \"count\": 32,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"pemuda-camp-2025\",\n        \"title\": \"Camp Pemuda 2025\",\n        \"count\": 60,\n        \"tag\": \"Pemuda\"\n      },\n      {\n        \"id\": \"bakti-sosial-2025\",\n        \"title\": \"Bakti Sosial 2025\",\n        \"count\": 25,\n        \"tag\": \"Sosial\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e51674f4-226d-4b2f-9ecd-134b16ca0d05",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "public/albums/:id",
+      "responses": [
+        {
+          "uuid": "30eabc67-1f4a-402b-9f24-ea250683851b",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"ibadah-natal-2025\",\n    \"title\": \"Ibadah Natal 2025\",\n    \"tag\": \"Ibadah\",\n    \"photoCount\": 48,\n    \"photos\": [\n      {\n        \"url\": \"https://images.unsplash.com/photo-1519681393784-d120267933ba\",\n        \"caption\": \"Suasana ibadah natal\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee\",\n        \"caption\": \"Paduan suara jemaat\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e\",\n        \"caption\": \"Persekutuan setelah ibadah\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "56a61b3d-7f7c-4f99-bfa2-5fa416d6ead5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/home",
+      "responses": [
+        {
+          "uuid": "85213996-ee6c-41f3-9a0c-77b18912aaba",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"title\": \"Melayani dengan kasih, bertumbuh dalam iman\",\n      \"description\": \"Informasi ibadah, warta jemaat, kegiatan, dan pelayanan BNKP Jemaat Sion.\",\n      \"ctaPrimary\": {\n        \"label\": \"Jadwal Ibadah\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaSecondary\": {\n        \"label\": \"Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaTertiary\": {\n        \"label\": \"Warta Jemaat\",\n        \"url\": \"/warta\"\n      }\n    },\n    \"scheduleSummary\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"verseText\": \"Kasihilah sesamamu manusia seperti Aku telah mengasihi kamu.\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\",\n      \"location\": \"Gedung Utama\"\n    },\n    \"onlineWorship\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"quickLinks\": [\n        {\n          \"label\": \"Warta\",\n          \"title\": \"Warta Mingguan\",\n          \"description\": \"Unduh warta terbaru.\",\n          \"url\": \"/warta\"\n        },\n        {\n          \"label\": \"Kegiatan\",\n          \"title\": \"Agenda Jemaat\",\n          \"description\": \"Lihat kegiatan terdekat.\",\n          \"url\": \"/kegiatan\"\n        },\n        {\n          \"label\": \"Pelayanan\",\n          \"title\": \"Pelayanan Jemaat\",\n          \"description\": \"Gabung pelayanan.\",\n          \"url\": \"/pelayanan\"\n        }\n      ]\n    },\n    \"quickLinks\": [\n      {\n        \"label\": \"Warta\",\n        \"title\": \"Warta Mingguan\",\n        \"description\": \"Unduh warta terbaru.\",\n        \"url\": \"/warta\"\n      },\n      {\n        \"label\": \"Kegiatan\",\n        \"title\": \"Agenda Jemaat\",\n        \"description\": \"Ikuti kegiatan rohani.\",\n        \"url\": \"/kegiatan\"\n      },\n      {\n        \"label\": \"Pelayanan\",\n        \"title\": \"Pelayanan Jemaat\",\n        \"description\": \"Terlibat dalam pelayanan.\",\n        \"url\": \"/pelayanan\"\n      },\n      {\n        \"label\": \"Kontak\",\n        \"title\": \"Hubungi Sekretariat\",\n        \"description\": \"Alamat & jam layanan.\",\n        \"url\": \"/kontak\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a58f1860-c7e7-472d-95ad-4fcef3de5d23",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/home",
+      "responses": [
+        {
+          "uuid": "f1368fd4-7377-473b-97ed-bf9a3c422d3c",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"title\": \"Melayani dengan kasih, bertumbuh dalam iman\",\n      \"description\": \"Informasi ibadah, warta jemaat, kegiatan, dan pelayanan BNKP Jemaat Sion.\",\n      \"ctaPrimary\": {\n        \"label\": \"Jadwal Ibadah\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaSecondary\": {\n        \"label\": \"Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"ctaTertiary\": {\n        \"label\": \"Warta Jemaat\",\n        \"url\": \"/warta\"\n      }\n    },\n    \"scheduleSummary\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"verseText\": \"Kasihilah sesamamu manusia seperti Aku telah mengasihi kamu.\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\",\n      \"location\": \"Gedung Utama\"\n    },\n    \"onlineWorship\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Ibadah Online\",\n        \"url\": \"/ibadah\"\n      },\n      \"quickLinks\": [\n        {\n          \"label\": \"Warta\",\n          \"title\": \"Warta Mingguan\",\n          \"description\": \"Unduh warta terbaru.\",\n          \"url\": \"/warta\"\n        },\n        {\n          \"label\": \"Kegiatan\",\n          \"title\": \"Agenda Jemaat\",\n          \"description\": \"Lihat kegiatan terdekat.\",\n          \"url\": \"/kegiatan\"\n        },\n        {\n          \"label\": \"Pelayanan\",\n          \"title\": \"Pelayanan Jemaat\",\n          \"description\": \"Gabung pelayanan.\",\n          \"url\": \"/pelayanan\"\n        }\n      ]\n    },\n    \"quickLinks\": [\n      {\n        \"label\": \"Warta\",\n        \"title\": \"Warta Mingguan\",\n        \"description\": \"Unduh warta terbaru.\",\n        \"url\": \"/warta\"\n      },\n      {\n        \"label\": \"Kegiatan\",\n        \"title\": \"Agenda Jemaat\",\n        \"description\": \"Ikuti kegiatan rohani.\",\n        \"url\": \"/kegiatan\"\n      },\n      {\n        \"label\": \"Pelayanan\",\n        \"title\": \"Pelayanan Jemaat\",\n        \"description\": \"Terlibat dalam pelayanan.\",\n        \"url\": \"/pelayanan\"\n      },\n      {\n        \"label\": \"Kontak\",\n        \"title\": \"Hubungi Sekretariat\",\n        \"description\": \"Alamat & jam layanan.\",\n        \"url\": \"/kontak\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "ed10da6d-b0f2-476b-bab2-781a26135fb5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/about",
+      "responses": [
+        {
+          "uuid": "7913463a-bdac-48ba-8caf-3520ee041c5b",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Profil Jemaat\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Gereja yang melayani jemaat di wilayah Gunungsitoli dan sekitarnya.\"\n    },\n    \"history\": {\n      \"summary\": \"BNKP Jemaat Sion bermula dari persekutuan kecil pada pertengahan abad ke-20 dan bertumbuh menjadi jemaat yang aktif melayani berbagai sektor.\",\n      \"establishedYear\": 1954,\n      \"serviceArea\": \"Gunungsitoli & sekitarnya\",\n      \"notes\": \"Saat ini melayani 4 sektor dan beberapa komunitas kategorial.\"\n    },\n    \"vision\": \"Menjadi jemaat yang berakar pada firman, bertumbuh dalam kasih, dan berdampak bagi sesama.\",\n    \"missions\": [\n      \"Memperkuat persekutuan dan pembinaan iman jemaat\",\n      \"Melayani masyarakat dengan kasih dan kepedulian\",\n      \"Mengembangkan pelayanan kategorial dan generasi muda\"\n    ],\n    \"leaders\": [\n      {\n        \"role\": \"Pendeta Jemaat\",\n        \"name\": \"Pdt. Maria Lase\"\n      },\n      {\n        \"role\": \"Ketua Majelis\",\n        \"name\": \"Ephorus A. Zebua\"\n      },\n      {\n        \"role\": \"Sekretaris\",\n        \"name\": \"B. Telaumbanua\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "624ff1dd-2d1e-4467-9a37-e89c4e9376d7",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/about",
+      "responses": [
+        {
+          "uuid": "a634e89e-f84d-48dd-a362-e372f29c6eea",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Profil Jemaat\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Gereja yang melayani jemaat di wilayah Gunungsitoli dan sekitarnya.\"\n    },\n    \"history\": {\n      \"summary\": \"BNKP Jemaat Sion bermula dari persekutuan kecil pada pertengahan abad ke-20 dan bertumbuh menjadi jemaat yang aktif melayani berbagai sektor.\",\n      \"establishedYear\": 1954,\n      \"serviceArea\": \"Gunungsitoli & sekitarnya\",\n      \"notes\": \"Saat ini melayani 4 sektor dan beberapa komunitas kategorial.\"\n    },\n    \"vision\": \"Menjadi jemaat yang berakar pada firman, bertumbuh dalam kasih, dan berdampak bagi sesama.\",\n    \"missions\": [\n      \"Memperkuat persekutuan dan pembinaan iman jemaat\",\n      \"Melayani masyarakat dengan kasih dan kepedulian\",\n      \"Mengembangkan pelayanan kategorial dan generasi muda\"\n    ],\n    \"leaders\": [\n      {\n        \"role\": \"Pendeta Jemaat\",\n        \"name\": \"Pdt. Maria Lase\"\n      },\n      {\n        \"role\": \"Ketua Majelis\",\n        \"name\": \"Ephorus A. Zebua\"\n      },\n      {\n        \"role\": \"Sekretaris\",\n        \"name\": \"B. Telaumbanua\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "6f4b9690-1b0a-4a85-9277-55d5c38791ae",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/worship",
+      "responses": [
+        {
+          "uuid": "c21598af-a8dd-4823-a889-512e563cc914",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Ibadah Jemaat\",\n      \"title\": \"Jadwal & Tata Ibadah\",\n      \"description\": \"Informasi jadwal ibadah, ibadah online, dan tema minggu ini.\"\n    },\n    \"schedule\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"liturgy\": {\n      \"wartaUrl\": \"/warta\"\n    },\n    \"online\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Kanal YouTube\",\n        \"url\": \"https://www.youtube.com/@bnkpsion\"\n      }\n    },\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a2e5d7a6-6a13-4cbc-85dc-5c7f06b71deb",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/worship",
+      "responses": [
+        {
+          "uuid": "6854411a-1966-4a10-abff-1eea6dcf26e6",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Ibadah Jemaat\",\n      \"title\": \"Jadwal & Tata Ibadah\",\n      \"description\": \"Informasi jadwal ibadah, ibadah online, dan tema minggu ini.\"\n    },\n    \"schedule\": [\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Raya\",\n        \"time\": \"08.00 WIB\",\n        \"location\": \"Gedung Utama\"\n      },\n      {\n        \"day\": \"Minggu\",\n        \"title\": \"Ibadah Kategorial\",\n        \"time\": \"10.30 WIB\",\n        \"location\": \"Aula Jemaat\"\n      },\n      {\n        \"day\": \"Rabu\",\n        \"title\": \"Ibadah Doa\",\n        \"time\": \"19.00 WIB\",\n        \"location\": \"Kapel\"\n      }\n    ],\n    \"liturgy\": {\n      \"wartaUrl\": \"/warta\"\n    },\n    \"online\": {\n      \"isLive\": false,\n      \"embedUrl\": \"https://www.youtube.com/embed/5qap5aO4i9A\",\n      \"streamUrl\": \"https://www.youtube.com/watch?v=5qap5aO4i9A\",\n      \"channelUrl\": \"https://www.youtube.com/@bnkpsion\",\n      \"action\": {\n        \"label\": \"Buka Kanal YouTube\",\n        \"url\": \"https://www.youtube.com/@bnkpsion\"\n      }\n    },\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"preacher\": \"Pdt. Maria Lase\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4de0de0a-9bc6-4d53-b4f4-8ace39c4c98d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/bulletins",
+      "responses": [
+        {
+          "uuid": "d26473be-9b94-44ab-bf86-56b889933faa",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Warta Jemaat\",\n      \"title\": \"Warta Mingguan BNKP Jemaat Sion\",\n      \"description\": \"Informasi ibadah, kegiatan, dan pengumuman jemaat.\"\n    },\n    \"weekly\": {\n      \"id\": \"warta-2026-02-02\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"theme\": \"Hidup dalam Kasih Kristus\",\n      \"pdfUrl\": \"https://example.com/warta-2026-02-02.pdf\"\n    },\n    \"latest\": [\n      {\n        \"id\": \"warta-2026-01-26\",\n        \"dateLabel\": \"Minggu, 26 Jan 2026\",\n        \"theme\": \"Kasih yang Mengampuni\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-26.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-19\",\n        \"dateLabel\": \"Minggu, 19 Jan 2026\",\n        \"theme\": \"Melayani dengan Sukacita\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-19.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-12\",\n        \"dateLabel\": \"Minggu, 12 Jan 2026\",\n        \"theme\": \"Setia dalam Persekutuan\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-12.pdf\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"summary\": \"Kasih menjadi dasar pelayanan, memampukan jemaat bertumbuh dan saling membangun.\"\n    },\n    \"archives\": [\n      {\n        \"month\": \"Januari 2026\",\n        \"count\": 4\n      },\n      {\n        \"month\": \"Desember 2025\",\n        \"count\": 5\n      },\n      {\n        \"month\": \"November 2025\",\n        \"count\": 4\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "52cbcb8e-8122-46c9-9aab-b288712a26b1",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/bulletins",
+      "responses": [
+        {
+          "uuid": "36421846-bc1f-4beb-8496-01e2b541a12b",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Warta Jemaat\",\n      \"title\": \"Warta Mingguan BNKP Jemaat Sion\",\n      \"description\": \"Informasi ibadah, kegiatan, dan pengumuman jemaat.\"\n    },\n    \"weekly\": {\n      \"id\": \"warta-2026-02-02\",\n      \"dateLabel\": \"Minggu, 02 Feb 2026\",\n      \"theme\": \"Hidup dalam Kasih Kristus\",\n      \"pdfUrl\": \"https://example.com/warta-2026-02-02.pdf\"\n    },\n    \"latest\": [\n      {\n        \"id\": \"warta-2026-01-26\",\n        \"dateLabel\": \"Minggu, 26 Jan 2026\",\n        \"theme\": \"Kasih yang Mengampuni\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-26.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-19\",\n        \"dateLabel\": \"Minggu, 19 Jan 2026\",\n        \"theme\": \"Melayani dengan Sukacita\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-19.pdf\"\n      },\n      {\n        \"id\": \"warta-2026-01-12\",\n        \"dateLabel\": \"Minggu, 12 Jan 2026\",\n        \"theme\": \"Setia dalam Persekutuan\",\n        \"pdfUrl\": \"https://example.com/warta-2026-01-12.pdf\"\n      }\n    ],\n    \"weeklyTheme\": {\n      \"title\": \"Hidup dalam Kasih Kristus\",\n      \"verse\": \"Yohanes 13:34\",\n      \"summary\": \"Kasih menjadi dasar pelayanan, memampukan jemaat bertumbuh dan saling membangun.\"\n    },\n    \"archives\": [\n      {\n        \"month\": \"Januari 2026\",\n        \"count\": 4\n      },\n      {\n        \"month\": \"Desember 2025\",\n        \"count\": 5\n      },\n      {\n        \"month\": \"November 2025\",\n        \"count\": 4\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e4e84cec-b325-42ae-b84b-4ab06347ee22",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "admin/bulletins",
+      "responses": [
+        {
+          "uuid": "c6f6ab3b-7a5a-4217-b13c-fc74ef6f2330",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"warta-2026-02-02\",\n    \"dateLabel\": \"Minggu, 02 Feb 2026\",\n    \"theme\": \"Hidup dalam Kasih Kristus\",\n    \"pdfUrl\": \"https://example.com/warta-2026-02-02.pdf\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "3a1c3180-f776-4169-b98f-8eb6ad119475",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/bulletins/:id",
+      "responses": [
+        {
+          "uuid": "83471fe6-d657-4602-881c-efc4faf31ce5",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"warta-2026-02-02\",\n    \"dateLabel\": \"Minggu, 02 Feb 2026\",\n    \"theme\": \"Hidup dalam Kasih Kristus\",\n    \"pdfUrl\": \"https://example.com/warta-2026-02-02.pdf\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e8f3b99b-80dc-43d5-b9f0-13d8cca907df",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/bulletins/:id",
+      "responses": [
+        {
+          "uuid": "eede9ff3-bf57-4ace-a5af-dd327b6abf92",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b15c9415-ec54-4c53-92db-ae22c08080e5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/activities",
+      "responses": [
+        {
+          "uuid": "9654d15b-d62a-4955-af61-5ca868a0d262",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Agenda Jemaat\",\n      \"title\": \"Kegiatan Jemaat\",\n      \"description\": \"Agenda kegiatan rohani, kategorial, dan sosial jemaat.\"\n    },\n    \"filters\": {\n      \"months\": [\n        \"Januari 2026\",\n        \"Februari 2026\",\n        \"Maret 2026\"\n      ],\n      \"categories\": [\n        \"Kategorial\",\n        \"Pelayanan\",\n        \"Sosial\",\n        \"Pelatihan\"\n      ]\n    },\n    \"upcoming\": [\n      {\n        \"id\": \"katekisasi-2026-1\",\n        \"title\": \"Kelas Katekisasi (Batch 1)\",\n        \"category\": \"Kategorial\",\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"timeLabel\": \"16.00 WIB\",\n        \"location\": \"Ruang Kelas\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        },\n        \"ctaSecondary\": {\n          \"label\": \"Daftar\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        }\n      },\n      {\n        \"id\": \"pelatihan-pelayan-2026\",\n        \"title\": \"Pelatihan Pelayan Ibadah\",\n        \"category\": \"Pelayanan\",\n        \"dateLabel\": \"Sabtu, 15 Feb 2026\",\n        \"timeLabel\": \"09.00 WIB\",\n        \"location\": \"Aula Jemaat\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembekalan untuk liturgis, singer, dan tim multimedia.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/pelatihan-pelayan-2026\"\n        }\n      }\n    ],\n    \"calendar\": [\n      {\n        \"dateLabel\": \"Minggu, 02 Feb 2026\",\n        \"title\": \"Ibadah Raya\",\n        \"timeLabel\": \"08.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Rabu, 05 Feb 2026\",\n        \"title\": \"Ibadah Doa\",\n        \"timeLabel\": \"19.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"title\": \"Katekisasi\",\n        \"timeLabel\": \"16.00 WIB\"\n      }\n    ],\n    \"archives\": [\n      {\n        \"month\": \"Desember 2025\"\n      },\n      {\n        \"month\": \"November 2025\"\n      }\n    ],\n    \"contactCta\": {\n      \"title\": \"Perlu Informasi Kegiatan?\",\n      \"description\": \"Hubungi sekretariat untuk konfirmasi jadwal, lokasi, dan pendaftaran.\",\n      \"label\": \"Kontak Sekretariat\",\n      \"url\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "096a7ce9-d170-4231-ac24-90788ea5d68c",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/activities",
+      "responses": [
+        {
+          "uuid": "b44d572b-1a63-4383-8eab-6c7ee79ea25e",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Agenda Jemaat\",\n      \"title\": \"Kegiatan Jemaat\",\n      \"description\": \"Agenda kegiatan rohani, kategorial, dan sosial jemaat.\"\n    },\n    \"filters\": {\n      \"months\": [\n        \"Januari 2026\",\n        \"Februari 2026\",\n        \"Maret 2026\"\n      ],\n      \"categories\": [\n        \"Kategorial\",\n        \"Pelayanan\",\n        \"Sosial\",\n        \"Pelatihan\"\n      ]\n    },\n    \"upcoming\": [\n      {\n        \"id\": \"katekisasi-2026-1\",\n        \"title\": \"Kelas Katekisasi (Batch 1)\",\n        \"category\": \"Kategorial\",\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"timeLabel\": \"16.00 WIB\",\n        \"location\": \"Ruang Kelas\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        },\n        \"ctaSecondary\": {\n          \"label\": \"Daftar\",\n          \"url\": \"/kegiatan/katekisasi-2026-1\"\n        }\n      },\n      {\n        \"id\": \"pelatihan-pelayan-2026\",\n        \"title\": \"Pelatihan Pelayan Ibadah\",\n        \"category\": \"Pelayanan\",\n        \"dateLabel\": \"Sabtu, 15 Feb 2026\",\n        \"timeLabel\": \"09.00 WIB\",\n        \"location\": \"Aula Jemaat\",\n        \"status\": \"Terbuka\",\n        \"summary\": \"Pembekalan untuk liturgis, singer, dan tim multimedia.\",\n        \"ctaPrimary\": {\n          \"label\": \"Detail\",\n          \"url\": \"/kegiatan/pelatihan-pelayan-2026\"\n        }\n      }\n    ],\n    \"calendar\": [\n      {\n        \"dateLabel\": \"Minggu, 02 Feb 2026\",\n        \"title\": \"Ibadah Raya\",\n        \"timeLabel\": \"08.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Rabu, 05 Feb 2026\",\n        \"title\": \"Ibadah Doa\",\n        \"timeLabel\": \"19.00 WIB\"\n      },\n      {\n        \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n        \"title\": \"Katekisasi\",\n        \"timeLabel\": \"16.00 WIB\"\n      }\n    ],\n    \"archives\": [\n      {\n        \"month\": \"Desember 2025\"\n      },\n      {\n        \"month\": \"November 2025\"\n      }\n    ],\n    \"contactCta\": {\n      \"title\": \"Perlu Informasi Kegiatan?\",\n      \"description\": \"Hubungi sekretariat untuk konfirmasi jadwal, lokasi, dan pendaftaran.\",\n      \"label\": \"Kontak Sekretariat\",\n      \"url\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b925cfa8-3eb7-4f18-a190-3e0b3c1abb61",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "admin/activities",
+      "responses": [
+        {
+          "uuid": "6227bd58-61bf-496c-b8a8-e89a9ea33250",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"katekisasi-2026-1\",\n    \"title\": \"Kelas Katekisasi (Batch 1)\",\n    \"category\": \"Kategorial\",\n    \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n    \"timeLabel\": \"16.00 WIB\",\n    \"location\": \"Ruang Kelas\",\n    \"status\": \"Terbuka\",\n    \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi.\",\n    \"ctaPrimary\": {\n      \"label\": \"Detail\",\n      \"url\": \"/kegiatan/katekisasi-2026-1\"\n    },\n    \"ctaSecondary\": {\n      \"label\": \"Daftar\",\n      \"url\": \"/kegiatan/katekisasi-2026-1\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c785b689-0862-4915-8af5-045082b69625",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/activities/:id",
+      "responses": [
+        {
+          "uuid": "9d8e5008-7d40-48c1-9ebe-33e58f341ab5",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"katekisasi-2026-1\",\n    \"title\": \"Kelas Katekisasi (Batch 1)\",\n    \"category\": \"Kategorial\",\n    \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n    \"timeLabel\": \"16.00 - 18.00 WIB\",\n    \"location\": \"Ruang Kelas\",\n    \"status\": \"Terbuka\",\n    \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi dengan materi dasar iman dan pembinaan karakter.\",\n    \"highlights\": [\n      \"Materi dasar iman\",\n      \"Sesi tanya jawab\",\n      \"Latihan liturgi\"\n    ],\n    \"agenda\": [\n      \"16.00 - Registrasi\",\n      \"16.20 - Materi\",\n      \"17.30 - Diskusi\",\n      \"18.00 - Penutup\"\n    ],\n    \"contactName\": \"Sekretariat Jemaat\",\n    \"contactPhone\": \"+62 821-1234-5678\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "ccd0073c-b9d0-4c76-b76c-ff52e514ab34",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/activities/:id",
+      "responses": [
+        {
+          "uuid": "35316c8b-d94e-4a4b-94a8-7b1f7c3f2a91",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"katekisasi-2026-1\",\n    \"title\": \"Kelas Katekisasi (Batch 1)\",\n    \"category\": \"Kategorial\",\n    \"dateLabel\": \"Sabtu, 08 Feb 2026\",\n    \"timeLabel\": \"16.00 - 18.00 WIB\",\n    \"location\": \"Ruang Kelas\",\n    \"status\": \"Terbuka\",\n    \"summary\": \"Pembinaan iman untuk calon sidi/katekisasi dengan materi dasar iman dan pembinaan karakter.\",\n    \"highlights\": [\n      \"Materi dasar iman\",\n      \"Sesi tanya jawab\",\n      \"Latihan liturgi\"\n    ],\n    \"agenda\": [\n      \"16.00 - Registrasi\",\n      \"16.20 - Materi\",\n      \"17.30 - Diskusi\",\n      \"18.00 - Penutup\"\n    ],\n    \"contactName\": \"Sekretariat Jemaat\",\n    \"contactPhone\": \"+62 821-1234-5678\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "76a797e7-18b1-47ab-aeaa-940ddb3245ce",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/activities/:id",
+      "responses": [
+        {
+          "uuid": "12c428f9-17b4-40c0-9f26-f8477b5c76c1",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f533f694-3947-4938-9bb0-d5210b536604",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/ministry",
+      "responses": [
+        {
+          "uuid": "19109ac4-965b-428a-8e43-45d2560667bc",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Pelayanan Jemaat\",\n      \"title\": \"Pelayanan\",\n      \"description\": \"Pelayanan kategorial dan fungsional untuk memperkuat persekutuan.\"\n    },\n    \"kategorialSection\": {\n      \"title\": \"Pelayanan Kategorial\",\n      \"description\": \"Persekutuan berdasarkan kategori usia dan wilayah.\"\n    },\n    \"kategorialCta\": {\n      \"label\": \"Gabung Pelayanan\",\n      \"url\": \"/kontak\"\n    },\n    \"kategorial\": [\n      {\n        \"label\": \"Pemuda\",\n        \"name\": \"Persekutuan Pemuda\",\n        \"description\": \"Pelayanan dan pembinaan iman pemuda jemaat.\",\n        \"schedule\": \"Sabtu, 18.00 WIB\"\n      },\n      {\n        \"label\": \"Remaja\",\n        \"name\": \"Persekutuan Remaja\",\n        \"description\": \"Pendampingan remaja dalam pertumbuhan iman.\",\n        \"schedule\": \"Minggu, 15.00 WIB\"\n      },\n      {\n        \"label\": \"Kaum Ibu\",\n        \"name\": \"Persekutuan Kaum Ibu\",\n        \"description\": \"Persekutuan doa dan pelayanan keluarga.\",\n        \"schedule\": \"Kamis, 16.00 WIB\"\n      }\n    ],\n    \"fungsionalSection\": {\n      \"title\": \"Pelayanan Fungsional\",\n      \"description\": \"Pelayanan yang mendukung ibadah dan pelayanan sosial.\"\n    },\n    \"fungsional\": [\n      {\n        \"label\": \"Liturgi\",\n        \"name\": \"Tim Liturgi\",\n        \"description\": \"Melayani tata ibadah dan liturgi mingguan.\"\n      },\n      {\n        \"label\": \"Musik\",\n        \"name\": \"Tim Musik & Singer\",\n        \"description\": \"Mendukung pujian dan musik ibadah.\"\n      },\n      {\n        \"label\": \"Diakonia\",\n        \"name\": \"Tim Diakonia\",\n        \"description\": \"Pelayanan sosial dan bantuan jemaat.\"\n      }\n    ],\n    \"ctaSection\": {\n      \"title\": \"Terlibat dalam Pelayanan\",\n      \"description\": \"Kami membuka kesempatan untuk terlibat dalam pelayanan sesuai talenta.\",\n      \"primaryLink\": {\n        \"label\": \"Daftar Pelayanan\",\n        \"url\": \"/kontak\"\n      },\n      \"secondaryLink\": {\n        \"label\": \"Lihat Kegiatan\",\n        \"url\": \"/kegiatan\"\n      },\n      \"note\": \"Koordinasi lebih lanjut akan dilakukan oleh sekretariat.\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "102e3fcc-9d6c-4463-9df0-339584072180",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/ministry",
+      "responses": [
+        {
+          "uuid": "0afba90c-9e61-4272-b307-948a80c35bb1",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Pelayanan Jemaat\",\n      \"title\": \"Pelayanan\",\n      \"description\": \"Pelayanan kategorial dan fungsional untuk memperkuat persekutuan.\"\n    },\n    \"kategorialSection\": {\n      \"title\": \"Pelayanan Kategorial\",\n      \"description\": \"Persekutuan berdasarkan kategori usia dan wilayah.\"\n    },\n    \"kategorialCta\": {\n      \"label\": \"Gabung Pelayanan\",\n      \"url\": \"/kontak\"\n    },\n    \"kategorial\": [\n      {\n        \"label\": \"Pemuda\",\n        \"name\": \"Persekutuan Pemuda\",\n        \"description\": \"Pelayanan dan pembinaan iman pemuda jemaat.\",\n        \"schedule\": \"Sabtu, 18.00 WIB\"\n      },\n      {\n        \"label\": \"Remaja\",\n        \"name\": \"Persekutuan Remaja\",\n        \"description\": \"Pendampingan remaja dalam pertumbuhan iman.\",\n        \"schedule\": \"Minggu, 15.00 WIB\"\n      },\n      {\n        \"label\": \"Kaum Ibu\",\n        \"name\": \"Persekutuan Kaum Ibu\",\n        \"description\": \"Persekutuan doa dan pelayanan keluarga.\",\n        \"schedule\": \"Kamis, 16.00 WIB\"\n      }\n    ],\n    \"fungsionalSection\": {\n      \"title\": \"Pelayanan Fungsional\",\n      \"description\": \"Pelayanan yang mendukung ibadah dan pelayanan sosial.\"\n    },\n    \"fungsional\": [\n      {\n        \"label\": \"Liturgi\",\n        \"name\": \"Tim Liturgi\",\n        \"description\": \"Melayani tata ibadah dan liturgi mingguan.\"\n      },\n      {\n        \"label\": \"Musik\",\n        \"name\": \"Tim Musik & Singer\",\n        \"description\": \"Mendukung pujian dan musik ibadah.\"\n      },\n      {\n        \"label\": \"Diakonia\",\n        \"name\": \"Tim Diakonia\",\n        \"description\": \"Pelayanan sosial dan bantuan jemaat.\"\n      }\n    ],\n    \"ctaSection\": {\n      \"title\": \"Terlibat dalam Pelayanan\",\n      \"description\": \"Kami membuka kesempatan untuk terlibat dalam pelayanan sesuai talenta.\",\n      \"primaryLink\": {\n        \"label\": \"Daftar Pelayanan\",\n        \"url\": \"/kontak\"\n      },\n      \"secondaryLink\": {\n        \"label\": \"Lihat Kegiatan\",\n        \"url\": \"/kegiatan\"\n      },\n      \"note\": \"Koordinasi lebih lanjut akan dilakukan oleh sekretariat.\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "dca084ea-ffb8-4aa4-9080-b73b4d8d5591",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/offerings",
+      "responses": [
+        {
+          "uuid": "ec1b20bf-6f07-439b-8fad-848a5e8c3459",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Persembahan Jemaat\",\n      \"title\": \"Persembahan\",\n      \"description\": \"Informasi persembahan via transfer, QRIS, dan onsite.\"\n    },\n    \"methodsSection\": {\n      \"title\": \"Metode Persembahan\",\n      \"description\": \"Pilih metode yang paling mudah untuk Anda.\"\n    },\n    \"methods\": [\n      {\n        \"type\": \"TRANSFER\",\n        \"title\": \"Transfer Bank\",\n        \"details\": [\n          {\n            \"label\": \"BCA\",\n            \"value\": \"1234567890 a.n. BNKP Jemaat Sion\"\n          },\n          {\n            \"label\": \"Mandiri\",\n            \"value\": \"9876543210 a.n. BNKP Jemaat Sion\"\n          }\n        ],\n        \"note\": \"Cantumkan keterangan (Persembahan/Perpuluhan/Khusus).\"\n      },\n      {\n        \"type\": \"QRIS\",\n        \"title\": \"QRIS\",\n        \"details\": [\n          {\n            \"label\": \"QR Code\",\n            \"value\": \"https://example.com/qris-bnkp-sion.png\"\n          }\n        ],\n        \"note\": \"Scan QR untuk persembahan via e-wallet.\"\n      },\n      {\n        \"type\": \"ONSITE\",\n        \"title\": \"Onsite\",\n        \"details\": [\n          {\n            \"label\": \"Lokasi\",\n            \"value\": \"Kotak Persembahan\"\n          }\n        ],\n        \"note\": \"Persembahan tetap dapat dilakukan saat ibadah berlangsung.\",\n        \"action\": {\n          \"label\": \"Lihat Jadwal Ibadah\",\n          \"url\": \"/ibadah\"\n        }\n      }\n    ],\n    \"guideSection\": {\n      \"title\": \"Panduan Singkat\",\n      \"description\": \"Ikuti panduan berikut untuk pencatatan yang baik.\",\n      \"note\": \"Informasi ini bersifat administratif. Hubungi bendahara untuk bantuan.\"\n    },\n    \"guide\": [\n      \"Gunakan nama lengkap\",\n      \"Tulis keterangan persembahan\",\n      \"Simpan bukti transfer\"\n    ],\n    \"confirmationForm\": {\n      \"isEnabled\": true,\n      \"title\": \"Konfirmasi Persembahan\",\n      \"description\": \"Isi form ini bila diperlukan untuk pencatatan.\",\n      \"contactCta\": {\n        \"label\": \"Kontak Bendahara\",\n        \"url\": \"/kontak\"\n      },\n      \"note\": \"Form ini contoh statis. Dapat dihubungkan ke sistem lain.\"\n    },\n    \"transparency\": {\n      \"isEnabled\": true,\n      \"title\": \"Ringkasan Keuangan\",\n      \"description\": \"Ringkasan keuangan jemaat tersedia setiap bulan.\",\n      \"items\": [\n        {\n          \"label\": \"Laporan Des 2025\",\n          \"url\": \"https://example.com/laporan-des-2025.pdf\"\n        },\n        {\n          \"label\": \"Laporan Nov 2025\",\n          \"url\": \"https://example.com/laporan-nov-2025.pdf\"\n        }\n      ]\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "dd6c1580-4ff3-445c-b048-b626f817169c",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/offerings",
+      "responses": [
+        {
+          "uuid": "edcf0889-39f5-4b00-a3e8-6ac99f2f8b36",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Persembahan Jemaat\",\n      \"title\": \"Persembahan\",\n      \"description\": \"Informasi persembahan via transfer, QRIS, dan onsite.\"\n    },\n    \"methodsSection\": {\n      \"title\": \"Metode Persembahan\",\n      \"description\": \"Pilih metode yang paling mudah untuk Anda.\"\n    },\n    \"methods\": [\n      {\n        \"type\": \"TRANSFER\",\n        \"title\": \"Transfer Bank\",\n        \"details\": [\n          {\n            \"label\": \"BCA\",\n            \"value\": \"1234567890 a.n. BNKP Jemaat Sion\"\n          },\n          {\n            \"label\": \"Mandiri\",\n            \"value\": \"9876543210 a.n. BNKP Jemaat Sion\"\n          }\n        ],\n        \"note\": \"Cantumkan keterangan (Persembahan/Perpuluhan/Khusus).\"\n      },\n      {\n        \"type\": \"QRIS\",\n        \"title\": \"QRIS\",\n        \"details\": [\n          {\n            \"label\": \"QR Code\",\n            \"value\": \"https://example.com/qris-bnkp-sion.png\"\n          }\n        ],\n        \"note\": \"Scan QR untuk persembahan via e-wallet.\"\n      },\n      {\n        \"type\": \"ONSITE\",\n        \"title\": \"Onsite\",\n        \"details\": [\n          {\n            \"label\": \"Lokasi\",\n            \"value\": \"Kotak Persembahan\"\n          }\n        ],\n        \"note\": \"Persembahan tetap dapat dilakukan saat ibadah berlangsung.\",\n        \"action\": {\n          \"label\": \"Lihat Jadwal Ibadah\",\n          \"url\": \"/ibadah\"\n        }\n      }\n    ],\n    \"guideSection\": {\n      \"title\": \"Panduan Singkat\",\n      \"description\": \"Ikuti panduan berikut untuk pencatatan yang baik.\",\n      \"note\": \"Informasi ini bersifat administratif. Hubungi bendahara untuk bantuan.\"\n    },\n    \"guide\": [\n      \"Gunakan nama lengkap\",\n      \"Tulis keterangan persembahan\",\n      \"Simpan bukti transfer\"\n    ],\n    \"confirmationForm\": {\n      \"isEnabled\": true,\n      \"title\": \"Konfirmasi Persembahan\",\n      \"description\": \"Isi form ini bila diperlukan untuk pencatatan.\",\n      \"contactCta\": {\n        \"label\": \"Kontak Bendahara\",\n        \"url\": \"/kontak\"\n      },\n      \"note\": \"Form ini contoh statis. Dapat dihubungkan ke sistem lain.\"\n    },\n    \"transparency\": {\n      \"isEnabled\": true,\n      \"title\": \"Ringkasan Keuangan\",\n      \"description\": \"Ringkasan keuangan jemaat tersedia setiap bulan.\",\n      \"items\": [\n        {\n          \"label\": \"Laporan Des 2025\",\n          \"url\": \"https://example.com/laporan-des-2025.pdf\"\n        },\n        {\n          \"label\": \"Laporan Nov 2025\",\n          \"url\": \"https://example.com/laporan-nov-2025.pdf\"\n        }\n      ]\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "307847fb-aa42-40a2-887a-ef90e3e427cb",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/contact",
+      "responses": [
+        {
+          "uuid": "720c1321-8682-4eb4-8999-047273973c38",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Kontak & Lokasi\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Hubungi kantor gereja atau kunjungi lokasi ibadah.\"\n    },\n    \"locationSection\": {\n      \"title\": \"Lokasi Jemaat\",\n      \"description\": \"Alamat dan petunjuk menuju gereja.\"\n    },\n    \"address\": \"Jl. Sisingamangaraja No. 12, Gunungsitoli, Nias\",\n    \"landmark\": \"Dekat Tugu Salib, 200 m dari Pasar\",\n    \"officeContacts\": {\n      \"phone\": \"+62 821-1234-5678\",\n      \"email\": \"sekretariat@bnkpsion.org\",\n      \"whatsapp\": \"https://wa.me/6282112345678\"\n    },\n    \"ctaLabels\": {\n      \"whatsappLabel\": \"WhatsApp Sekretariat\",\n      \"mapLabel\": \"Buka Google Maps\"\n    },\n    \"map\": {\n      \"embedUrl\": \"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.123456789!2d97.6101234!3d1.2823456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3024a4b123456789%3A0xabcdef123456789!2sBNKP%20Jemaat%20Sion!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid\",\n      \"mapUrl\": \"https://maps.google.com/?q=BNKP%20Jemaat%20Sion%20Gunungsitoli\"\n    },\n    \"officeHours\": [\n      {\n        \"label\": \"Senin - Jumat\",\n        \"time\": \"08.00 - 16.00 WIB\"\n      },\n      {\n        \"label\": \"Sabtu\",\n        \"time\": \"08.00 - 12.00 WIB\"\n      },\n      {\n        \"label\": \"Minggu\",\n        \"time\": \"07.00 - 12.00 WIB\"\n      }\n    ],\n    \"officeHoursNote\": \"Di luar jam kantor, silakan hubungi WhatsApp sekretariat.\",\n    \"pastoralService\": {\n      \"isEnabled\": true,\n      \"title\": \"Layanan Pastoral\",\n      \"description\": \"Kunjungan doa dan konseling pastoral berdasarkan kebutuhan jemaat.\",\n      \"ctaLabel\": \"Ajukan Layanan\",\n      \"ctaUrl\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "df61622f-edf6-494d-8986-da8bb548c94d",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/contact",
+      "responses": [
+        {
+          "uuid": "d80bc332-a668-4289-9bf7-2ad235157341",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Kontak & Lokasi\",\n      \"title\": \"BNKP Jemaat Sion\",\n      \"description\": \"Hubungi kantor gereja atau kunjungi lokasi ibadah.\"\n    },\n    \"locationSection\": {\n      \"title\": \"Lokasi Jemaat\",\n      \"description\": \"Alamat dan petunjuk menuju gereja.\"\n    },\n    \"address\": \"Jl. Sisingamangaraja No. 12, Gunungsitoli, Nias\",\n    \"landmark\": \"Dekat Tugu Salib, 200 m dari Pasar\",\n    \"officeContacts\": {\n      \"phone\": \"+62 821-1234-5678\",\n      \"email\": \"sekretariat@bnkpsion.org\",\n      \"whatsapp\": \"https://wa.me/6282112345678\"\n    },\n    \"ctaLabels\": {\n      \"whatsappLabel\": \"WhatsApp Sekretariat\",\n      \"mapLabel\": \"Buka Google Maps\"\n    },\n    \"map\": {\n      \"embedUrl\": \"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.123456789!2d97.6101234!3d1.2823456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3024a4b123456789%3A0xabcdef123456789!2sBNKP%20Jemaat%20Sion!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid\",\n      \"mapUrl\": \"https://maps.google.com/?q=BNKP%20Jemaat%20Sion%20Gunungsitoli\"\n    },\n    \"officeHours\": [\n      {\n        \"label\": \"Senin - Jumat\",\n        \"time\": \"08.00 - 16.00 WIB\"\n      },\n      {\n        \"label\": \"Sabtu\",\n        \"time\": \"08.00 - 12.00 WIB\"\n      },\n      {\n        \"label\": \"Minggu\",\n        \"time\": \"07.00 - 12.00 WIB\"\n      }\n    ],\n    \"officeHoursNote\": \"Di luar jam kantor, silakan hubungi WhatsApp sekretariat.\",\n    \"pastoralService\": {\n      \"isEnabled\": true,\n      \"title\": \"Layanan Pastoral\",\n      \"description\": \"Kunjungan doa dan konseling pastoral berdasarkan kebutuhan jemaat.\",\n      \"ctaLabel\": \"Ajukan Layanan\",\n      \"ctaUrl\": \"/kontak\"\n    }\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "1ca7e162-99ed-4536-b469-9af6c2954160",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/albums",
+      "responses": [
+        {
+          "uuid": "09cc1b57-c858-4eb0-b418-792ec23c95a3",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Album\",\n      \"title\": \"Album Kegiatan Jemaat\",\n      \"description\": \"Dokumentasi ibadah dan kegiatan BNKP Jemaat Sion.\"\n    },\n    \"tags\": [\n      \"Ibadah\",\n      \"Pemuda\",\n      \"Pelayanan\",\n      \"Sosial\"\n    ],\n    \"selectedTag\": \"Ibadah\",\n    \"photos\": [\n      {\n        \"id\": \"ibadah-natal-2025\",\n        \"title\": \"Ibadah Natal 2025\",\n        \"count\": 48,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"ibadah-tahun-baru-2026\",\n        \"title\": \"Ibadah Tahun Baru 2026\",\n        \"count\": 32,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"pemuda-camp-2025\",\n        \"title\": \"Camp Pemuda 2025\",\n        \"count\": 60,\n        \"tag\": \"Pemuda\"\n      },\n      {\n        \"id\": \"bakti-sosial-2025\",\n        \"title\": \"Bakti Sosial 2025\",\n        \"count\": 25,\n        \"tag\": \"Sosial\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "b221a45f-5ff6-4870-a67f-2caede00811f",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/albums",
+      "responses": [
+        {
+          "uuid": "a7ac20cb-93dd-4693-828e-31258773019e",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"hero\": {\n      \"label\": \"Album\",\n      \"title\": \"Album Kegiatan Jemaat\",\n      \"description\": \"Dokumentasi ibadah dan kegiatan BNKP Jemaat Sion.\"\n    },\n    \"tags\": [\n      \"Ibadah\",\n      \"Pemuda\",\n      \"Pelayanan\",\n      \"Sosial\"\n    ],\n    \"selectedTag\": \"Ibadah\",\n    \"photos\": [\n      {\n        \"id\": \"ibadah-natal-2025\",\n        \"title\": \"Ibadah Natal 2025\",\n        \"count\": 48,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"ibadah-tahun-baru-2026\",\n        \"title\": \"Ibadah Tahun Baru 2026\",\n        \"count\": 32,\n        \"tag\": \"Ibadah\"\n      },\n      {\n        \"id\": \"pemuda-camp-2025\",\n        \"title\": \"Camp Pemuda 2025\",\n        \"count\": 60,\n        \"tag\": \"Pemuda\"\n      },\n      {\n        \"id\": \"bakti-sosial-2025\",\n        \"title\": \"Bakti Sosial 2025\",\n        \"count\": 25,\n        \"tag\": \"Sosial\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "cbac72c3-9a81-4005-b89d-e43f1c6a6db7",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "admin/albums",
+      "responses": [
+        {
+          "uuid": "307d0e56-7456-48bb-a215-b227f4d24e24",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"ibadah-natal-2025\",\n    \"title\": \"Ibadah Natal 2025\",\n    \"count\": 48,\n    \"tag\": \"Ibadah\"\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a67bd486-0e0a-4b55-b778-9e2fe6fe7262",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "admin/albums/:id",
+      "responses": [
+        {
+          "uuid": "ceb247ff-6581-49de-9441-8c9d33556563",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"ibadah-natal-2025\",\n    \"title\": \"Ibadah Natal 2025\",\n    \"tag\": \"Ibadah\",\n    \"photoCount\": 48,\n    \"photos\": [\n      {\n        \"url\": \"https://images.unsplash.com/photo-1519681393784-d120267933ba\",\n        \"caption\": \"Suasana ibadah natal\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee\",\n        \"caption\": \"Paduan suara jemaat\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e\",\n        \"caption\": \"Persekutuan setelah ibadah\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "507ea81b-45ef-4919-9049-c0b84178e65d",
+      "type": "http",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "admin/albums/:id",
+      "responses": [
+        {
+          "uuid": "a7983426-6ee2-4e15-af22-7e39188e7928",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"ibadah-natal-2025\",\n    \"title\": \"Ibadah Natal 2025\",\n    \"tag\": \"Ibadah\",\n    \"photoCount\": 48,\n    \"photos\": [\n      {\n        \"url\": \"https://images.unsplash.com/photo-1519681393784-d120267933ba\",\n        \"caption\": \"Suasana ibadah natal\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee\",\n        \"caption\": \"Paduan suara jemaat\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e\",\n        \"caption\": \"Persekutuan setelah ibadah\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "cd091203-29f5-4827-86ba-ffcd2198b3c3",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/albums/:id",
+      "responses": [
+        {
+          "uuid": "0bfb0f78-daa7-44c5-bf0f-4a31f1aaeb26",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "fb75fa80-3aa5-4eeb-8f96-a78a7d12c2d5",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "admin/albums/:id/photos",
+      "responses": [
+        {
+          "uuid": "44dce302-cd66-45cc-8a33-cb10ebbfd2de",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {\n    \"id\": \"ibadah-natal-2025\",\n    \"title\": \"Ibadah Natal 2025\",\n    \"tag\": \"Ibadah\",\n    \"photoCount\": 48,\n    \"photos\": [\n      {\n        \"url\": \"https://images.unsplash.com/photo-1519681393784-d120267933ba\",\n        \"caption\": \"Suasana ibadah natal\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee\",\n        \"caption\": \"Paduan suara jemaat\"\n      },\n      {\n        \"url\": \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e\",\n        \"caption\": \"Persekutuan setelah ibadah\"\n      }\n    ]\n  },\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "57be88de-a09c-4c38-ab5f-738110adad76",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/albums/:id/photos/:photoId",
+      "responses": [
+        {
+          "uuid": "a2e40e8b-a055-45e3-84d2-a03cfaa2fe75",
+          "body": "{\n  \"isSuccess\": true,\n  \"errors\": null,\n  \"data\": {},\n  \"timestamp\": \"2026-01-30T09:00:00.000Z\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "1e474758-7d0b-4435-9694-b3cb9d81f4d5"
+    },
+    {
+      "type": "route",
+      "uuid": "686ae0c0-0757-45cb-bbe9-78f6a61d748a"
+    },
+    {
+      "type": "route",
+      "uuid": "5f3321ef-c6cb-4611-82f7-33e9c9827390"
+    },
+    {
+      "type": "route",
+      "uuid": "dbaac0a4-30cc-4f13-88f9-eb1a89bb483d"
+    },
+    {
+      "type": "route",
+      "uuid": "9cdd0de4-08ca-47cd-867d-2d5bd2545126"
+    },
+    {
+      "type": "route",
+      "uuid": "bf5e9208-be76-46cd-a102-b4797362bc5a"
+    },
+    {
+      "type": "route",
+      "uuid": "64891b88-8dfe-49ce-a3d2-b0ca0d8d653d"
+    },
+    {
+      "type": "route",
+      "uuid": "f522a77e-501c-41bc-9027-b147d7f4a196"
+    },
+    {
+      "type": "route",
+      "uuid": "3d9ed157-0160-444e-bf26-313ab96c04ab"
+    },
+    {
+      "type": "route",
+      "uuid": "85944802-b973-4aea-8e15-f76ad7f2aacf"
+    },
+    {
+      "type": "route",
+      "uuid": "b7cc5890-4c46-41a0-943f-51f73b28abc7"
+    },
+    {
+      "type": "route",
+      "uuid": "f8ffa3f9-f13d-4c56-8188-aeea30408a6e"
+    },
+    {
+      "type": "route",
+      "uuid": "3371b094-b17a-42d4-a0d8-ecfc5afe93d7"
+    },
+    {
+      "type": "route",
+      "uuid": "e51674f4-226d-4b2f-9ecd-134b16ca0d05"
+    },
+    {
+      "type": "route",
+      "uuid": "56a61b3d-7f7c-4f99-bfa2-5fa416d6ead5"
+    },
+    {
+      "type": "route",
+      "uuid": "a58f1860-c7e7-472d-95ad-4fcef3de5d23"
+    },
+    {
+      "type": "route",
+      "uuid": "ed10da6d-b0f2-476b-bab2-781a26135fb5"
+    },
+    {
+      "type": "route",
+      "uuid": "624ff1dd-2d1e-4467-9a37-e89c4e9376d7"
+    },
+    {
+      "type": "route",
+      "uuid": "6f4b9690-1b0a-4a85-9277-55d5c38791ae"
+    },
+    {
+      "type": "route",
+      "uuid": "a2e5d7a6-6a13-4cbc-85dc-5c7f06b71deb"
+    },
+    {
+      "type": "route",
+      "uuid": "4de0de0a-9bc6-4d53-b4f4-8ace39c4c98d"
+    },
+    {
+      "type": "route",
+      "uuid": "52cbcb8e-8122-46c9-9aab-b288712a26b1"
+    },
+    {
+      "type": "route",
+      "uuid": "e4e84cec-b325-42ae-b84b-4ab06347ee22"
+    },
+    {
+      "type": "route",
+      "uuid": "3a1c3180-f776-4169-b98f-8eb6ad119475"
+    },
+    {
+      "type": "route",
+      "uuid": "e8f3b99b-80dc-43d5-b9f0-13d8cca907df"
+    },
+    {
+      "type": "route",
+      "uuid": "b15c9415-ec54-4c53-92db-ae22c08080e5"
+    },
+    {
+      "type": "route",
+      "uuid": "096a7ce9-d170-4231-ac24-90788ea5d68c"
+    },
+    {
+      "type": "route",
+      "uuid": "b925cfa8-3eb7-4f18-a190-3e0b3c1abb61"
+    },
+    {
+      "type": "route",
+      "uuid": "c785b689-0862-4915-8af5-045082b69625"
+    },
+    {
+      "type": "route",
+      "uuid": "ccd0073c-b9d0-4c76-b76c-ff52e514ab34"
+    },
+    {
+      "type": "route",
+      "uuid": "76a797e7-18b1-47ab-aeaa-940ddb3245ce"
+    },
+    {
+      "type": "route",
+      "uuid": "f533f694-3947-4938-9bb0-d5210b536604"
+    },
+    {
+      "type": "route",
+      "uuid": "102e3fcc-9d6c-4463-9df0-339584072180"
+    },
+    {
+      "type": "route",
+      "uuid": "dca084ea-ffb8-4aa4-9080-b73b4d8d5591"
+    },
+    {
+      "type": "route",
+      "uuid": "dd6c1580-4ff3-445c-b048-b626f817169c"
+    },
+    {
+      "type": "route",
+      "uuid": "307847fb-aa42-40a2-887a-ef90e3e427cb"
+    },
+    {
+      "type": "route",
+      "uuid": "df61622f-edf6-494d-8986-da8bb548c94d"
+    },
+    {
+      "type": "route",
+      "uuid": "1ca7e162-99ed-4536-b469-9af6c2954160"
+    },
+    {
+      "type": "route",
+      "uuid": "b221a45f-5ff6-4870-a67f-2caede00811f"
+    },
+    {
+      "type": "route",
+      "uuid": "cbac72c3-9a81-4005-b89d-e43f1c6a6db7"
+    },
+    {
+      "type": "route",
+      "uuid": "a67bd486-0e0a-4b55-b778-9e2fe6fe7262"
+    },
+    {
+      "type": "route",
+      "uuid": "507ea81b-45ef-4919-9049-c0b84178e65d"
+    },
+    {
+      "type": "route",
+      "uuid": "cd091203-29f5-4827-86ba-ffcd2198b3c3"
+    },
+    {
+      "type": "route",
+      "uuid": "fb75fa80-3aa5-4eeb-8f96-a78a7d12c2d5"
+    },
+    {
+      "type": "route",
+      "uuid": "57be88de-a09c-4c38-ab5f-738110adad76"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
