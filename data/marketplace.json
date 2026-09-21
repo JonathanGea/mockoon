@@ -1,0 +1,2687 @@
+{
+  "uuid": "65242d78-8cdb-4a86-be8a-fdf7086a40fe",
+  "lastMigration": 29,
+  "name": "Template Marketplace - Level 0-3 Best Practice API",
+  "endpointPrefix": "api",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "4cb27df6-949e-4215-a46c-f6648f1d34c4",
+      "type": "http",
+      "documentation": "Level 0 \u2014 Admin login.\n\nRequest body:\n{\n  \"username\": \"superadmin\",\n  \"password\": \"admin123\"\n}\n\nNotes:\n- Success is determined by HTTP 200, not a `success` boolean.\n- `expiresIn` is expressed in seconds.\n- Access token is short-lived in this mock.\n- Do not log or persist raw passwords.",
+      "method": "post",
+      "endpoint": "admin/auth/login",
+      "responses": [
+        {
+          "uuid": "f9e9bfe7-0fdf-456e-a164-18fd5ee5eec7",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"mock-access-token\",\n    \"refreshToken\": \"mock-refresh-token-v1\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": 900,\n    \"admin\": {\n      \"id\": 1,\n      \"username\": \"superadmin\",\n      \"displayName\": \"Super Admin\",\n      \"roles\": [\n        \"SUPER_ADMIN\"\n      ],\n      \"permissions\": [\n        \"PRODUCT_READ\",\n        \"PRODUCT_CREATE\",\n        \"PRODUCT_UPDATE\",\n        \"PRODUCT_DELETE\",\n        \"ORDER_READ\",\n        \"CATALOG_MANAGE\"\n      ]\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Login successful",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "133e3303-35db-4a5f-8c28-fe4a686c6da1",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/invalid-credentials\",\n  \"title\": \"Invalid credentials\",\n  \"status\": 401,\n  \"detail\": \"The username or password is incorrect.\",\n  \"instance\": \"/api/admin/auth/login\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Invalid credentials",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "4d2e2843-d3c5-4718-a203-ef28c0751620",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/auth/login\",\n  \"errors\": [\n    {\n      \"field\": \"username\",\n      \"message\": \"Username is required.\"\n    },\n    {\n      \"field\": \"password\",\n      \"message\": \"Password is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f1aa9830-c7a1-4fad-8064-7a379a8387fb",
+      "type": "http",
+      "documentation": "Level 0 \u2014 Return the currently authenticated administrator.",
+      "method": "get",
+      "endpoint": "admin/auth/me",
+      "responses": [
+        {
+          "uuid": "276c9af4-853b-40e9-8354-5b766f843442",
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"username\": \"superadmin\",\n    \"displayName\": \"Super Admin\",\n    \"roles\": [\n      \"SUPER_ADMIN\"\n    ],\n    \"permissions\": [\n      \"PRODUCT_READ\",\n      \"PRODUCT_CREATE\",\n      \"PRODUCT_UPDATE\",\n      \"PRODUCT_DELETE\",\n      \"ORDER_READ\",\n      \"CATALOG_MANAGE\"\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Current admin",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f33a356e-0d9b-48ef-81b5-b1ea4d9cdab7",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/auth/me\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9443e78c-ea8b-4e6a-b193-89087151a52a",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/auth/me\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "57262678-5813-407a-9e7d-fffca7ae1790",
+      "type": "http",
+      "documentation": "Level 0 \u2014 Rotate refresh token.\n\nRequest body:\n{\n  \"refreshToken\": \"mock-refresh-token-v1\"\n}\n\nThe response returns a new refresh token to model refresh-token rotation.",
+      "method": "post",
+      "endpoint": "admin/auth/refresh-token",
+      "responses": [
+        {
+          "uuid": "3fdadd4e-6ebd-492b-b4bd-e2ef1141860d",
+          "body": "{\n  \"data\": {\n    \"accessToken\": \"mock-access-token-v2\",\n    \"refreshToken\": \"mock-refresh-token-v2\",\n    \"tokenType\": \"Bearer\",\n    \"expiresIn\": 900\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Token refreshed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f52f8810-6edf-48e9-8fb7-5712ed0e54e7",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/invalid-refresh-token\",\n  \"title\": \"Invalid refresh token\",\n  \"status\": 401,\n  \"detail\": \"The refresh token is invalid, expired, revoked, or already rotated.\",\n  \"instance\": \"/api/admin/auth/refresh-token\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Invalid refresh token",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3efc4c47-2e62-444c-b2cb-dca0999198dd",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/auth/refresh-token\",\n  \"errors\": [\n    {\n      \"field\": \"refreshToken\",\n      \"message\": \"Refresh token is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "bba9bc42-df9e-4287-a6fd-765b209ef279",
+      "type": "http",
+      "documentation": "Level 1 \u2014 Public catalog. Example: GET /api/products?page=0&size=12",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "65642141-e9ea-4c8e-9482-0a893bae982d",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 101,\n      \"name\": \"Classic Runner\",\n      \"slug\": \"classic-runner\",\n      \"basePrice\": 899000,\n      \"category\": {\n        \"id\": 1,\n        \"name\": \"Shoes\",\n        \"slug\": \"shoes\"\n      },\n      \"brand\": {\n        \"id\": 1,\n        \"name\": \"Northstar\",\n        \"slug\": \"northstar\"\n      },\n      \"thumbnailUrl\": \"https://example.com/products/classic-runner/main.jpg\",\n      \"available\": true\n    },\n    {\n      \"id\": 102,\n      \"name\": \"Urban Court\",\n      \"slug\": \"urban-court\",\n      \"basePrice\": 749000,\n      \"category\": {\n        \"id\": 1,\n        \"name\": \"Shoes\",\n        \"slug\": \"shoes\"\n      },\n      \"brand\": {\n        \"id\": 2,\n        \"name\": \"Avenue\",\n        \"slug\": \"avenue\"\n      },\n      \"thumbnailUrl\": \"https://example.com/products/urban-court/main.jpg\",\n      \"available\": true\n    }\n  ],\n  \"meta\": {\n    \"pagination\": {\n      \"page\": 0,\n      \"size\": 12,\n      \"totalElements\": 2,\n      \"totalPages\": 1\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Product list",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e881b905-f968-4d31-81fd-f6e040dddeaf",
+      "type": "http",
+      "documentation": "Level 1 \u2014 Public product detail.",
+      "method": "get",
+      "endpoint": "products/:id",
+      "responses": [
+        {
+          "uuid": "b98ab397-1c94-4c8c-8ec2-906183a300d3",
+          "body": "{\n  \"data\": {\n    \"id\": 101,\n    \"name\": \"Classic Runner\",\n    \"slug\": \"classic-runner\",\n    \"description\": \"Lightweight everyday running shoes.\",\n    \"basePrice\": 899000,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Shoes\",\n      \"slug\": \"shoes\"\n    },\n    \"brand\": {\n      \"id\": 1,\n      \"name\": \"Northstar\",\n      \"slug\": \"northstar\"\n    },\n    \"thumbnailUrl\": \"https://example.com/products/classic-runner/main.jpg\",\n    \"available\": true,\n    \"active\": true,\n    \"createdAt\": \"2026-09-21T14:00:00Z\",\n    \"updatedAt\": \"2026-09-21T14:00:00Z\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Product detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b7b18605-1b65-4c3d-9065-65508d1cfd4e",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/product-not-found\",\n  \"title\": \"Product not found\",\n  \"status\": 404,\n  \"detail\": \"No product exists with the requested id.\",\n  \"instance\": \"/api/products/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Product not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "c6008d41-d3b2-484e-a922-40bf9488b1f3",
+      "type": "http",
+      "documentation": "Level 1 \u2014 Public variants for a product.",
+      "method": "get",
+      "endpoint": "products/:id/variants",
+      "responses": [
+        {
+          "uuid": "8afe4f9c-195c-43df-8410-e1707f80a702",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 1001,\n      \"productId\": 101,\n      \"sku\": \"CR-BLK-40\",\n      \"size\": {\n        \"id\": 4,\n        \"name\": \"40\"\n      },\n      \"price\": 899000,\n      \"stock\": 12,\n      \"available\": true,\n      \"active\": true\n    },\n    {\n      \"id\": 1002,\n      \"productId\": 101,\n      \"sku\": \"CR-BLK-41\",\n      \"size\": {\n        \"id\": 5,\n        \"name\": \"41\"\n      },\n      \"price\": 899000,\n      \"stock\": 0,\n      \"available\": false,\n      \"active\": true\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Product variants",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "881fcd2b-8af2-452b-96da-f29e5402a061",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/product-not-found\",\n  \"title\": \"Product not found\",\n  \"status\": 404,\n  \"detail\": \"No product exists with the requested id.\",\n  \"instance\": \"/api/products/999/variants\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Product not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "16afe66c-c110-4c1c-8dee-b54a6e19b236",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"name\": \"Classic Runner\",\n  \"slug\": \"classic-runner\",\n  \"description\": \"Lightweight everyday running shoes.\",\n  \"basePrice\": 899000,\n  \"categoryId\": 1,\n  \"brandId\": 1,\n  \"thumbnailUrl\": \"https://example.com/products/classic-runner/main.jpg\",\n  \"active\": true\n}",
+      "method": "post",
+      "endpoint": "admin/products",
+      "responses": [
+        {
+          "uuid": "75227fe3-e502-4a16-b2de-9fe09f3bdc05",
+          "body": "{\n  \"data\": {\n    \"id\": 101,\n    \"name\": \"Classic Runner\",\n    \"slug\": \"classic-runner\",\n    \"description\": \"Lightweight everyday running shoes.\",\n    \"basePrice\": 899000,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Shoes\",\n      \"slug\": \"shoes\"\n    },\n    \"brand\": {\n      \"id\": 1,\n      \"name\": \"Northstar\",\n      \"slug\": \"northstar\"\n    },\n    \"thumbnailUrl\": \"https://example.com/products/classic-runner/main.jpg\",\n    \"available\": true,\n    \"active\": true,\n    \"createdAt\": \"2026-09-21T14:00:00Z\",\n    \"updatedAt\": \"2026-09-21T14:00:00Z\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Product created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/products/101"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "77f70c2d-e53d-4650-86fe-f854a62c5009",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b028b72f-3f5b-4c4d-a25b-543f498a0699",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "4ea6de86-ebb6-4371-abba-d6faf872dcbc",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/products\",\n  \"errors\": [\n    {\n      \"field\": \"name\",\n      \"message\": \"Name is required.\"\n    },\n    {\n      \"field\": \"basePrice\",\n      \"message\": \"Base price must be greater than or equal to 0.\"\n    },\n    {\n      \"field\": \"categoryId\",\n      \"message\": \"Category does not exist.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "19c1df47-6ee6-4326-aa95-4ef4a95a4323",
+      "type": "http",
+      "documentation": "Full replacement-style update body:\n{\n  \"name\": \"Classic Runner V2\",\n  \"slug\": \"classic-runner-v2\",\n  \"description\": \"Updated lightweight running shoes.\",\n  \"basePrice\": 949000,\n  \"categoryId\": 1,\n  \"brandId\": 1,\n  \"thumbnailUrl\": \"https://example.com/products/classic-runner-v2/main.jpg\",\n  \"active\": true\n}\n\nIf later you want partial updates, add PATCH instead of overloading PUT semantics.",
+      "method": "put",
+      "endpoint": "admin/products/:id",
+      "responses": [
+        {
+          "uuid": "1966f7cb-1a11-4a1a-ab72-7b8535c80afb",
+          "body": "{\n  \"data\": {\n    \"id\": 101,\n    \"name\": \"Classic Runner V2\",\n    \"slug\": \"classic-runner-v2\",\n    \"description\": \"Lightweight everyday running shoes.\",\n    \"basePrice\": 949000,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Shoes\",\n      \"slug\": \"shoes\"\n    },\n    \"brand\": {\n      \"id\": 1,\n      \"name\": \"Northstar\",\n      \"slug\": \"northstar\"\n    },\n    \"thumbnailUrl\": \"https://example.com/products/classic-runner/main.jpg\",\n    \"available\": true,\n    \"active\": true,\n    \"createdAt\": \"2026-09-21T14:00:00Z\",\n    \"updatedAt\": \"2026-09-21T16:00:00Z\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Product updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "5da37ce1-e3a0-4506-9c35-03b4a75e9d73",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products/101\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "0eb4beb1-5ef0-4edb-a1e2-6f84dc68fca5",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products/101\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1499a674-ccaf-4205-84ac-990ceed50310",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/product-not-found\",\n  \"title\": \"Product not found\",\n  \"status\": 404,\n  \"detail\": \"No product exists with the requested id.\",\n  \"instance\": \"/api/admin/products/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Product not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "ef310d05-303a-443c-b91d-b57489764689",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/products/101\",\n  \"errors\": [\n    {\n      \"field\": \"name\",\n      \"message\": \"Name is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "e597bba0-0030-4eaf-8696-6b30d6cb3d44",
+      "type": "http",
+      "documentation": "Successful deletion returns HTTP 204 with no response body.",
+      "method": "delete",
+      "endpoint": "admin/products/:id",
+      "responses": [
+        {
+          "uuid": "2300f717-f7c2-4f15-9a13-2e50d115439b",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "204 Product deleted",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d11714c2-5cdc-46ef-bfd4-b5ba65546ea0",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products/101\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e59af6b6-fa39-42ec-8dde-f5769681f38b",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products/101\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "ace3215b-0a48-4e63-8ff4-d7ff1e5f506e",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/product-not-found\",\n  \"title\": \"Product not found\",\n  \"status\": 404,\n  \"detail\": \"No product exists with the requested id.\",\n  \"instance\": \"/api/admin/products/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Product not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "514ad085-71cd-408d-985d-4918f3cd97ed",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"productId\": 101,\n  \"sizeId\": 4,\n  \"sku\": \"CR-BLK-40\",\n  \"price\": 899000,\n  \"stock\": 12,\n  \"active\": true\n}",
+      "method": "post",
+      "endpoint": "admin/variants",
+      "responses": [
+        {
+          "uuid": "aed7674f-da99-4305-8d7a-cbce475d50ad",
+          "body": "{\n  \"data\": {\n    \"id\": 1001,\n    \"productId\": 101,\n    \"sku\": \"CR-BLK-40\",\n    \"size\": {\n      \"id\": 4,\n      \"name\": \"40\"\n    },\n    \"price\": 899000,\n    \"stock\": 12,\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Variant created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/products/101/variants"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a2301416-44b2-4433-ac22-d0d7bd0b85fe",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/variants\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "4f27bed2-f44a-4e0b-a2b5-537084ad3191",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/variants\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d9aa4edd-bdfc-4c83-960f-8ca76997de12",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/variants\",\n  \"errors\": [\n    {\n      \"field\": \"sku\",\n      \"message\": \"SKU is required and must be unique.\"\n    },\n    {\n      \"field\": \"productId\",\n      \"message\": \"Product does not exist.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "ab1e1c01-6d17-4b4f-b85e-20a05485a14e",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"productId\": 101,\n  \"sizeId\": 4,\n  \"sku\": \"CR-BLK-40\",\n  \"price\": 929000,\n  \"stock\": 15,\n  \"active\": true\n}",
+      "method": "put",
+      "endpoint": "admin/variants/:id",
+      "responses": [
+        {
+          "uuid": "176978a5-80f0-4b80-91ec-1f0bc799f940",
+          "body": "{\n  \"data\": {\n    \"id\": 1001,\n    \"productId\": 101,\n    \"sku\": \"CR-BLK-40\",\n    \"size\": {\n      \"id\": 4,\n      \"name\": \"40\"\n    },\n    \"price\": 929000,\n    \"stock\": 15,\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Variant updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e27bc94a-c4e4-430b-ac48-1e5fcd081630",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/variants/1001\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "6ee792ea-1865-4cf5-89ce-05362d8d057d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/variants/1001\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9be68794-e10f-499c-896a-faa2cf6b1d75",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/variant-not-found\",\n  \"title\": \"Variant not found\",\n  \"status\": 404,\n  \"detail\": \"No variant exists with the requested id.\",\n  \"instance\": \"/api/admin/variants/9999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Variant not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f586d64a-f136-4aa0-b86a-3d946cdfc35e",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/variants/1001\",\n  \"errors\": [\n    {\n      \"field\": \"price\",\n      \"message\": \"Price must be greater than or equal to 0.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "96c44546-6a77-4020-bcc4-7fc1dfdc24a6",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/variants/:id",
+      "responses": [
+        {
+          "uuid": "9aa1081a-1555-4990-b54a-e2cd2ed41356",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "204 Variant deleted",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "bc4845ce-2ae7-43c7-887d-12b7155a1d33",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/variants/1001\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "73ac2d2f-7bd1-4599-a308-852feea4fcb6",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/variants/1001\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "c32a6f5c-d900-4dc5-94fa-de009166f763",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/variant-not-found\",\n  \"title\": \"Variant not found\",\n  \"status\": 404,\n  \"detail\": \"No variant exists with the requested id.\",\n  \"instance\": \"/api/admin/variants/9999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Variant not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "69240de8-eabc-4160-8833-a6fc112fc4c2",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"name\": \"Shoes\",\n  \"slug\": \"shoes\",\n  \"active\": true\n}",
+      "method": "post",
+      "endpoint": "admin/categories",
+      "responses": [
+        {
+          "uuid": "c22c2bc5-4e85-48d5-8fa2-a1b4c0981e85",
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Shoes\",\n    \"slug\": \"shoes\",\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Category created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/admin/categories/1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "903e7f1d-9aeb-4596-bb45-a35684796a79",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/categories\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "63ad06f7-ecd6-40b4-9a77-3585ff164249",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/categories\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "78f176e1-068a-4e92-953f-48658f5a1a8c",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/categories\",\n  \"errors\": [\n    {\n      \"field\": \"name\",\n      \"message\": \"Name is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "bcf5af38-92b7-4f6b-814b-6efaa4468e96",
+      "type": "http",
+      "documentation": "Full replacement-style request body:\n{\n  \"name\": \"Shoes\",\n  \"slug\": \"shoes\",\n  \"active\": true\n}",
+      "method": "put",
+      "endpoint": "admin/categories/:id",
+      "responses": [
+        {
+          "uuid": "a2a1a5cd-fe6c-4926-8cba-8a4eca30b820",
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Footwear\",\n    \"slug\": \"footwear\",\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Category updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2aa066ad-d1ad-4359-9e99-4e520dcec0c2",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/categories/1\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b97e2120-ba3b-4996-a9e1-5dc34d01751d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/categories/1\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e03dedb9-aa3c-4657-a566-22e53a3323b5",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/category-not-found\",\n  \"title\": \"Category not found\",\n  \"status\": 404,\n  \"detail\": \"No category exists with the requested id.\",\n  \"instance\": \"/api/admin/categories/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Category not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "733deaba-86c4-4b7a-8bf8-fddd4be3ff97",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/categories/:id",
+      "responses": [
+        {
+          "uuid": "e27b61f5-9f7f-4bc7-8124-8dfb7b412844",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "204 Category deleted",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "fceac4d9-69eb-4e7b-8441-cd2bf0f3c587",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/categories/1\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2e26d107-39d7-4f0c-b7ec-390206ccdb7c",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/categories/1\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1aac4375-1b3e-45fd-bf40-5846e2f40329",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/category-not-found\",\n  \"title\": \"Category not found\",\n  \"status\": 404,\n  \"detail\": \"No category exists with the requested id.\",\n  \"instance\": \"/api/admin/categories/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Category not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "cb001a9c-ab61-4f45-bed2-349a552da7a2",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"name\": \"Northstar\",\n  \"slug\": \"northstar\",\n  \"active\": true\n}",
+      "method": "post",
+      "endpoint": "admin/brands",
+      "responses": [
+        {
+          "uuid": "6c96534a-2156-4901-9cd3-275a586ce33b",
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Northstar\",\n    \"slug\": \"northstar\",\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Brand created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/admin/brands/1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1b7a96be-4287-47b0-bbae-3fa84cd9803d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/brands\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "72853939-86e6-42e6-838b-8315eb7f83a9",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/brands\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f1cd19c4-eeb6-4d6d-9714-fce36dd184b8",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/brands\",\n  \"errors\": [\n    {\n      \"field\": \"name\",\n      \"message\": \"Name is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "403fcafd-d0ee-4f84-a147-cdcac630bff7",
+      "type": "http",
+      "documentation": "Full replacement-style request body:\n{\n  \"name\": \"Northstar\",\n  \"slug\": \"northstar\",\n  \"active\": true\n}",
+      "method": "put",
+      "endpoint": "admin/brands/:id",
+      "responses": [
+        {
+          "uuid": "30a5700d-837b-480d-b5a0-d6bf86680465",
+          "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Northstar Sport\",\n    \"slug\": \"northstar-sport\",\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Brand updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "6353f578-319e-479e-a3c6-68a33f2c9f0f",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/brands/1\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e9e70bac-63c9-4ac8-a6de-e667acb81ce9",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/brands/1\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a52e26d9-2c9f-44ef-b3a2-1923a033415c",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/brand-not-found\",\n  \"title\": \"Brand not found\",\n  \"status\": 404,\n  \"detail\": \"No brand exists with the requested id.\",\n  \"instance\": \"/api/admin/brands/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Brand not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d687bcd3-bba5-4e48-94bd-d0229811b381",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/brands/:id",
+      "responses": [
+        {
+          "uuid": "ca2cea03-f77a-4053-9c8f-15385536381c",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "204 Brand deleted",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "6e4399bd-ca6b-4b4c-a1cb-5fe9c0e2c801",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/brands/1\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "7045bae0-6499-4d72-867a-797a31fedd1b",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/brands/1\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "96addf52-c330-4ca4-b498-f5191bc7bab9",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/brand-not-found\",\n  \"title\": \"Brand not found\",\n  \"status\": 404,\n  \"detail\": \"No brand exists with the requested id.\",\n  \"instance\": \"/api/admin/brands/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Brand not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "eb05b858-d30e-446d-a7f0-44e0431a3aeb",
+      "type": "http",
+      "documentation": "Request body:\n{\n  \"name\": \"40\",\n  \"sortOrder\": 40,\n  \"active\": true\n}",
+      "method": "post",
+      "endpoint": "admin/sizes",
+      "responses": [
+        {
+          "uuid": "97745e90-72c7-42ed-bd1e-0fd389b9fc69",
+          "body": "{\n  \"data\": {\n    \"id\": 4,\n    \"name\": \"40\",\n    \"sortOrder\": 40,\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Size created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/admin/sizes/4"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "511400e4-166d-4759-a7f9-127fb46c2e0d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/sizes\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "7830dcbb-cae9-4fdd-a7c2-5ec77f3c0781",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/sizes\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b41682fa-863c-4f96-9184-4f31c4fdd75e",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/admin/sizes\",\n  \"errors\": [\n    {\n      \"field\": \"name\",\n      \"message\": \"Name is required.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f3e297fb-d31a-4ee1-9c2b-2a98c59499e3",
+      "type": "http",
+      "documentation": "Full replacement-style request body:\n{\n  \"name\": \"40\",\n  \"sortOrder\": 40,\n  \"active\": true\n}",
+      "method": "put",
+      "endpoint": "admin/sizes/:id",
+      "responses": [
+        {
+          "uuid": "1f181acd-df54-4184-acb7-b480e3103611",
+          "body": "{\n  \"data\": {\n    \"id\": 4,\n    \"name\": \"EU 40\",\n    \"sortOrder\": 40,\n    \"active\": true\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Size updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "bc19df94-efc8-4f25-9181-8cf6c9141e01",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/sizes/4\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "7ceebe3a-f8a8-4887-a3a0-797e37fe1c10",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/sizes/4\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "eb1c5e5d-bb32-4c9a-9ed9-f83692d0cc6a",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/size-not-found\",\n  \"title\": \"Size not found\",\n  \"status\": 404,\n  \"detail\": \"No size exists with the requested id.\",\n  \"instance\": \"/api/admin/sizes/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Size not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "2924bf85-c16a-4ce4-8967-289edbf48472",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "admin/sizes/:id",
+      "responses": [
+        {
+          "uuid": "67910d73-3d4c-457b-b3a6-52a60203a42a",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "204 Size deleted",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "108a28f7-601f-4917-b47e-60278d52bedf",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/sizes/4\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b5a26d7c-ed78-483c-9fbe-fc8a178b4118",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/sizes/4\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3a372a51-4df8-41bf-b3f2-0743a760d184",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/size-not-found\",\n  \"title\": \"Size not found\",\n  \"status\": 404,\n  \"detail\": \"No size exists with the requested id.\",\n  \"instance\": \"/api/admin/sizes/999\"\n}",
+          "latency": 0,
+          "statusCode": 404,
+          "label": "404 Size not found",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "efe1f54e-4914-4788-af8d-111174030494",
+      "type": "http",
+      "documentation": "Level 2 \u2014 Manual checkout. Cart remains client-side.\n\nRequest body:\n{\n  \"customer\": {\n    \"name\": \"Jonathan Gea\",\n    \"email\": \"jonathan@example.com\",\n    \"phone\": \"081234567890\"\n  },\n  \"shippingAddress\": {\n    \"recipient\": \"Jonathan Gea\",\n    \"phone\": \"081234567890\",\n    \"fullAddress\": \"Jl. Example No. 10, Tangerang Selatan\"\n  },\n  \"items\": [\n    {\n      \"variantId\": 1001,\n      \"quantity\": 2\n    }\n  ],\n  \"notes\": \"Please pack carefully\"\n}",
+      "method": "post",
+      "endpoint": "orders",
+      "responses": [
+        {
+          "uuid": "a08402b5-f695-46aa-9349-22107438838f",
+          "body": "{\n  \"data\": {\n    \"id\": 5001,\n    \"orderNumber\": \"ORD-20260921-0001\",\n    \"status\": \"PENDING\",\n    \"customer\": {\n      \"name\": \"Jonathan Gea\",\n      \"email\": \"jonathan@example.com\",\n      \"phone\": \"081234567890\"\n    },\n    \"shippingAddress\": {\n      \"recipient\": \"Jonathan Gea\",\n      \"phone\": \"081234567890\",\n      \"fullAddress\": \"Jl. Example No. 10, Tangerang Selatan\"\n    },\n    \"items\": [\n      {\n        \"id\": 9001,\n        \"variantId\": 1001,\n        \"sku\": \"CR-BLK-40\",\n        \"productName\": \"Classic Runner\",\n        \"size\": \"40\",\n        \"quantity\": 2,\n        \"unitPrice\": 899000,\n        \"lineTotal\": 1798000\n      }\n    ],\n    \"totals\": {\n      \"subtotal\": 1798000,\n      \"grandTotal\": 1798000\n    },\n    \"createdAt\": \"2026-09-21T14:30:00Z\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "201 Order created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/orders/5001"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "905f70ce-5637-4db8-9a04-beef3dbaf439",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/validation-error\",\n  \"title\": \"Validation failed\",\n  \"status\": 422,\n  \"detail\": \"One or more request fields are invalid.\",\n  \"instance\": \"/api/orders\",\n  \"errors\": [\n    {\n      \"field\": \"items\",\n      \"message\": \"At least one order item is required.\"\n    },\n    {\n      \"field\": \"items[0].quantity\",\n      \"message\": \"Quantity must be greater than 0.\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 422,
+          "label": "422 Validation failed",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "874d1839-f9cc-47d0-8436-29a7715299c5",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/insufficient-stock\",\n  \"title\": \"Insufficient stock\",\n  \"status\": 409,\n  \"detail\": \"One or more variants do not have enough stock.\",\n  \"instance\": \"/api/orders\"\n}",
+          "latency": 0,
+          "statusCode": 409,
+          "label": "409 Insufficient stock",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4bc3f1cb-47ce-4160-acda-ba780c9b26cb",
+      "type": "http",
+      "documentation": "Level 2 \u2014 Admin read-only order list.",
+      "method": "get",
+      "endpoint": "admin/orders",
+      "responses": [
+        {
+          "uuid": "65485035-ba51-4fd7-a58f-847f5cf3a8c2",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 5001,\n      \"orderNumber\": \"ORD-20260921-0001\",\n      \"customerName\": \"Jonathan Gea\",\n      \"totalItems\": 2,\n      \"grandTotal\": 1798000,\n      \"status\": \"PENDING\",\n      \"createdAt\": \"2026-09-21T14:30:00Z\"\n    }\n  ],\n  \"meta\": {\n    \"pagination\": {\n      \"page\": 0,\n      \"size\": 20,\n      \"totalElements\": 1,\n      \"totalPages\": 1\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Admin order list",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f7e709bd-9ad3-4130-b95e-5dede0c21d6d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/orders\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "402c0e8e-0d9b-49ad-9767-01703a653e41",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/orders\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "26ecd3e2-7764-4400-b907-825dba6732ba",
+      "type": "http",
+      "documentation": "Level 3 \u2014 Bulk product import.\n\nContent-Type: multipart/form-data\nForm field:\nfile = products-september.xlsx\n\n202 Accepted models a potentially long-running import. The final result is read from import logs.",
+      "method": "post",
+      "endpoint": "admin/products/import",
+      "responses": [
+        {
+          "uuid": "4f43b915-2f8a-444a-927b-787ccaaba6e0",
+          "body": "{\n  \"data\": {\n    \"id\": 7001,\n    \"fileName\": \"products-september.xlsx\",\n    \"status\": \"PROCESSING\",\n    \"submittedAt\": \"2026-09-21T15:30:00Z\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 202,
+          "label": "202 Import accepted",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Location",
+              "value": "/api/admin/products/import-logs/7001"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b4abdedd-a56f-4311-97dc-b18036000bf3",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products/import\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "97d56b05-bc62-48fa-8e91-f6c3dd898c60",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products/import\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "5a84fff6-d4f8-4b9a-9db8-9a1b10c92bfb",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unsupported-import-file\",\n  \"title\": \"Unsupported media type\",\n  \"status\": 415,\n  \"detail\": \"Upload a supported CSV or XLSX file.\",\n  \"instance\": \"/api/admin/products/import\"\n}",
+          "latency": 0,
+          "statusCode": 415,
+          "label": "415 Unsupported media type",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "7b255663-cb12-4194-a16e-cf5cb2ffa50b",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/import-file-too-large\",\n  \"title\": \"Payload too large\",\n  \"status\": 413,\n  \"detail\": \"The uploaded import file exceeds the configured size limit.\",\n  \"instance\": \"/api/admin/products/import\"\n}",
+          "latency": 0,
+          "statusCode": 413,
+          "label": "413 Payload too large",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4672cd8f-e6bd-4015-9cd0-f35753c42c82",
+      "type": "http",
+      "documentation": "Level 3 \u2014 Export products as CSV.",
+      "method": "get",
+      "endpoint": "admin/products/export",
+      "responses": [
+        {
+          "uuid": "dd396531-4394-48cd-90e5-88cf68ead513",
+          "body": "id,name,slug,basePrice,category,brand,active\n101,Classic Runner,classic-runner,899000,Shoes,Northstar,true\n102,Urban Court,urban-court,749000,Shoes,Avenue,true\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 CSV export",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/csv; charset=utf-8"
+            },
+            {
+              "key": "Content-Disposition",
+              "value": "attachment; filename=\"products-export.csv\""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "85e43e12-4e99-455a-b256-403f405a5d10",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products/export\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3de0df2c-4417-4fa4-bab1-88f19d7fb451",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products/export\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "5ce44a4d-979a-47cd-8a47-4d2b40ad7820",
+      "type": "http",
+      "documentation": "Level 3 \u2014 Product import history.",
+      "method": "get",
+      "endpoint": "admin/products/import-logs",
+      "responses": [
+        {
+          "uuid": "507ae1e9-609f-4419-aa89-447ad475847c",
+          "body": "{\n  \"data\": [\n    {\n      \"id\": 7001,\n      \"fileName\": \"products-september.xlsx\",\n      \"status\": \"COMPLETED_WITH_ERRORS\",\n      \"totalRows\": 100,\n      \"successRows\": 96,\n      \"failedRows\": 4,\n      \"createdAt\": \"2026-09-21T15:30:00Z\",\n      \"completedAt\": \"2026-09-21T15:31:12Z\"\n    },\n    {\n      \"id\": 7000,\n      \"fileName\": \"products-august.csv\",\n      \"status\": \"COMPLETED\",\n      \"totalRows\": 60,\n      \"successRows\": 60,\n      \"failedRows\": 0,\n      \"createdAt\": \"2026-08-31T09:00:00Z\",\n      \"completedAt\": \"2026-08-31T09:00:20Z\"\n    }\n  ],\n  \"meta\": {\n    \"pagination\": {\n      \"page\": 0,\n      \"size\": 20,\n      \"totalElements\": 2,\n      \"totalPages\": 1\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "200 Import logs",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1a1b639e-001a-43d4-a1e1-f30f45f7048d",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/unauthorized\",\n  \"title\": \"Unauthorized\",\n  \"status\": 401,\n  \"detail\": \"A valid Bearer access token is required.\",\n  \"instance\": \"/api/admin/products/import-logs\"\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "401 Unauthorized",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3f557ac6-3d6a-414a-a55e-3d459db8d1e2",
+          "body": "{\n  \"type\": \"https://api.example.com/problems/forbidden\",\n  \"title\": \"Forbidden\",\n  \"status\": 403,\n  \"detail\": \"The authenticated administrator does not have permission to perform this action.\",\n  \"instance\": \"/api/admin/products/import-logs\"\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "403 Forbidden",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/problem+json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "uuid": "4cb27df6-949e-4215-a46c-f6648f1d34c4",
+      "type": "route"
+    },
+    {
+      "uuid": "f1aa9830-c7a1-4fad-8064-7a379a8387fb",
+      "type": "route"
+    },
+    {
+      "uuid": "57262678-5813-407a-9e7d-fffca7ae1790",
+      "type": "route"
+    },
+    {
+      "uuid": "bba9bc42-df9e-4287-a6fd-765b209ef279",
+      "type": "route"
+    },
+    {
+      "uuid": "e881b905-f968-4d31-81fd-f6e040dddeaf",
+      "type": "route"
+    },
+    {
+      "uuid": "c6008d41-d3b2-484e-a922-40bf9488b1f3",
+      "type": "route"
+    },
+    {
+      "uuid": "16afe66c-c110-4c1c-8dee-b54a6e19b236",
+      "type": "route"
+    },
+    {
+      "uuid": "19c1df47-6ee6-4326-aa95-4ef4a95a4323",
+      "type": "route"
+    },
+    {
+      "uuid": "e597bba0-0030-4eaf-8696-6b30d6cb3d44",
+      "type": "route"
+    },
+    {
+      "uuid": "514ad085-71cd-408d-985d-4918f3cd97ed",
+      "type": "route"
+    },
+    {
+      "uuid": "ab1e1c01-6d17-4b4f-b85e-20a05485a14e",
+      "type": "route"
+    },
+    {
+      "uuid": "96c44546-6a77-4020-bcc4-7fc1dfdc24a6",
+      "type": "route"
+    },
+    {
+      "uuid": "69240de8-eabc-4160-8833-a6fc112fc4c2",
+      "type": "route"
+    },
+    {
+      "uuid": "bcf5af38-92b7-4f6b-814b-6efaa4468e96",
+      "type": "route"
+    },
+    {
+      "uuid": "733deaba-86c4-4b7a-8bf8-fddd4be3ff97",
+      "type": "route"
+    },
+    {
+      "uuid": "cb001a9c-ab61-4f45-bed2-349a552da7a2",
+      "type": "route"
+    },
+    {
+      "uuid": "403fcafd-d0ee-4f84-a147-cdcac630bff7",
+      "type": "route"
+    },
+    {
+      "uuid": "d687bcd3-bba5-4e48-94bd-d0229811b381",
+      "type": "route"
+    },
+    {
+      "uuid": "eb05b858-d30e-446d-a7f0-44e0431a3aeb",
+      "type": "route"
+    },
+    {
+      "uuid": "f3e297fb-d31a-4ee1-9c2b-2a98c59499e3",
+      "type": "route"
+    },
+    {
+      "uuid": "2924bf85-c16a-4ce4-8967-289edbf48472",
+      "type": "route"
+    },
+    {
+      "uuid": "efe1f54e-4914-4788-af8d-111174030494",
+      "type": "route"
+    },
+    {
+      "uuid": "4bc3f1cb-47ce-4160-acda-ba780c9b26cb",
+      "type": "route"
+    },
+    {
+      "uuid": "26ecd3e2-7764-4400-b907-825dba6732ba",
+      "type": "route"
+    },
+    {
+      "uuid": "4672cd8f-e6bd-4015-9cd0-f35753c42c82",
+      "type": "route"
+    },
+    {
+      "uuid": "5ce44a4d-979a-47cd-8a47-4d2b40ad7820",
+      "type": "route"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [],
+  "proxyReqHeaders": [],
+  "proxyResHeaders": [],
+  "data": [],
+  "callbacks": []
+}
