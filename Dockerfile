@@ -1,11 +1,11 @@
-FROM node:20-alpine
-
-RUN npm install -g @mockoon/cli
+FROM node:22-alpine
 
 WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev --no-audit --no-fund
 
-COPY data/marketplace.json ./data/marketplace.json
+COPY scripts ./scripts
+COPY data ./data
 
 EXPOSE 3000
-
-CMD ["sh", "-c", "mockoon-cli start --data data/marketplace.json --port ${PORT:-3000}"]
+CMD ["node", "scripts/start.mjs"]

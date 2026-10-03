@@ -1,8 +1,8 @@
 {
   "uuid": "b675f9d0-9813-433b-aed9-56f29f22675b",
   "lastMigration": 33,
-  "name": "Mockoon",
-  "endpointPrefix": "",
+  "name": "church",
+  "endpointPrefix": "church",
   "latency": 0,
   "port": 3000,
   "hostname": "",

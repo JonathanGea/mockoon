@@ -1,0 +1,1048 @@
+{
+  "uuid": "b1a1c1d1-0001-4a2b-8c3d-000000000001",
+  "lastMigration": 32,
+  "name": "motorcycle",
+  "endpointPrefix": "motorcycle",
+  "latency": 300,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "8a7144d4-0a1f-4a8e-ac29-3b9779d47104",
+      "type": "http",
+      "documentation": "GET /motorcycle/motors - list motor",
+      "method": "get",
+      "endpoint": "motors",
+      "responses": [
+        {
+          "uuid": "43cf5afb-31b1-4f10-a730-72dab3bcbc76",
+          "body": "[\n  {\n    \"id\": 1,\n    \"brand\": \"Honda\",\n    \"model\": \"Vario\",\n    \"variant\": \"160\",\n    \"year\": 2024,\n    \"price\": 28500000,\n    \"description\": \"Matic irit, cocok harian\",\n    \"specifications\": { \"cc\": 160, \"warna\": \"Merah\", \"transmisi\": \"Automatic\" },\n    \"status\": \"AVAILABLE\",\n    \"images\": [\"https://placehold.co/600x400?text=Honda+Vario\"]\n  },\n  {\n    \"id\": 2,\n    \"brand\": \"Yamaha\",\n    \"model\": \"NMAX\",\n    \"variant\": \"155\",\n    \"year\": 2023,\n    \"price\": 33000000,\n    \"description\": \"Matic premium, nyaman jarak jauh\",\n    \"specifications\": { \"cc\": 155, \"warna\": \"Hitam\", \"transmisi\": \"Automatic\" },\n    \"status\": \"AVAILABLE\",\n    \"images\": [\"https://placehold.co/600x400?text=Yamaha+NMAX\"]\n  },\n  {\n    \"id\": 3,\n    \"brand\": \"Honda\",\n    \"model\": \"Beat\",\n    \"variant\": \"Street\",\n    \"year\": 2022,\n    \"price\": 18500000,\n    \"description\": \"Sudah terjual\",\n    \"specifications\": { \"cc\": 110, \"warna\": \"Putih\", \"transmisi\": \"Automatic\" },\n    \"status\": \"SOLD\",\n    \"images\": [\"https://placehold.co/600x400?text=Honda+Beat\"]\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "a76947fc-3572-4052-b9d0-75507fe7d216",
+      "type": "http",
+      "documentation": "GET /motorcycle/motors/:id - detail motor",
+      "method": "get",
+      "endpoint": "motors/:id",
+      "responses": [
+        {
+          "uuid": "36032c7b-a106-4d31-b8ed-75cd255a6f2e",
+          "body": "{\n  \"id\": {{urlParam 'id'}},\n  \"brand\": \"Honda\",\n  \"model\": \"Vario\",\n  \"variant\": \"160\",\n  \"year\": 2024,\n  \"price\": 28500000,\n  \"description\": \"Matic irit, cocok harian\",\n  \"specifications\": { \"cc\": 160, \"warna\": \"Merah\", \"transmisi\": \"Automatic\" },\n  \"status\": \"AVAILABLE\",\n  \"images\": [\"https://placehold.co/600x400?text=Honda+Vario\"]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success (contoh statis — sesuaikan manual per id jika perlu, atau pakai Data Bucket)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "300fd788-05c5-43b1-85ad-a79f254e1758",
+      "type": "http",
+      "documentation": "POST /motorcycle/motors - create motor",
+      "method": "post",
+      "endpoint": "motors",
+      "responses": [
+        {
+          "uuid": "72f0e1fc-354d-41dc-8303-0c910d6ba5e7",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "261b1883-916f-40b6-89de-8e174284bd24",
+      "type": "http",
+      "documentation": "PATCH /motorcycle/motors/:id - update motor",
+      "method": "patch",
+      "endpoint": "motors/:id",
+      "responses": [
+        {
+          "uuid": "66b0b6c9-df3f-4243-82ca-fbdb288fe82f",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "015c2014-6cc2-4a84-8b03-040f120d526b",
+      "type": "http",
+      "documentation": "DELETE /motorcycle/motors/:id - nonaktifkan motor",
+      "method": "delete",
+      "endpoint": "motors/:id",
+      "responses": [
+        {
+          "uuid": "1bb27276-34cf-4eed-85b6-3f99509573d8",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "No Content",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "02a323bd-ae56-48ab-88df-55fc25b5103e",
+      "type": "http",
+      "documentation": "GET /motorcycle/customers - list customer",
+      "method": "get",
+      "endpoint": "customers",
+      "responses": [
+        {
+          "uuid": "017cf3f4-8b59-420c-a881-fe626eb37d78",
+          "body": "[\n  { \"id\": 1, \"name\": \"Dedi Kurniawan\", \"phone\": \"081234567890\", \"email\": \"dedi@example.com\", \"address\": \"Jakarta\", \"notes\": \"\" },\n  { \"id\": 2, \"name\": \"Rina Wulandari\", \"phone\": \"081298765432\", \"email\": \"rina@example.com\", \"address\": \"Surabaya\", \"notes\": \"\" }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "c97055bb-871a-4ff2-b118-d1599af168cf",
+      "type": "http",
+      "documentation": "GET /motorcycle/customers/:id - detail customer",
+      "method": "get",
+      "endpoint": "customers/:id",
+      "responses": [
+        {
+          "uuid": "a74f21fc-1824-4f32-953a-ecf09c44cf2e",
+          "body": "{\n  \"id\": {{urlParam 'id'}},\n  \"name\": \"Dedi Kurniawan\",\n  \"phone\": \"081234567890\",\n  \"email\": \"dedi@example.com\",\n  \"address\": \"Jakarta\",\n  \"notes\": \"\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "444ca61f-c697-4221-80e0-01c0ba5a7023",
+      "type": "http",
+      "documentation": "GET /motorcycle/customers/:id/sales - riwayat penjualan customer",
+      "method": "get",
+      "endpoint": "customers/:id/sales",
+      "responses": [
+        {
+          "uuid": "f31450e1-f07e-43a3-b2d2-b860cbdb1743",
+          "body": "[\n  { \"id\": 1, \"status\": \"COMPLETED\", \"totalAmount\": 18500000, \"saleDate\": \"2026-08-20\" }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "2c8cf498-0143-4b22-bbe5-c58e518fbd93",
+      "type": "http",
+      "documentation": "POST /motorcycle/customers - create customer",
+      "method": "post",
+      "endpoint": "customers",
+      "responses": [
+        {
+          "uuid": "cb477e68-eb99-491d-a606-1819cc31abee",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "3a61c061-b05a-4acd-bb9f-8fceca2cdb43",
+      "type": "http",
+      "documentation": "PATCH /motorcycle/customers/:id - update customer",
+      "method": "patch",
+      "endpoint": "customers/:id",
+      "responses": [
+        {
+          "uuid": "44ab6d7a-65c5-4fca-a4ff-3c95e0435665",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "4c552f10-830d-42a1-8b7a-59bde6973707",
+      "type": "http",
+      "documentation": "DELETE /motorcycle/customers/:id",
+      "method": "delete",
+      "endpoint": "customers/:id",
+      "responses": [
+        {
+          "uuid": "44c05b85-2551-42e4-85e1-618503b3f591",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "No Content",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "27d60462-51db-44a7-8b3d-55366046eb50",
+      "type": "http",
+      "documentation": "GET /motorcycle/sales - list penjualan",
+      "method": "get",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "ffecb492-f954-4008-a451-9a06d1e9218f",
+          "body": "[\n  {\n    \"id\": 1,\n    \"customerId\": 1,\n    \"salesUserId\": 3,\n    \"status\": \"COMPLETED\",\n    \"totalAmount\": 18500000,\n    \"saleDate\": \"2026-08-20\",\n    \"notes\": \"\",\n    \"items\": [\n      { \"id\": 1, \"motorcycleId\": 3, \"price\": 18500000, \"quantity\": 1, \"subtotal\": 18500000 }\n    ]\n  }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "a128f491-11b7-4a2d-9335-b8420f798395",
+      "type": "http",
+      "documentation": "GET /motorcycle/sales/:id - detail penjualan",
+      "method": "get",
+      "endpoint": "sales/:id",
+      "responses": [
+        {
+          "uuid": "e4e671aa-f332-4998-83a5-f408da2a1818",
+          "body": "{\n  \"id\": {{urlParam 'id'}},\n  \"customerId\": 1,\n  \"salesUserId\": 3,\n  \"status\": \"COMPLETED\",\n  \"totalAmount\": 18500000,\n  \"saleDate\": \"2026-08-20\",\n  \"notes\": \"\",\n  \"items\": [\n    { \"id\": 1, \"motorcycleId\": 3, \"price\": 18500000, \"quantity\": 1, \"subtotal\": 18500000 }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "2a0efb28-78a3-4f47-a5b6-a0c2e52ff253",
+      "type": "http",
+      "documentation": "POST /motorcycle/sales - create penjualan (status default DRAFT)",
+      "method": "post",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "534a3fb2-f93a-4afd-9778-a37498507ceb",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "3d6cbd5b-6d98-4016-8f2d-2a515152f5a6",
+      "type": "http",
+      "documentation": "PATCH /motorcycle/sales/:id - update status penjualan",
+      "method": "patch",
+      "endpoint": "sales/:id",
+      "responses": [
+        {
+          "uuid": "d081107e-b195-4fe6-adcd-00071a6a4570",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "4b113898-f5b1-4ccd-99f5-1cfc749e2a43",
+      "type": "http",
+      "documentation": "DELETE /motorcycle/sales/:id - batalkan (CANCELLED)",
+      "method": "delete",
+      "endpoint": "sales/:id",
+      "responses": [
+        {
+          "uuid": "6e2efae0-f861-405d-b556-c6367dc95485",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "No Content",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "74346b12-6205-4cc3-a8ea-6217e2b6ef52",
+      "type": "http",
+      "documentation": "GET /motorcycle/users - list user",
+      "method": "get",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "6dcd35f5-63c8-4b07-bb0f-e9ffaca9fb8d",
+          "body": "[\n  { \"id\": 1, \"name\": \"Budi Owner\", \"email\": \"budi@company.com\", \"status\": \"ACTIVE\", \"roles\": [\"OWNER\"] },\n  { \"id\": 2, \"name\": \"Sari Admin\", \"email\": \"sari@company.com\", \"status\": \"ACTIVE\", \"roles\": [\"ADMIN\"] },\n  { \"id\": 3, \"name\": \"Andi Sales\", \"email\": \"andi@company.com\", \"status\": \"ACTIVE\", \"roles\": [\"SALES\"] }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "454eee1b-256a-4d53-9826-e9a70eab597a",
+      "type": "http",
+      "documentation": "GET /motorcycle/users/:id - detail user",
+      "method": "get",
+      "endpoint": "users/:id",
+      "responses": [
+        {
+          "uuid": "fa129379-868a-48e5-9fbf-1d5165d32fae",
+          "body": "{\n  \"id\": {{urlParam 'id'}},\n  \"name\": \"Budi Owner\",\n  \"email\": \"budi@company.com\",\n  \"status\": \"ACTIVE\",\n  \"roles\": [\"OWNER\"]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "230999cf-73c5-46e7-ac4b-64cc39763061",
+      "type": "http",
+      "documentation": "POST /motorcycle/users - create user",
+      "method": "post",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "503e6724-d821-41e2-9ba6-9d9ff3b9a2fc",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "04fb5684-a0ef-4965-9211-0f2157726dfd",
+      "type": "http",
+      "documentation": "PATCH /motorcycle/users/:id - update user",
+      "method": "patch",
+      "endpoint": "users/:id",
+      "responses": [
+        {
+          "uuid": "6589b5e3-328f-4f3b-8514-8d1a883c7d3d",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "058f7845-92ec-4352-be3b-748c4fb1e378",
+      "type": "http",
+      "documentation": "DELETE /motorcycle/users/:id - nonaktifkan user",
+      "method": "delete",
+      "endpoint": "users/:id",
+      "responses": [
+        {
+          "uuid": "63253b33-a336-4073-8994-7856401c1617",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "No Content",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "28b750b5-c04d-4594-b8ba-52688b514ea3",
+      "type": "http",
+      "documentation": "GET /motorcycle/roles - list role",
+      "method": "get",
+      "endpoint": "roles",
+      "responses": [
+        {
+          "uuid": "f81157de-221c-43b1-bd8a-2b36239fce2b",
+          "body": "[\n  { \"id\": 1, \"name\": \"OWNER\", \"permissions\": [\"motor.view\",\"motor.create\",\"motor.edit\",\"motor.delete\",\"customer.view\",\"customer.create\",\"customer.edit\",\"customer.delete\",\"sale.view\",\"sale.create\",\"sale.edit\",\"sale.delete\",\"user.manage\",\"role.manage\"] },\n  { \"id\": 2, \"name\": \"ADMIN\", \"permissions\": [\"motor.view\",\"motor.create\",\"motor.edit\",\"motor.delete\",\"customer.view\",\"customer.create\",\"customer.edit\",\"customer.delete\",\"sale.view\",\"sale.create\",\"sale.edit\",\"sale.delete\",\"user.manage\",\"role.manage\"] },\n  { \"id\": 3, \"name\": \"SALES\", \"permissions\": [\"motor.view\",\"customer.view\",\"customer.create\",\"customer.edit\",\"sale.view\",\"sale.create\",\"sale.edit\"] }\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "13391b80-4f80-465c-8db3-1dbb10e42238",
+      "type": "http",
+      "documentation": "GET /motorcycle/roles/:id - detail role + permission",
+      "method": "get",
+      "endpoint": "roles/:id",
+      "responses": [
+        {
+          "uuid": "52f97b03-fb2f-43ff-b2a3-e7ce301875d5",
+          "body": "{\n  \"id\": {{urlParam 'id'}},\n  \"name\": \"SALES\",\n  \"permissions\": [\"motor.view\",\"customer.view\",\"customer.create\",\"customer.edit\",\"sale.view\",\"sale.create\",\"sale.edit\"]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "4d46e075-efe1-4951-9dba-a06b1bcc804a",
+      "type": "http",
+      "documentation": "POST /motorcycle/roles - create role",
+      "method": "post",
+      "endpoint": "roles",
+      "responses": [
+        {
+          "uuid": "0c0351eb-1da4-4242-a881-0727b2f8727f",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Created",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "187677f5-9dce-43dc-bedc-835e3e6f3f9f",
+      "type": "http",
+      "documentation": "PATCH /motorcycle/roles/:id - update role & assign permission",
+      "method": "patch",
+      "endpoint": "roles/:id",
+      "responses": [
+        {
+          "uuid": "61e76cfe-a31b-4a8f-9d21-17f43c290bb6",
+          "body": "{{{body}}}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Updated",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "f2814b3c-6d47-4de1-86c0-32b35d260202",
+      "type": "http",
+      "documentation": "DELETE /motorcycle/roles/:id",
+      "method": "delete",
+      "endpoint": "roles/:id",
+      "responses": [
+        {
+          "uuid": "e8cf6fc0-3501-4458-8837-4b8b7dbdd864",
+          "body": "",
+          "latency": 0,
+          "statusCode": 204,
+          "label": "No Content",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    },
+    {
+      "uuid": "5900bdf7-b3af-490c-9e3e-7c993432c3db",
+      "type": "http",
+      "documentation": "GET /motorcycle/permissions - read only",
+      "method": "get",
+      "endpoint": "permissions",
+      "responses": [
+        {
+          "uuid": "e88a9c2e-5f9a-4e6b-beb6-8b55439a99e0",
+          "body": "[\n  \"motor.view\",\"motor.create\",\"motor.edit\",\"motor.delete\",\n  \"customer.view\",\"customer.create\",\"customer.edit\",\"customer.delete\",\n  \"sale.view\",\"sale.create\",\"sale.edit\",\"sale.delete\",\n  \"user.manage\",\"role.manage\"\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Success",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "responseMode": null,
+      "enabled": true
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "8a7144d4-0a1f-4a8e-ac29-3b9779d47104"
+    },
+    {
+      "type": "route",
+      "uuid": "a76947fc-3572-4052-b9d0-75507fe7d216"
+    },
+    {
+      "type": "route",
+      "uuid": "300fd788-05c5-43b1-85ad-a79f254e1758"
+    },
+    {
+      "type": "route",
+      "uuid": "261b1883-916f-40b6-89de-8e174284bd24"
+    },
+    {
+      "type": "route",
+      "uuid": "015c2014-6cc2-4a84-8b03-040f120d526b"
+    },
+    {
+      "type": "route",
+      "uuid": "02a323bd-ae56-48ab-88df-55fc25b5103e"
+    },
+    {
+      "type": "route",
+      "uuid": "c97055bb-871a-4ff2-b118-d1599af168cf"
+    },
+    {
+      "type": "route",
+      "uuid": "444ca61f-c697-4221-80e0-01c0ba5a7023"
+    },
+    {
+      "type": "route",
+      "uuid": "2c8cf498-0143-4b22-bbe5-c58e518fbd93"
+    },
+    {
+      "type": "route",
+      "uuid": "3a61c061-b05a-4acd-bb9f-8fceca2cdb43"
+    },
+    {
+      "type": "route",
+      "uuid": "4c552f10-830d-42a1-8b7a-59bde6973707"
+    },
+    {
+      "type": "route",
+      "uuid": "27d60462-51db-44a7-8b3d-55366046eb50"
+    },
+    {
+      "type": "route",
+      "uuid": "a128f491-11b7-4a2d-9335-b8420f798395"
+    },
+    {
+      "type": "route",
+      "uuid": "2a0efb28-78a3-4f47-a5b6-a0c2e52ff253"
+    },
+    {
+      "type": "route",
+      "uuid": "3d6cbd5b-6d98-4016-8f2d-2a515152f5a6"
+    },
+    {
+      "type": "route",
+      "uuid": "4b113898-f5b1-4ccd-99f5-1cfc749e2a43"
+    },
+    {
+      "type": "route",
+      "uuid": "74346b12-6205-4cc3-a8ea-6217e2b6ef52"
+    },
+    {
+      "type": "route",
+      "uuid": "454eee1b-256a-4d53-9826-e9a70eab597a"
+    },
+    {
+      "type": "route",
+      "uuid": "230999cf-73c5-46e7-ac4b-64cc39763061"
+    },
+    {
+      "type": "route",
+      "uuid": "04fb5684-a0ef-4965-9211-0f2157726dfd"
+    },
+    {
+      "type": "route",
+      "uuid": "058f7845-92ec-4352-be3b-748c4fb1e378"
+    },
+    {
+      "type": "route",
+      "uuid": "28b750b5-c04d-4594-b8ba-52688b514ea3"
+    },
+    {
+      "type": "route",
+      "uuid": "13391b80-4f80-465c-8db3-1dbb10e42238"
+    },
+    {
+      "type": "route",
+      "uuid": "4d46e075-efe1-4951-9dba-a06b1bcc804a"
+    },
+    {
+      "type": "route",
+      "uuid": "187677f5-9dce-43dc-bedc-835e3e6f3f9f"
+    },
+    {
+      "type": "route",
+      "uuid": "f2814b3c-6d47-4de1-86c0-32b35d260202"
+    },
+    {
+      "type": "route",
+      "uuid": "5900bdf7-b3af-490c-9e3e-7c993432c3db"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

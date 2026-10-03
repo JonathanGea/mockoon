@@ -1,0 +1,19 @@
+{
+  "name": "centralized-mock-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "validate": "node scripts/start.mjs --validate",
+    "test": "node --test",
+    "new-project": "node scripts/new-project.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@mockoon/cli": "9.9.0",
+    "@mockoon/commons": "9.9.0"
+  }
+}
