@@ -1,0 +1,249 @@
+[
+  {
+    "id": "order-2026-000001",
+    "orderNumber": "ORD-2026-000001",
+    "channel": "ONLINE",
+    "status": "PENDING",
+    "paymentStatus": "PENDING",
+    "customerId": "customer-ava-chen",
+    "customerSnapshot": {
+      "name": "Ava Chen",
+      "email": "ava.chen@example.test",
+      "phone": "+1 555 010 1001"
+    },
+    "shippingAddressSnapshot": {
+      "recipientName": "Ava Chen",
+      "phone": "+1 555 010 1001",
+      "line1": "100 Market Street",
+      "line2": "Apartment 8",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "countryCode": "US"
+    },
+    "items": [
+      {
+        "id": "order-item-2026-000001-1",
+        "productId": "product-pegasus-41",
+        "variantId": "variant-pegasus-41-black-42",
+        "sku": "PEG41-BLK-42",
+        "productName": "Nike Pegasus 41",
+        "variantName": "Black / 42",
+        "imageUrl": null,
+        "quantity": 1,
+        "unitPrice": 140,
+        "lineDiscount": 0,
+        "lineTotal": 140
+      }
+    ],
+    "totals": {
+      "subtotal": 140,
+      "discountTotal": 0,
+      "shippingTotal": 12,
+      "grandTotal": 152
+    },
+    "createdAt": "2026-09-22T09:15:00.000Z",
+    "statusHistory": [
+      {
+        "id": "order-history-2026-000001-1",
+        "orderId": "order-2026-000001",
+        "fromStatus": null,
+        "toStatus": "PENDING",
+        "occurredAt": "2026-09-22T09:15:00.000Z",
+        "note": "Order created from the online channel."
+      }
+    ]
+  },
+  {
+    "id": "order-2026-000002",
+    "orderNumber": "ORD-2026-000002",
+    "channel": "POS",
+    "status": "PROCESSING",
+    "paymentStatus": "PAID",
+    "customerId": null,
+    "customerSnapshot": {
+      "name": "Walk-in Customer",
+      "email": null,
+      "phone": null
+    },
+    "shippingAddressSnapshot": null,
+    "items": [
+      {
+        "id": "order-item-2026-000002-1",
+        "productId": "product-adizero-sl",
+        "variantId": "variant-adizero-sl-blue-42",
+        "sku": "ADZSL-BLU-42",
+        "productName": "Adidas Adizero SL",
+        "variantName": "Blue / 42",
+        "imageUrl": null,
+        "quantity": 1,
+        "unitPrice": 120,
+        "lineDiscount": 10,
+        "lineTotal": 110
+      },
+      {
+        "id": "order-item-2026-000002-2",
+        "productId": "product-pegasus-41",
+        "variantId": "variant-pegasus-41-white-42",
+        "sku": "PEG41-WHT-42",
+        "productName": "Nike Pegasus 41",
+        "variantName": "White / 42",
+        "imageUrl": null,
+        "quantity": 1,
+        "unitPrice": 140,
+        "lineDiscount": 0,
+        "lineTotal": 140
+      }
+    ],
+    "totals": {
+      "subtotal": 260,
+      "discountTotal": 10,
+      "shippingTotal": 0,
+      "grandTotal": 250
+    },
+    "createdAt": "2026-09-21T16:40:00.000Z",
+    "statusHistory": [
+      {
+        "id": "order-history-2026-000002-1",
+        "orderId": "order-2026-000002",
+        "fromStatus": null,
+        "toStatus": "PENDING",
+        "occurredAt": "2026-09-21T16:40:00.000Z",
+        "note": "Order created at POS."
+      },
+      {
+        "id": "order-history-2026-000002-2",
+        "orderId": "order-2026-000002",
+        "fromStatus": "PENDING",
+        "toStatus": "PROCESSING",
+        "occurredAt": "2026-09-21T16:43:00.000Z",
+        "note": "Order accepted for processing."
+      }
+    ]
+  },
+  {
+    "id": "order-2026-000003",
+    "orderNumber": "ORD-2026-000003",
+    "channel": "ONLINE",
+    "status": "COMPLETED",
+    "paymentStatus": "PAID",
+    "customerId": "customer-jordan-rivera",
+    "customerSnapshot": {
+      "name": "Jordan Rivera",
+      "email": "jordan.rivera@example.test",
+      "phone": "+1 555 010 1002"
+    },
+    "shippingAddressSnapshot": {
+      "recipientName": "Jordan Rivera",
+      "phone": "+1 555 010 1002",
+      "line1": "42 Cedar Avenue",
+      "line2": null,
+      "city": "Oakland",
+      "region": "CA",
+      "postalCode": "94607",
+      "countryCode": "US"
+    },
+    "items": [
+      {
+        "id": "order-item-2026-000003-1",
+        "productId": "product-pegasus-41",
+        "variantId": "variant-pegasus-41-black-42",
+        "sku": "PEG41-BLK-42",
+        "productName": "Nike Pegasus 41",
+        "variantName": "Black / 42",
+        "imageUrl": null,
+        "quantity": 2,
+        "unitPrice": 140,
+        "lineDiscount": 20,
+        "lineTotal": 260
+      }
+    ],
+    "totals": {
+      "subtotal": 280,
+      "discountTotal": 20,
+      "shippingTotal": 0,
+      "grandTotal": 260
+    },
+    "createdAt": "2026-09-19T12:05:00.000Z",
+    "statusHistory": [
+      {
+        "id": "order-history-2026-000003-1",
+        "orderId": "order-2026-000003",
+        "fromStatus": null,
+        "toStatus": "PENDING",
+        "occurredAt": "2026-09-19T12:05:00.000Z",
+        "note": "Order created from the online channel."
+      },
+      {
+        "id": "order-history-2026-000003-2",
+        "orderId": "order-2026-000003",
+        "fromStatus": "PENDING",
+        "toStatus": "PROCESSING",
+        "occurredAt": "2026-09-19T12:12:00.000Z",
+        "note": null
+      },
+      {
+        "id": "order-history-2026-000003-3",
+        "orderId": "order-2026-000003",
+        "fromStatus": "PROCESSING",
+        "toStatus": "COMPLETED",
+        "occurredAt": "2026-09-20T15:30:00.000Z",
+        "note": "Order completed."
+      }
+    ]
+  },
+  {
+    "id": "order-2026-000004",
+    "orderNumber": "ORD-2026-000004",
+    "channel": "POS",
+    "status": "CANCELLED",
+    "paymentStatus": "PENDING",
+    "customerId": null,
+    "customerSnapshot": {
+      "name": "Walk-in Customer",
+      "email": null,
+      "phone": null
+    },
+    "shippingAddressSnapshot": null,
+    "items": [
+      {
+        "id": "order-item-2026-000004-1",
+        "productId": "product-adizero-sl",
+        "variantId": "variant-adizero-sl-blue-42",
+        "sku": "ADZSL-BLU-42",
+        "productName": "Adidas Adizero SL",
+        "variantName": "Blue / 42",
+        "imageUrl": null,
+        "quantity": 1,
+        "unitPrice": 120,
+        "lineDiscount": 0,
+        "lineTotal": 120
+      }
+    ],
+    "totals": {
+      "subtotal": 120,
+      "discountTotal": 0,
+      "shippingTotal": 0,
+      "grandTotal": 120
+    },
+    "createdAt": "2026-09-18T10:20:00.000Z",
+    "statusHistory": [
+      {
+        "id": "order-history-2026-000004-1",
+        "orderId": "order-2026-000004",
+        "fromStatus": null,
+        "toStatus": "PENDING",
+        "occurredAt": "2026-09-18T10:20:00.000Z",
+        "note": "Order created at POS."
+      },
+      {
+        "id": "order-history-2026-000004-2",
+        "orderId": "order-2026-000004",
+        "fromStatus": "PENDING",
+        "toStatus": "CANCELLED",
+        "occurredAt": "2026-09-18T10:24:00.000Z",
+        "note": "Customer cancelled before payment."
+      }
+    ]
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "variantId": "variant-adizero-evo-sl-exo-beige-41",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-evo-sl-exo-beige-42",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-evo-sl-exo-grey-41",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-evo-sl-exo-grey-42",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-sl-blue-41",
+    "warehouseId": "warehouse-city",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-sl-black-42",
+    "warehouseId": "warehouse-city",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-sl-white-42",
+    "warehouseId": "warehouse-city",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adizero-sl-white-41",
+    "warehouseId": "warehouse-city",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-zoom-vomero-5-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-nike-zoom-vomero-5-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-adidas-ultraboost-light-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-ultraboost-light-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-novablast-5-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-novablast-5-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-530-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-530-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-pegasus-trail-5-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-pegasus-trail-5-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-terrex-ax4-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-terrex-ax4-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-gel-trabuco-12-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-gel-trabuco-12-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-fresh-foam-x-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-new-balance-fresh-foam-x-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-nike-dri-fit-training-tee-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-dri-fit-training-tee-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-own-the-run-tee-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-own-the-run-tee-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-core-singlet-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-core-singlet-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-accelerate-short-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-accelerate-short-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-pro-3in-short-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-pro-3in-short-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-tiro-24-pants-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-tiro-24-pants-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-court-skirt-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-asics-court-skirt-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-new-balance-athletics-hoodie-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-athletics-hoodie-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-academy-football-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-academy-football-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-ucl-training-ball-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-ucl-training-ball-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-elite-basketball-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-elite-basketball-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-padel-racket-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-padel-racket-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-gel-resolution-9-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-gel-resolution-9-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-ct302-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-new-balance-ct302-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 2,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-nike-downshifter-13-kids-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-downshifter-13-kids-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-duramo-sl-kids-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-duramo-sl-kids-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-upcourt-6-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-asics-upcourt-6-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-480-kids-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-new-balance-480-kids-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-yoga-mat-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-nike-yoga-mat-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 9,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-training-gloves-1",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-adidas-training-gloves-2",
+    "warehouseId": "warehouse-main",
+    "onHand": 0,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-pegasus-41-black-42",
+    "warehouseId": "warehouse-main",
+    "onHand": 12,
+    "reserved": 2
+  },
+  {
+    "variantId": "variant-pegasus-41-white-42",
+    "warehouseId": "warehouse-main",
+    "onHand": 8,
+    "reserved": 1
+  },
+  {
+    "variantId": "variant-adizero-sl-blue-42",
+    "warehouseId": "warehouse-city",
+    "onHand": 6,
+    "reserved": 0
+  },
+  {
+    "variantId": "variant-gel-kayano-31-black-42",
+    "warehouseId": "warehouse-main",
+    "onHand": 4,
+    "reserved": 0
+  }
+]

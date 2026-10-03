@@ -1,0 +1,60 @@
+{
+  "privacy": {
+    "introduction": "Terakhir diperbarui: 21 September 2026. Ini adalah teks awal template dan harus ditinjau sesuai kebutuhan hukum proyek sebelum dipublikasikan.",
+    "sections": [
+      {
+        "id": "privacy-data",
+        "title": "Informasi yang dikumpulkan",
+        "body": "Jika fitur pengiriman diaktifkan, kami dapat memproses informasi yang Anda berikan melalui formulir, seperti nama, alamat email, dan isi pesan."
+      },
+      {
+        "id": "privacy-use",
+        "title": "Penggunaan informasi",
+        "body": "Informasi digunakan untuk menanggapi pertanyaan, menjalankan layanan yang diminta, dan memenuhi kewajiban yang berlaku."
+      },
+      {
+        "id": "privacy-control",
+        "title": "Pilihan Anda",
+        "body": "Hubungi pengelola layanan untuk meminta akses, koreksi, atau penghapusan informasi Anda, sesuai hukum yang berlaku."
+      }
+    ]
+  },
+  "terms": {
+    "introduction": "Terakhir diperbarui: 21 September 2026. Teks awal ini perlu disesuaikan dan ditinjau sesuai model layanan serta yurisdiksi proyek.",
+    "sections": [
+      {
+        "id": "terms-use",
+        "title": "Penggunaan layanan",
+        "body": "Gunakan layanan secara sah dan jangan mengganggu keamanan, ketersediaan, atau penggunaan pihak lain."
+      },
+      {
+        "id": "terms-content",
+        "title": "Konten dan informasi",
+        "body": "Anda bertanggung jawab atas informasi yang dikirimkan dan memastikan bahwa Anda memiliki hak untuk membagikannya."
+      },
+      {
+        "id": "terms-changes",
+        "title": "Perubahan ketentuan",
+        "body": "Ketentuan dapat diperbarui bila diperlukan. Tanggal pembaruan akan dicantumkan pada halaman ini."
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Untuk apa template ini digunakan?",
+      "answer": "Sebagai titik awal public site yang netral, responsif, dan dapat diakses."
+    },
+    {
+      "question": "Apakah kontennya dapat disesuaikan?",
+      "answer": "Ya. Ganti teks, struktur informasi, dan tindakan sesuai kebutuhan proyek tanpa mengubah fondasi komponen bersama."
+    },
+    {
+      "question": "Ke mana saya mengirim pertanyaan?",
+      "answer": "Gunakan halaman kontak untuk membuka draft pesan di WhatsApp."
+    },
+    {
+      "question": "Di mana kebijakan penggunaan data?",
+      "answer": "Kebijakan privasi dan ketentuan layanan tersedia melalui tautan pada footer."
+    }
+  ]
+}

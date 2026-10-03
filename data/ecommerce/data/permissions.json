@@ -1,0 +1,12 @@
+[
+  "catalog.manage",
+  "inventory.manage",
+  "orders.manage",
+  "content.manage",
+  "reports.view",
+  "ui-kit.view",
+  "users.view",
+  "users.manage",
+  "roles.view",
+  "roles.manage"
+]

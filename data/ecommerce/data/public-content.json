@@ -1,0 +1,3245 @@
+{
+  "products": [
+    {
+      "id": "product-pegasus-41",
+      "name": "Nike Pegasus 41",
+      "slug": "nike-pegasus-41",
+      "description": "Responsive daily running shoes for everyday mileage.",
+      "brandId": "brand-nike",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "images": [
+        {
+          "id": "pegasus-hero",
+          "alt": "Nike Pegasus 41 running shoe",
+          "url": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/d15d9326-cb42-430d-9abb-58a923e80205/AIR+ZOOM+PEGASUS+41+WIDE.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-pegasus-41-black-42",
+          "name": "Black / 42",
+          "sku": "PEG41-BLK-42",
+          "price": 2199000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-pegasus-41-white-42",
+          "name": "White / 42",
+          "sku": "PEG41-WHT-42",
+          "price": 2199000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-white"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-zoom-vomero-5",
+      "name": "Nike Zoom Vomero 5",
+      "slug": "nike-zoom-vomero-5",
+      "description": "Nike Zoom Vomero 5 for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "nike-zoom-vomero-5-image-1",
+          "alt": "Nike Zoom Vomero 5 product view",
+          "url": "https://static.nike.com/a/images/t_default/e0a6bba0-1188-4008-9a5e-5c5b52a5c9b9/NIKE+ZOOM+VOMERO+5.png"
+        },
+        {
+          "id": "nike-zoom-vomero-5-image-2",
+          "alt": "Nike Zoom Vomero 5 product view",
+          "url": "https://static.nike.com/a/images/t_default/e0a6bba0-1188-4008-9a5e-5c5b52a5c9b9/NIKE+ZOOM+VOMERO+5.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-zoom-vomero-5-1",
+          "name": "Black",
+          "sku": "NIKE-ZOO-1",
+          "price": 2199000,
+          "compareAtPrice": 2499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-zoom-vomero-5-2",
+          "name": "Blue",
+          "sku": "NIKE-ZOO-2",
+          "price": 2199000,
+          "compareAtPrice": 2499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-ultraboost-light",
+      "name": "Adidas Ultraboost Light",
+      "slug": "adidas-ultraboost-light",
+      "description": "Adidas Ultraboost Light for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "adidas-ultraboost-light-image-1",
+          "alt": "Adidas Ultraboost Light product view",
+          "url": "https://assets.adidas.com/images/w_500,f_auto,q_auto/280b67363a524595969d68568751491a_9366/Ultraboost_Light_Shoes_Blue_IE1752_HM1.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-ultraboost-light-1",
+          "name": "Black",
+          "sku": "ADIDAS-U-1",
+          "price": 2899000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-ultraboost-light-2",
+          "name": "Blue",
+          "sku": "ADIDAS-U-2",
+          "price": 2899000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-novablast-5",
+      "name": "ASICS Novablast 5",
+      "slug": "asics-novablast-5",
+      "description": "ASICS Novablast 5 for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "asics-novablast-5-image-1",
+          "alt": "ASICS Novablast 5 product view",
+          "url": "https://therunhouse.com/cdn/shop/collections/680918_v3.jpg?v=1759258744"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-novablast-5-1",
+          "name": "Black",
+          "sku": "ASICS-NO-1",
+          "price": 2499000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-novablast-5-2",
+          "name": "Blue",
+          "sku": "ASICS-NO-2",
+          "price": 2499000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-530",
+      "name": "New Balance 530",
+      "slug": "new-balance-530",
+      "description": "New Balance 530 for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-sportstyle"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "new-balance-530-image-1",
+          "alt": "New Balance 530 product view",
+          "url": "https://dtlrshop.it.com/wp-content/uploads/2026/07/NB_MR530CCP_M014-scaled.jpg"
+        },
+        {
+          "id": "new-balance-530-image-2",
+          "alt": "New Balance 530 product view",
+          "url": "https://dtlrshop.it.com/wp-content/uploads/2026/07/NB_MR530CCP_M014-scaled.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-530-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 1699000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-530-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 1699000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-pegasus-trail-5",
+      "name": "Nike Pegasus Trail 5",
+      "slug": "nike-pegasus-trail-5",
+      "description": "Nike Pegasus Trail 5 for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-trail-shoes",
+      "activityIds": [
+        "activity-outdoor"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "nike-pegasus-trail-5-image-1",
+          "alt": "Nike Pegasus Trail 5 product view",
+          "url": "http://www.gooutdoors.co.uk/cdn/shop/files/go_773412_a.jpg?v=1765468567&width=4000"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-pegasus-trail-5-1",
+          "name": "Black",
+          "sku": "NIKE-PEG-1",
+          "price": 2399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-pegasus-trail-5-2",
+          "name": "Blue",
+          "sku": "NIKE-PEG-2",
+          "price": 2399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-terrex-ax4",
+      "name": "Adidas Terrex AX4",
+      "slug": "adidas-terrex-ax4",
+      "description": "Adidas Terrex AX4 for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-trail-shoes",
+      "activityIds": [
+        "activity-outdoor"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "adidas-terrex-ax4-image-1",
+          "alt": "Adidas Terrex AX4 product view",
+          "url": "https://images.mtbiker.sk/eshop/big/338590-adidas-terrex-ax4-topanky-wonder-beige-carbon-pure-ruby-1741764247_67d1369796fa4.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-terrex-ax4-1",
+          "name": "Black",
+          "sku": "ADIDAS-T-1",
+          "price": 1999000,
+          "compareAtPrice": 2299000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-terrex-ax4-2",
+          "name": "Blue",
+          "sku": "ADIDAS-T-2",
+          "price": 1999000,
+          "compareAtPrice": 2299000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-gel-trabuco-12",
+      "name": "ASICS Gel-Trabuco 12",
+      "slug": "asics-gel-trabuco-12",
+      "description": "ASICS Gel-Trabuco 12 for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-trail-shoes",
+      "activityIds": [
+        "activity-outdoor"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "asics-gel-trabuco-12-image-1",
+          "alt": "ASICS Gel-Trabuco 12 product view",
+          "url": "https://static01.galaxus.com/productimages/1/7/6/1/7/0/1/3/9/6/2/0/4/9/0/2/7/1/3/197abd2c-d8df-47cb-adb6-9cceec463d99_cropped.jpg_720.jpeg"
+        },
+        {
+          "id": "asics-gel-trabuco-12-image-2",
+          "alt": "ASICS Gel-Trabuco 12 product view",
+          "url": "https://static01.galaxus.com/productimages/1/7/6/1/7/0/1/3/9/6/2/0/4/9/0/2/7/1/3/197abd2c-d8df-47cb-adb6-9cceec463d99_cropped.jpg_720.jpeg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-gel-trabuco-12-1",
+          "name": "Black",
+          "sku": "ASICS-GE-1",
+          "price": 2099000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-gel-trabuco-12-2",
+          "name": "Blue",
+          "sku": "ASICS-GE-2",
+          "price": 2099000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-fresh-foam-x",
+      "name": "New Balance Fresh Foam X",
+      "slug": "new-balance-fresh-foam-x",
+      "description": "New Balance Fresh Foam X for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "new-balance-fresh-foam-x-image-1",
+          "alt": "New Balance Fresh Foam X product view",
+          "url": "https://m.media-amazon.com/images/I/71BRb+4VL7L._AC_SR768,1024_.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-fresh-foam-x-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 2299000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-fresh-foam-x-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 2299000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-dri-fit-training-tee",
+      "name": "Nike Dri-FIT Training Tee",
+      "slug": "nike-dri-fit-training-tee",
+      "description": "Nike Dri-FIT Training Tee for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-training-gym"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "nike-dri-fit-training-tee-image-1",
+          "alt": "Nike Dri-FIT Training Tee product view",
+          "url": "https://www.nike.ae/dw/image/v2/BDVB_PRD/on/demandware.static/-/Sites-akeneo-master-catalog/default/dw92dd0224/nk/5c6/0/9/6/1/d/5c60961d_bed5_4f14_97c8_eb73c36647be.jpg?sw=700&sh=700&sm=fit&q=80"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-dri-fit-training-tee-1",
+          "name": "Black",
+          "sku": "NIKE-DRI-1",
+          "price": 499000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-dri-fit-training-tee-2",
+          "name": "Blue",
+          "sku": "NIKE-DRI-2",
+          "price": 499000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-own-the-run-tee",
+      "name": "Adidas Own The Run Tee",
+      "slug": "adidas-own-the-run-tee",
+      "description": "Adidas Own The Run Tee for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "adidas-own-the-run-tee-image-1",
+          "alt": "Adidas Own The Run Tee product view",
+          "url": "https://assets.adidas.com/images/w_500,f_auto,q_auto/74cec7d15fea431c88f08f265bdf9c2a_9366/Own_The_Run_Tee_Black_IN2961_01_laydown.jpg"
+        },
+        {
+          "id": "adidas-own-the-run-tee-image-2",
+          "alt": "Adidas Own The Run Tee product view",
+          "url": "https://assets.adidas.com/images/w_500,f_auto,q_auto/74cec7d15fea431c88f08f265bdf9c2a_9366/Own_The_Run_Tee_Black_IN2961_01_laydown.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-own-the-run-tee-1",
+          "name": "Black",
+          "sku": "ADIDAS-O-1",
+          "price": 549000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-own-the-run-tee-2",
+          "name": "Blue",
+          "sku": "ADIDAS-O-2",
+          "price": 549000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-core-singlet",
+      "name": "ASICS Core Running Singlet",
+      "slug": "asics-core-singlet",
+      "description": "ASICS Core Running Singlet for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "asics-core-singlet-image-1",
+          "alt": "ASICS Core Running Singlet product view",
+          "url": "https://img.tenniswarehouse-europe.com/watermark/rs.php?path=AMCSBG-BK-1.jpg&nw=455"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-core-singlet-1",
+          "name": "Black",
+          "sku": "ASICS-CO-1",
+          "price": 429000,
+          "compareAtPrice": 729000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-core-singlet-2",
+          "name": "Blue",
+          "sku": "ASICS-CO-2",
+          "price": 429000,
+          "compareAtPrice": 729000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-accelerate-short",
+      "name": "New Balance Accelerate Short",
+      "slug": "new-balance-accelerate-short",
+      "description": "New Balance Accelerate Short for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "new-balance-accelerate-short-image-1",
+          "alt": "New Balance Accelerate Short product view",
+          "url": "https://nb.scene7.com/is/image/NB/ms23228bk_nb_70_i?$pdpflexf2$"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-accelerate-short-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 599000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-accelerate-short-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 599000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-pro-3in-short",
+      "name": "Nike Pro 3in Short",
+      "slug": "nike-pro-3in-short",
+      "description": "Nike Pro 3in Short for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-training-gym"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "nike-pro-3in-short-image-1",
+          "alt": "Nike Pro 3in Short product view",
+          "url": "https://img.runningwarehouse.com/watermark/rs.php?path=NWP3SAM-GR-1.jpg&nw=455"
+        },
+        {
+          "id": "nike-pro-3in-short-image-2",
+          "alt": "Nike Pro 3in Short product view",
+          "url": "https://img.runningwarehouse.com/watermark/rs.php?path=NWP3SAM-GR-1.jpg&nw=455"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-pro-3in-short-1",
+          "name": "Black",
+          "sku": "NIKE-PRO-1",
+          "price": 579000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-pro-3in-short-2",
+          "name": "Blue",
+          "sku": "NIKE-PRO-2",
+          "price": 579000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-tiro-24-pants",
+      "name": "Adidas Tiro 24 Training Pants",
+      "slug": "adidas-tiro-24-pants",
+      "description": "Adidas Tiro 24 Training Pants for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-football"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "adidas-tiro-24-pants-image-1",
+          "alt": "Adidas Tiro 24 Training Pants product view",
+          "url": "https://dtlr.it.com/wp-content/uploads/2026/07/Adidas_IP1952_M-048-scaled.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-tiro-24-pants-1",
+          "name": "Black",
+          "sku": "ADIDAS-T-1",
+          "price": 799000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-tiro-24-pants-2",
+          "name": "Blue",
+          "sku": "ADIDAS-T-2",
+          "price": 799000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-court-skirt",
+      "name": "ASICS Court Skirt",
+      "slug": "asics-court-skirt",
+      "description": "ASICS Court Skirt for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-tennis"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "asics-court-skirt-image-1",
+          "alt": "ASICS Court Skirt product view",
+          "url": "https://cdn.shopify.com/s/files/1/0745/4670/8569/files/image_asics_2042A369_001_GF_FT_GLB.webp"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-court-skirt-1",
+          "name": "Black",
+          "sku": "ASICS-CO-1",
+          "price": 689000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-court-skirt-2",
+          "name": "Blue",
+          "sku": "ASICS-CO-2",
+          "price": 689000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-athletics-hoodie",
+      "name": "New Balance Athletics Hoodie",
+      "slug": "new-balance-athletics-hoodie",
+      "description": "New Balance Athletics Hoodie for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-training-apparel",
+      "activityIds": [
+        "activity-sportstyle"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "new-balance-athletics-hoodie-image-1",
+          "alt": "New Balance Athletics Hoodie product view",
+          "url": "https://cdn.fleetfeet.com/a:1.5-f:cover-w:1200/products/mj43206ag_70.jpg?s=91d0cc11"
+        },
+        {
+          "id": "new-balance-athletics-hoodie-image-2",
+          "alt": "New Balance Athletics Hoodie product view",
+          "url": "https://cdn.fleetfeet.com/a:1.5-f:cover-w:1200/products/mj43206ag_70.jpg?s=91d0cc11"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-athletics-hoodie-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 1199000,
+          "compareAtPrice": 1499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-s"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-athletics-hoodie-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 1199000,
+          "compareAtPrice": 1499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-m"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-academy-football",
+      "name": "Nike Academy Football",
+      "slug": "nike-academy-football",
+      "description": "Nike Academy Football for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-footballs",
+      "activityIds": [
+        "activity-football"
+      ],
+      "audiences": [
+        "kids"
+      ],
+      "images": [
+        {
+          "id": "nike-academy-football-image-1",
+          "alt": "Nike Academy Football product view",
+          "url": "https://static.nike.com/a/images/t_default/e07ad6e4-7d57-45a4-b370-38fc515186e9/NK+ACADEMY+-+TEAM.png"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-academy-football-1",
+          "name": "Black",
+          "sku": "NIKE-ACA-1",
+          "price": 399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-academy-football-2",
+          "name": "Blue",
+          "sku": "NIKE-ACA-2",
+          "price": 399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-ucl-training-ball",
+      "name": "Adidas UCL Training Ball",
+      "slug": "adidas-ucl-training-ball",
+      "description": "Adidas UCL Training Ball for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-footballs",
+      "activityIds": [
+        "activity-football"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "adidas-ucl-training-ball-image-1",
+          "alt": "Adidas UCL Training Ball product view",
+          "url": "https://cdn.shopify.com/s/files/1/0781/2900/4760/files/1002934_main.jpg?v=1778086300"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-ucl-training-ball-1",
+          "name": "Black",
+          "sku": "ADIDAS-U-1",
+          "price": 449000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-ucl-training-ball-2",
+          "name": "Blue",
+          "sku": "ADIDAS-U-2",
+          "price": 449000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-elite-basketball",
+      "name": "Nike Elite Basketball",
+      "slug": "nike-elite-basketball",
+      "description": "Nike Elite Basketball for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-equipment",
+      "activityIds": [
+        "activity-basketball"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "nike-elite-basketball-image-1",
+          "alt": "Nike Elite Basketball product view",
+          "url": "https://assets.footlocker.com/is/image/FLDM/N1081107_01?$tile500jpg$=true&fmt=png-alpha"
+        },
+        {
+          "id": "nike-elite-basketball-image-2",
+          "alt": "Nike Elite Basketball product view",
+          "url": "https://assets.footlocker.com/is/image/FLDM/N1081107_01?$tile500jpg$=true&fmt=png-alpha"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-elite-basketball-1",
+          "name": "Black",
+          "sku": "NIKE-ELI-1",
+          "price": 549000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-elite-basketball-2",
+          "name": "Blue",
+          "sku": "NIKE-ELI-2",
+          "price": 549000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-padel-racket",
+      "name": "Adidas Metalbone Padel Racket",
+      "slug": "adidas-padel-racket",
+      "description": "Adidas Metalbone Padel Racket for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-equipment",
+      "activityIds": [
+        "activity-padel"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "adidas-padel-racket-image-1",
+          "alt": "Adidas Metalbone Padel Racket product view",
+          "url": "https://centralsports.co.uk/cdn/shop/files/Untitleddesign-2026-04-23T170216.508_1500x.png?v=1776934960"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-padel-racket-1",
+          "name": "Black",
+          "sku": "ADIDAS-P-1",
+          "price": 2399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-padel-racket-2",
+          "name": "Blue",
+          "sku": "ADIDAS-P-2",
+          "price": 2399000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-gel-resolution-9",
+      "name": "ASICS Gel-Resolution 9",
+      "slug": "asics-gel-resolution-9",
+      "description": "ASICS Gel-Resolution 9 for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-tennis"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "asics-gel-resolution-9-image-1",
+          "alt": "ASICS Gel-Resolution 9 product view",
+          "url": "https://s3.amazonaws.com/syncpigeon/alti_prod/images/acs-1042a208_white-amethyst.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-gel-resolution-9-1",
+          "name": "Black",
+          "sku": "ASICS-GE-1",
+          "price": 2199000,
+          "compareAtPrice": 2499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-gel-resolution-9-2",
+          "name": "Blue",
+          "sku": "ASICS-GE-2",
+          "price": 2199000,
+          "compareAtPrice": 2499000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-ct302",
+      "name": "New Balance CT302",
+      "slug": "new-balance-ct302",
+      "description": "New Balance CT302 for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-sportstyle"
+      ],
+      "audiences": [
+        "women"
+      ],
+      "images": [
+        {
+          "id": "new-balance-ct302-image-1",
+          "alt": "New Balance CT302 product view",
+          "url": "https://s3.amazonaws.com/syncpigeon/alti_prod/images/nwb-ct302r_sea-salt.jpg"
+        },
+        {
+          "id": "new-balance-ct302-image-2",
+          "alt": "New Balance CT302 product view",
+          "url": "https://s3.amazonaws.com/syncpigeon/alti_prod/images/nwb-ct302r_sea-salt.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-ct302-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 1599000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-ct302-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 1599000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-downshifter-13-kids",
+      "name": "Nike Downshifter 13 Kids",
+      "slug": "nike-downshifter-13-kids",
+      "description": "Nike Downshifter 13 Kids for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "kids"
+      ],
+      "images": [
+        {
+          "id": "nike-downshifter-13-kids-image-1",
+          "alt": "Nike Downshifter 13 Kids product view",
+          "url": "https://photo.i-run.fr/nike-downshifter-13-chaussures-de-sport-femme-765740-1-z.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-downshifter-13-kids-1",
+          "name": "Black",
+          "sku": "NIKE-DOW-1",
+          "price": 699000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-downshifter-13-kids-2",
+          "name": "Blue",
+          "sku": "NIKE-DOW-2",
+          "price": 699000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-duramo-sl-kids",
+      "name": "Adidas Duramo SL Kids",
+      "slug": "adidas-duramo-sl-kids",
+      "description": "Adidas Duramo SL Kids for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "kids"
+      ],
+      "images": [
+        {
+          "id": "adidas-duramo-sl-kids-image-1",
+          "alt": "Adidas Duramo SL Kids product view",
+          "url": "https://photo.i-run.fr/adidas-duramo-sl-chaussures-homme-737847-1-z.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-duramo-sl-kids-1",
+          "name": "Black",
+          "sku": "ADIDAS-D-1",
+          "price": 649000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-duramo-sl-kids-2",
+          "name": "Blue",
+          "sku": "ADIDAS-D-2",
+          "price": 649000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-asics-upcourt-6",
+      "name": "ASICS Upcourt 6",
+      "slug": "asics-upcourt-6",
+      "description": "ASICS Upcourt 6 for everyday sport and movement.",
+      "brandId": "brand-asics",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-volleyball"
+      ],
+      "audiences": [
+        "kids"
+      ],
+      "images": [
+        {
+          "id": "asics-upcourt-6-image-1",
+          "alt": "ASICS Upcourt 6 product view",
+          "url": "https://static01.galaxus.com/productimages/8/8/7/5/0/7/5/4/8/4/9/0/8/9/0/0/1/6/f10b7bec-39aa-4cd6-868b-c64e06e01df9_cropped.jpg_720.jpeg"
+        },
+        {
+          "id": "asics-upcourt-6-image-2",
+          "alt": "ASICS Upcourt 6 product view",
+          "url": "https://static01.galaxus.com/productimages/8/8/7/5/0/7/5/4/8/4/9/0/8/9/0/0/1/6/f10b7bec-39aa-4cd6-868b-c64e06e01df9_cropped.jpg_720.jpeg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-asics-upcourt-6-1",
+          "name": "Black",
+          "sku": "ASICS-UP-1",
+          "price": 799000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-asics-upcourt-6-2",
+          "name": "Blue",
+          "sku": "ASICS-UP-2",
+          "price": 799000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-new-balance-480-kids",
+      "name": "New Balance 480 Kids",
+      "slug": "new-balance-480-kids",
+      "description": "New Balance 480 Kids for everyday sport and movement.",
+      "brandId": "brand-new-balance",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-basketball"
+      ],
+      "audiences": [
+        "kids"
+      ],
+      "images": [
+        {
+          "id": "new-balance-480-kids-image-1",
+          "alt": "New Balance 480 Kids product view",
+          "url": "https://www.pacsun.com/dw/image/v2/AAJE_PRD/on/demandware.static/-/Sites-pacsun_storefront_catalog/default/dwe88eec67/product_images/0782221770004NEW_00_709.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-new-balance-480-kids-1",
+          "name": "Black",
+          "sku": "NEW-BALA-1",
+          "price": 899000,
+          "compareAtPrice": 1199000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-new-balance-480-kids-2",
+          "name": "Blue",
+          "sku": "NEW-BALA-2",
+          "price": 899000,
+          "compareAtPrice": 1199000,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-nike-yoga-mat",
+      "name": "Nike Move Yoga Mat",
+      "slug": "nike-yoga-mat",
+      "description": "Nike Move Yoga Mat for everyday sport and movement.",
+      "brandId": "brand-nike",
+      "categoryId": "category-equipment",
+      "activityIds": [
+        "activity-yoga-pilates"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "nike-yoga-mat-image-1",
+          "alt": "Nike Move Yoga Mat product view",
+          "url": "https://photo.i-run.fr/nike-tapis-de-yoga-move-4-mm-accessoires-463098-1-z.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-nike-yoga-mat-1",
+          "name": "Black",
+          "sku": "NIKE-YOG-1",
+          "price": 899000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-nike-yoga-mat-2",
+          "name": "Blue",
+          "sku": "NIKE-YOG-2",
+          "price": 899000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adidas-training-gloves",
+      "name": "Adidas Training Gloves",
+      "slug": "adidas-training-gloves",
+      "description": "Adidas Training Gloves for everyday sport and movement.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-equipment",
+      "activityIds": [
+        "activity-training-gym"
+      ],
+      "audiences": [
+        "unisex"
+      ],
+      "images": [
+        {
+          "id": "adidas-training-gloves-image-1",
+          "alt": "Adidas Training Gloves product view",
+          "url": "https://contents.mediadecathlon.com/m19215121/k$e6bf9150b16f8e2327d90e2b2faf21c7/picture.jpg?format=auto&f=3000x0"
+        },
+        {
+          "id": "adidas-training-gloves-image-2",
+          "alt": "Adidas Training Gloves product view",
+          "url": "https://contents.mediadecathlon.com/m19215121/k$e6bf9150b16f8e2327d90e2b2faf21c7/picture.jpg?format=auto&f=3000x0"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adidas-training-gloves-1",
+          "name": "Black",
+          "sku": "ADIDAS-T-1",
+          "price": 349000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adidas-training-gloves-2",
+          "name": "Blue",
+          "sku": "ADIDAS-T-2",
+          "price": 349000,
+          "compareAtPrice": null,
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adizero-sl",
+      "name": "Adidas Adizero SL",
+      "slug": "adidas-adizero-sl",
+      "description": "Lightweight running shoes designed for fast training sessions.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "images": [
+        {
+          "id": "adizero-blue-side",
+          "alt": "Adidas Adizero SL in Preloved Ink / Blue Burst / Cloud White, side view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/cbcbf9955b124bed8baebfc6183a3983_9366/Zapatillas_ADIZERO_SL_Azul_IG8194_01_standard.jpg"
+        },
+        {
+          "id": "adizero-blue-pair",
+          "alt": "Adidas Adizero SL in Preloved Ink / Blue Burst / Cloud White, top view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/4b5fe6834b9e4910b80311e21e2531b1_9366/Zapatillas_ADIZERO_SL_Azul_IG8194_02_standard_hover.jpg"
+        },
+        {
+          "id": "adizero-black-side",
+          "alt": "Adidas Adizero SL in Core Black / Cloud White / Carbon, side view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/2f2aca88390d48379a7dde303dfc8d49_9366/Zapatillas_de_Running_Adizero_SL_Negro_HQ1349_HM1.jpg"
+        },
+        {
+          "id": "adizero-black-pair",
+          "alt": "Adidas Adizero SL in Core Black / Cloud White / Carbon, alternate view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/18f6ca6c893347b486954dc0050589e7_9366/Zapatillas_de_Running_Adizero_SL_Negro_HQ1349_HM3_hover.jpg"
+        },
+        {
+          "id": "adizero-white-side",
+          "alt": "Adidas Adizero SL in Cloud White / Core Black / Bright Red, side view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/a39555ccb43d46dc90f8f0c43ba30c66_9366/ADIZERO_SL_Shoes_White_ID6924_HM1.jpg"
+        },
+        {
+          "id": "adizero-white-pair",
+          "alt": "Adidas Adizero SL in Cloud White / Core Black / Bright Red, alternate view",
+          "url": "https://assets.adidas.com/images/w_1200,q_auto/3e1369f33f6146a396c8e62900b2b4c8_9366/ADIZERO_SL_Shoes_White_ID6924_HM3_hover.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adizero-sl-blue-42",
+          "name": "Blue / 42",
+          "sku": "ADZSL-BLU-42",
+          "price": 1899000,
+          "compareAtPrice": 2199000,
+          "imageIds": [
+            "adizero-blue-side",
+            "adizero-blue-pair"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-sl-blue-41",
+          "name": "Blue / 41",
+          "sku": "ADZSL-BLU-41",
+          "price": 1899000,
+          "compareAtPrice": 2199000,
+          "imageIds": [
+            "adizero-blue-side",
+            "adizero-blue-pair"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-blue"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-sl-black-42",
+          "name": "Black / 42",
+          "sku": "ADZSL-BLK-42",
+          "price": 1899000,
+          "compareAtPrice": 2199000,
+          "imageIds": [
+            "adizero-black-side",
+            "adizero-black-pair"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-black"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-sl-white-42",
+          "name": "White / 42",
+          "sku": "ADZSL-WHT-42",
+          "price": 1899000,
+          "compareAtPrice": 2199000,
+          "imageIds": [
+            "adizero-white-side",
+            "adizero-white-pair"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-white"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-sl-white-41",
+          "name": "White / 41",
+          "sku": "ADZSL-WHT-41",
+          "price": 1899000,
+          "compareAtPrice": 2199000,
+          "imageIds": [
+            "adizero-white-side",
+            "adizero-white-pair"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-white"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "id": "product-adizero-evo-sl-exo",
+      "name": "Adizero Evo SL Exo Men's Running Shoes",
+      "slug": "adizero-evo-sl-exo-mens-running-shoes",
+      "description": "Men’s running shoes available in Beige and Grey.",
+      "brandId": "brand-adidas",
+      "categoryId": "category-running-shoes",
+      "activityIds": [
+        "activity-running"
+      ],
+      "audiences": [
+        "men"
+      ],
+      "images": [
+        {
+          "id": "adizero-evo-sl-exo-beige-1",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Beige, product image 1",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/8/0888-ADIKJ0429018008-1.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-beige-2",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Beige, product image 2",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/8/0888-ADIKJ0429018008-2.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-beige-3",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Beige, product image 3",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/8/0888-ADIKJ0429018008-3.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-beige-4",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Beige, product image 4",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/8/0888-ADIKJ0429018008-4.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-beige-5",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Beige, product image 5",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/8/0888-ADIKJ0429018008-5.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-grey-1",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Grey, product image 1",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/1/01-ADIDAS-F34RUADI5-ADIKI6927-Grey.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-grey-2",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Grey, product image 2",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/2/02-ADIDAS-F34RUADI5-ADIKI6927-Grey.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-grey-3",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Grey, product image 3",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/3/03-ADIDAS-F34RUADI5-ADIKI6927-Grey.jpg"
+        },
+        {
+          "id": "adizero-evo-sl-exo-grey-4",
+          "alt": "Adizero Evo SL Exo Men's Running Shoes in Grey, product image 4",
+          "url": "https://www.planetsports.asia/media/catalog/product/cache/b60eaab0b6e62e186de5a06d3bd89625/0/4/04-ADIDAS-F34RUADI5-ADIKI6927-Grey.jpg"
+        }
+      ],
+      "variants": [
+        {
+          "id": "variant-adizero-evo-sl-exo-beige-41",
+          "name": "Beige / 41",
+          "sku": "ADZEVOEXO-BEIGE-41",
+          "price": 1899000,
+          "compareAtPrice": null,
+          "imageIds": [
+            "adizero-evo-sl-exo-beige-1",
+            "adizero-evo-sl-exo-beige-2",
+            "adizero-evo-sl-exo-beige-3",
+            "adizero-evo-sl-exo-beige-4",
+            "adizero-evo-sl-exo-beige-5"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-beige"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-evo-sl-exo-beige-42",
+          "name": "Beige / 42",
+          "sku": "ADZEVOEXO-BEIGE-42",
+          "price": 1899000,
+          "compareAtPrice": null,
+          "imageIds": [
+            "adizero-evo-sl-exo-beige-1",
+            "adizero-evo-sl-exo-beige-2",
+            "adizero-evo-sl-exo-beige-3",
+            "adizero-evo-sl-exo-beige-4",
+            "adizero-evo-sl-exo-beige-5"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-beige"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-evo-sl-exo-grey-41",
+          "name": "Grey / 41",
+          "sku": "ADZEVOEXO-GREY-41",
+          "price": 1899000,
+          "compareAtPrice": null,
+          "imageIds": [
+            "adizero-evo-sl-exo-grey-1",
+            "adizero-evo-sl-exo-grey-2",
+            "adizero-evo-sl-exo-grey-3",
+            "adizero-evo-sl-exo-grey-4"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-grey"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-41"
+            }
+          ],
+          "status": "active"
+        },
+        {
+          "id": "variant-adizero-evo-sl-exo-grey-42",
+          "name": "Grey / 42",
+          "sku": "ADZEVOEXO-GREY-42",
+          "price": 1899000,
+          "compareAtPrice": null,
+          "imageIds": [
+            "adizero-evo-sl-exo-grey-1",
+            "adizero-evo-sl-exo-grey-2",
+            "adizero-evo-sl-exo-grey-3",
+            "adizero-evo-sl-exo-grey-4"
+          ],
+          "attributes": [
+            {
+              "attributeId": "attribute-color",
+              "valueId": "color-grey"
+            },
+            {
+              "attributeId": "attribute-size",
+              "valueId": "size-42"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "status": "active"
+    }
+  ],
+  "categories": [
+    {
+      "id": "category-footwear",
+      "name": "Footwear",
+      "slug": "footwear",
+      "parentId": null,
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-running",
+      "name": "Running",
+      "slug": "running",
+      "parentId": "category-footwear",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-running-shoes",
+      "name": "Running Shoes",
+      "slug": "running-shoes",
+      "parentId": "category-running",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-trail-running",
+      "name": "Trail Running",
+      "slug": "trail-running",
+      "parentId": "category-footwear",
+      "sortOrder": 2,
+      "status": "active"
+    },
+    {
+      "id": "category-trail-shoes",
+      "name": "Trail Shoes",
+      "slug": "trail-shoes",
+      "parentId": "category-trail-running",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-apparel",
+      "name": "Apparel",
+      "slug": "apparel",
+      "parentId": null,
+      "sortOrder": 2,
+      "status": "active"
+    },
+    {
+      "id": "category-training-apparel",
+      "name": "Training",
+      "slug": "training-apparel",
+      "parentId": "category-apparel",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-training-tops",
+      "name": "Training Tops",
+      "slug": "training-tops",
+      "parentId": "category-training-apparel",
+      "sortOrder": 1,
+      "status": "inactive"
+    },
+    {
+      "id": "category-equipment",
+      "name": "Equipment",
+      "slug": "equipment",
+      "parentId": null,
+      "sortOrder": 3,
+      "status": "active"
+    },
+    {
+      "id": "category-football",
+      "name": "Football",
+      "slug": "football-equipment",
+      "parentId": "category-equipment",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "category-footballs",
+      "name": "Footballs",
+      "slug": "footballs",
+      "parentId": "category-football",
+      "sortOrder": 1,
+      "status": "active"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand-nike",
+      "logoUrl": "/brand-logos/nike.svg",
+      "name": "Nike",
+      "slug": "nike",
+      "description": "Performance footwear and apparel.",
+      "status": "active"
+    },
+    {
+      "id": "brand-adidas",
+      "logoUrl": "/brand-logos/adidas.svg",
+      "name": "Adidas",
+      "slug": "adidas",
+      "description": "Sport and lifestyle essentials.",
+      "status": "active"
+    },
+    {
+      "id": "brand-asics",
+      "logoUrl": "/brand-logos/asics.svg",
+      "name": "ASICS",
+      "slug": "asics",
+      "description": "Running and training footwear.",
+      "status": "active"
+    },
+    {
+      "id": "brand-new-balance",
+      "logoUrl": "/brand-logos/newbalance.svg",
+      "name": "New Balance",
+      "slug": "new-balance",
+      "description": "Comfort-focused performance products.",
+      "status": "active"
+    }
+  ],
+  "activities": [
+    {
+      "id": "activity-running",
+      "name": "Running",
+      "slug": "running",
+      "sortOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "activity-football",
+      "name": "Football",
+      "slug": "football",
+      "sortOrder": 2,
+      "status": "active"
+    },
+    {
+      "id": "activity-futsal",
+      "name": "Futsal",
+      "slug": "futsal",
+      "sortOrder": 3,
+      "status": "active"
+    },
+    {
+      "id": "activity-sportstyle",
+      "name": "Sportstyle",
+      "slug": "sportstyle",
+      "sortOrder": 4,
+      "status": "active"
+    },
+    {
+      "id": "activity-hyrox",
+      "name": "Hyrox",
+      "slug": "hyrox",
+      "sortOrder": 5,
+      "status": "active"
+    },
+    {
+      "id": "activity-training-gym",
+      "name": "Training & Gym",
+      "slug": "training-gym",
+      "sortOrder": 6,
+      "status": "active"
+    },
+    {
+      "id": "activity-basketball",
+      "name": "Basketball",
+      "slug": "basketball",
+      "sortOrder": 7,
+      "status": "active"
+    },
+    {
+      "id": "activity-golf",
+      "name": "Golf",
+      "slug": "golf",
+      "sortOrder": 8,
+      "status": "active"
+    },
+    {
+      "id": "activity-outdoor",
+      "name": "Outdoor",
+      "slug": "outdoor",
+      "sortOrder": 9,
+      "status": "active"
+    },
+    {
+      "id": "activity-padel",
+      "name": "Padel",
+      "slug": "padel",
+      "sortOrder": 10,
+      "status": "active"
+    },
+    {
+      "id": "activity-pickleball",
+      "name": "Pickleball",
+      "slug": "pickleball",
+      "sortOrder": 11,
+      "status": "active"
+    },
+    {
+      "id": "activity-tennis",
+      "name": "Tennis",
+      "slug": "tennis",
+      "sortOrder": 12,
+      "status": "active"
+    },
+    {
+      "id": "activity-volleyball",
+      "name": "Volleyball",
+      "slug": "volleyball",
+      "sortOrder": 13,
+      "status": "active"
+    },
+    {
+      "id": "activity-yoga-pilates",
+      "name": "Yoga & Pilates",
+      "slug": "yoga-pilates",
+      "sortOrder": 14,
+      "status": "active"
+    }
+  ],
+  "attributes": [
+    {
+      "id": "attribute-color",
+      "name": "Color",
+      "code": "color",
+      "displayType": "swatch",
+      "filterable": true,
+      "usedForVariants": true,
+      "sortOrder": 1,
+      "status": "active",
+      "groups": [
+        {
+          "id": "color",
+          "name": "Color",
+          "sortOrder": 1,
+          "values": [
+            {
+              "id": "color-black",
+              "label": "Black",
+              "value": "black",
+              "displayValue": "Black",
+              "sortOrder": 1,
+              "colorHex": "#111827"
+            },
+            {
+              "id": "color-white",
+              "label": "White",
+              "value": "white",
+              "displayValue": "White",
+              "sortOrder": 2,
+              "colorHex": "#f8fafc"
+            },
+            {
+              "id": "color-blue",
+              "label": "Blue",
+              "value": "blue",
+              "displayValue": "Blue",
+              "sortOrder": 3,
+              "colorHex": "#2563eb"
+            },
+            {
+              "id": "color-grey",
+              "label": "Grey",
+              "value": "grey",
+              "displayValue": "Grey",
+              "sortOrder": 4,
+              "colorHex": "#6b7280"
+            },
+            {
+              "id": "color-beige",
+              "label": "Beige",
+              "value": "beige",
+              "displayValue": "Beige",
+              "sortOrder": 5,
+              "colorHex": "#d9cbb8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute-size",
+      "name": "Size",
+      "code": "size",
+      "displayType": "button",
+      "filterable": true,
+      "usedForVariants": true,
+      "sortOrder": 2,
+      "status": "active",
+      "groups": [
+        {
+          "id": "size-apparel",
+          "name": "Apparel",
+          "sortOrder": 1,
+          "values": [
+            {
+              "id": "size-xs",
+              "label": "XS",
+              "value": "xs",
+              "displayValue": "XS",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "size-s",
+              "label": "S",
+              "value": "s",
+              "displayValue": "S",
+              "sortOrder": 2,
+              "colorHex": null
+            },
+            {
+              "id": "size-m",
+              "label": "M",
+              "value": "m",
+              "displayValue": "M",
+              "sortOrder": 3,
+              "colorHex": null
+            },
+            {
+              "id": "size-l",
+              "label": "L",
+              "value": "l",
+              "displayValue": "L",
+              "sortOrder": 4,
+              "colorHex": null
+            },
+            {
+              "id": "size-xl",
+              "label": "XL",
+              "value": "xl",
+              "displayValue": "XL",
+              "sortOrder": 5,
+              "colorHex": null
+            }
+          ]
+        },
+        {
+          "id": "size-eu-shoes",
+          "name": "EU Shoes",
+          "sortOrder": 2,
+          "values": [
+            {
+              "id": "size-40",
+              "label": "40",
+              "value": "40",
+              "displayValue": "40",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "size-41",
+              "label": "41",
+              "value": "41",
+              "displayValue": "41",
+              "sortOrder": 2,
+              "colorHex": null
+            },
+            {
+              "id": "size-42",
+              "label": "42",
+              "value": "42",
+              "displayValue": "42",
+              "sortOrder": 3,
+              "colorHex": null
+            },
+            {
+              "id": "size-43",
+              "label": "43",
+              "value": "43",
+              "displayValue": "43",
+              "sortOrder": 4,
+              "colorHex": null
+            }
+          ]
+        },
+        {
+          "id": "size-one-size",
+          "name": "One Size",
+          "sortOrder": 3,
+          "values": [
+            {
+              "id": "size-osfa",
+              "label": "OSFA",
+              "value": "osfa",
+              "displayValue": "OSFA",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "size-osfm",
+              "label": "OSFM",
+              "value": "osfm",
+              "displayValue": "OSFM",
+              "sortOrder": 2,
+              "colorHex": null
+            },
+            {
+              "id": "size-osfw",
+              "label": "OSFW",
+              "value": "osfw",
+              "displayValue": "OSFW",
+              "sortOrder": 3,
+              "colorHex": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute-volume",
+      "name": "Volume",
+      "code": "volume",
+      "displayType": "select",
+      "filterable": true,
+      "usedForVariants": false,
+      "sortOrder": 3,
+      "status": "active",
+      "groups": [
+        {
+          "id": "volume",
+          "name": "Volume",
+          "sortOrder": 1,
+          "values": [
+            {
+              "id": "volume-500ml",
+              "label": "500 ml",
+              "value": "500ml",
+              "displayValue": "500 ml",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "volume-1l",
+              "label": "1 L",
+              "value": "1l",
+              "displayValue": "1 L",
+              "sortOrder": 2,
+              "colorHex": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute-grip-size",
+      "name": "Grip Size",
+      "code": "grip-size",
+      "displayType": "button",
+      "filterable": true,
+      "usedForVariants": true,
+      "sortOrder": 4,
+      "status": "active",
+      "groups": [
+        {
+          "id": "grip-size",
+          "name": "Grip Size",
+          "sortOrder": 1,
+          "values": [
+            {
+              "id": "grip-1",
+              "label": "1",
+              "value": "1",
+              "displayValue": "1",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "grip-2",
+              "label": "2",
+              "value": "2",
+              "displayValue": "2",
+              "sortOrder": 2,
+              "colorHex": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribute-weight",
+      "name": "Weight",
+      "code": "weight",
+      "displayType": "select",
+      "filterable": true,
+      "usedForVariants": false,
+      "sortOrder": 5,
+      "status": "active",
+      "groups": [
+        {
+          "id": "weight",
+          "name": "Weight",
+          "sortOrder": 1,
+          "values": [
+            {
+              "id": "weight-250g",
+              "label": "250 g",
+              "value": "250g",
+              "displayValue": "250 g",
+              "sortOrder": 1,
+              "colorHex": null
+            },
+            {
+              "id": "weight-500g",
+              "label": "500 g",
+              "value": "500g",
+              "displayValue": "500 g",
+              "sortOrder": 2,
+              "colorHex": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "warehouse-main",
+      "code": "JKT-01",
+      "name": "Main Warehouse",
+      "location": "Primary location",
+      "status": "active"
+    },
+    {
+      "id": "warehouse-city",
+      "code": "BDG-01",
+      "name": "City Store",
+      "location": "Retail location",
+      "status": "active"
+    }
+  ],
+  "inventory": [
+    {
+      "variantId": "variant-adizero-evo-sl-exo-beige-41",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-evo-sl-exo-beige-42",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-evo-sl-exo-grey-41",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-evo-sl-exo-grey-42",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-sl-blue-41",
+      "warehouseId": "warehouse-city",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-sl-black-42",
+      "warehouseId": "warehouse-city",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-sl-white-42",
+      "warehouseId": "warehouse-city",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adizero-sl-white-41",
+      "warehouseId": "warehouse-city",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-zoom-vomero-5-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-nike-zoom-vomero-5-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-adidas-ultraboost-light-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-ultraboost-light-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-novablast-5-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-novablast-5-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-530-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-530-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-pegasus-trail-5-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-pegasus-trail-5-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-terrex-ax4-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-terrex-ax4-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-gel-trabuco-12-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-gel-trabuco-12-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-fresh-foam-x-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-new-balance-fresh-foam-x-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-nike-dri-fit-training-tee-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-dri-fit-training-tee-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-own-the-run-tee-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-own-the-run-tee-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-core-singlet-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-core-singlet-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-accelerate-short-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-accelerate-short-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-pro-3in-short-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-pro-3in-short-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-tiro-24-pants-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-tiro-24-pants-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-court-skirt-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-asics-court-skirt-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-new-balance-athletics-hoodie-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-athletics-hoodie-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-academy-football-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-academy-football-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-ucl-training-ball-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-ucl-training-ball-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-elite-basketball-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-elite-basketball-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-padel-racket-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-padel-racket-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-gel-resolution-9-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-gel-resolution-9-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-ct302-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-new-balance-ct302-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 2,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-nike-downshifter-13-kids-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-downshifter-13-kids-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-duramo-sl-kids-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-duramo-sl-kids-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-upcourt-6-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-asics-upcourt-6-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-480-kids-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-new-balance-480-kids-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-yoga-mat-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-nike-yoga-mat-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 9,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-training-gloves-1",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-adidas-training-gloves-2",
+      "warehouseId": "warehouse-main",
+      "onHand": 0,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-pegasus-41-black-42",
+      "warehouseId": "warehouse-main",
+      "onHand": 12,
+      "reserved": 2
+    },
+    {
+      "variantId": "variant-pegasus-41-white-42",
+      "warehouseId": "warehouse-main",
+      "onHand": 8,
+      "reserved": 1
+    },
+    {
+      "variantId": "variant-adizero-sl-blue-42",
+      "warehouseId": "warehouse-city",
+      "onHand": 6,
+      "reserved": 0
+    },
+    {
+      "variantId": "variant-gel-kayano-31-black-42",
+      "warehouseId": "warehouse-main",
+      "onHand": 4,
+      "reserved": 0
+    }
+  ],
+  "stockMovements": [
+    {
+      "id": "movement-initial-stock",
+      "variantId": "variant-pegasus-41-black-42",
+      "warehouseId": "warehouse-main",
+      "type": "stock-in",
+      "quantity": 12,
+      "occurredAt": "2026-09-23T09:00:00.000Z",
+      "reversalOfId": null,
+      "reference": "OPENING-2026",
+      "note": "Initial mock stock"
+    },
+    {
+      "id": "movement-initial-stock-white",
+      "variantId": "variant-pegasus-41-white-42",
+      "warehouseId": "warehouse-main",
+      "type": "stock-in",
+      "quantity": 8,
+      "occurredAt": "2026-09-23T09:01:00.000Z",
+      "reversalOfId": null,
+      "reference": "OPENING-2026",
+      "note": "Initial mock stock"
+    },
+    {
+      "id": "movement-initial-stock-adizero",
+      "variantId": "variant-adizero-sl-blue-42",
+      "warehouseId": "warehouse-city",
+      "type": "stock-in",
+      "quantity": 6,
+      "occurredAt": "2026-09-23T09:02:00.000Z",
+      "reversalOfId": null,
+      "reference": "OPENING-2026",
+      "note": "Initial mock stock"
+    },
+    {
+      "id": "movement-initial-stock-kayano",
+      "variantId": "variant-gel-kayano-31-black-42",
+      "warehouseId": "warehouse-main",
+      "type": "stock-in",
+      "quantity": 4,
+      "occurredAt": "2026-09-23T09:03:00.000Z",
+      "reversalOfId": null,
+      "reference": "OPENING-2026",
+      "note": "Initial mock stock"
+    }
+  ],
+  "pages": {
+    "privacy": {
+      "introduction": "Terakhir diperbarui: 21 September 2026. Ini adalah teks awal template dan harus ditinjau sesuai kebutuhan hukum proyek sebelum dipublikasikan.",
+      "sections": [
+        {
+          "id": "privacy-data",
+          "title": "Informasi yang dikumpulkan",
+          "body": "Jika fitur pengiriman diaktifkan, kami dapat memproses informasi yang Anda berikan melalui formulir, seperti nama, alamat email, dan isi pesan."
+        },
+        {
+          "id": "privacy-use",
+          "title": "Penggunaan informasi",
+          "body": "Informasi digunakan untuk menanggapi pertanyaan, menjalankan layanan yang diminta, dan memenuhi kewajiban yang berlaku."
+        },
+        {
+          "id": "privacy-control",
+          "title": "Pilihan Anda",
+          "body": "Hubungi pengelola layanan untuk meminta akses, koreksi, atau penghapusan informasi Anda, sesuai hukum yang berlaku."
+        }
+      ]
+    },
+    "terms": {
+      "introduction": "Terakhir diperbarui: 21 September 2026. Teks awal ini perlu disesuaikan dan ditinjau sesuai model layanan serta yurisdiksi proyek.",
+      "sections": [
+        {
+          "id": "terms-use",
+          "title": "Penggunaan layanan",
+          "body": "Gunakan layanan secara sah dan jangan mengganggu keamanan, ketersediaan, atau penggunaan pihak lain."
+        },
+        {
+          "id": "terms-content",
+          "title": "Konten dan informasi",
+          "body": "Anda bertanggung jawab atas informasi yang dikirimkan dan memastikan bahwa Anda memiliki hak untuk membagikannya."
+        },
+        {
+          "id": "terms-changes",
+          "title": "Perubahan ketentuan",
+          "body": "Ketentuan dapat diperbarui bila diperlukan. Tanggal pembaruan akan dicantumkan pada halaman ini."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "question": "Untuk apa template ini digunakan?",
+        "answer": "Sebagai titik awal public site yang netral, responsif, dan dapat diakses."
+      },
+      {
+        "question": "Apakah kontennya dapat disesuaikan?",
+        "answer": "Ya. Ganti teks, struktur informasi, dan tindakan sesuai kebutuhan proyek tanpa mengubah fondasi komponen bersama."
+      },
+      {
+        "question": "Ke mana saya mengirim pertanyaan?",
+        "answer": "Gunakan halaman kontak untuk membuka draft pesan di WhatsApp."
+      },
+      {
+        "question": "Di mana kebijakan penggunaan data?",
+        "answer": "Kebijakan privasi dan ketentuan layanan tersedia melalui tautan pada footer."
+      }
+    ]
+  },
+  "profile": {
+    "profile": {
+      "title": "Tentang template ini",
+      "introduction": "Template Public adalah fondasi netral untuk menyampaikan informasi penting dan memberi pengunjung langkah berikutnya yang jelas.",
+      "purpose": "Menyediakan struktur yang dapat disesuaikan, tanpa menetapkan domain bisnis atau model layanan tertentu.",
+      "principles": [
+        {
+          "title": "Jelas",
+          "description": "Informasi dan tindakan disampaikan dengan bahasa yang mudah dipahami."
+        },
+        {
+          "title": "Terbuka",
+          "description": "Kebijakan dan cara menghubungi kami tersedia dari navigasi pendukung."
+        },
+        {
+          "title": "Inklusif",
+          "description": "Kami mempertimbangkan beragam cara orang membaca, menavigasi, dan berinteraksi."
+        }
+      ]
+    },
+    "contact": {
+      "whatsappNumber": "+6281234567890",
+      "defaultMessage": "Halo, saya ingin bertanya tentang informasi di situs ini.",
+      "title": "Mari mulai percakapan",
+      "introduction": "Hubungi kami melalui WhatsApp untuk pertanyaan atau informasi lebih lanjut."
+    }
+  },
+  "banners": [
+    {
+      "id": "home-move-collection",
+      "placement": "home-hero",
+      "eyebrow": "Your next move starts here",
+      "title": "Less scrolling. More moving.",
+      "subtitle": "Find your next pair, your everyday essentials, and the gear that keeps you going. All in one place.",
+      "imageUrl": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1400&q=85",
+      "imageAlt": "Runner training on outdoor steps",
+      "ctaLabel": "Shop all products",
+      "ctaPath": "/products",
+      "active": true,
+      "sortOrder": 1
+    }
+  ],
+  "merchandising": {
+    "collections": [
+      {
+        "audience": "men",
+        "label": "Men",
+        "description": "Ready for every rep, run, and rest day.",
+        "imageUrl": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Athlete lifting weights in a gym"
+      },
+      {
+        "audience": "women",
+        "label": "Women",
+        "description": "Find your pace. Make it your own.",
+        "imageUrl": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Runner in turquoise leggings training on outdoor steps"
+      },
+      {
+        "audience": "kids",
+        "label": "Kids",
+        "description": "For big adventures and everyday play.",
+        "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80",
+        "imageAlt": "Child playing outdoors with colourful face paint"
+      }
+    ],
+    "featuredProductIds": [
+      "product-pegasus-41",
+      "product-adidas-ultraboost-light",
+      "product-asics-core-singlet",
+      "product-new-balance-accelerate-short"
+    ]
+  },
+  "unpublishedProductIds": [
+    "product-gel-kayano-31",
+    "product-fresh-foam-1080"
+  ]
+}

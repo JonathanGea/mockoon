@@ -1,0 +1,295 @@
+[
+  {
+    "id": "attribute-color",
+    "name": "Color",
+    "code": "color",
+    "displayType": "swatch",
+    "filterable": true,
+    "usedForVariants": true,
+    "sortOrder": 1,
+    "status": "active",
+    "groups": [
+      {
+        "id": "color",
+        "name": "Color",
+        "sortOrder": 1,
+        "values": [
+          {
+            "id": "color-black",
+            "label": "Black",
+            "value": "black",
+            "displayValue": "Black",
+            "sortOrder": 1,
+            "colorHex": "#111827"
+          },
+          {
+            "id": "color-white",
+            "label": "White",
+            "value": "white",
+            "displayValue": "White",
+            "sortOrder": 2,
+            "colorHex": "#f8fafc"
+          },
+          {
+            "id": "color-blue",
+            "label": "Blue",
+            "value": "blue",
+            "displayValue": "Blue",
+            "sortOrder": 3,
+            "colorHex": "#2563eb"
+          },
+          {
+            "id": "color-grey",
+            "label": "Grey",
+            "value": "grey",
+            "displayValue": "Grey",
+            "sortOrder": 4,
+            "colorHex": "#6b7280"
+          },
+          {
+            "id": "color-beige",
+            "label": "Beige",
+            "value": "beige",
+            "displayValue": "Beige",
+            "sortOrder": 5,
+            "colorHex": "#d9cbb8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attribute-size",
+    "name": "Size",
+    "code": "size",
+    "displayType": "button",
+    "filterable": true,
+    "usedForVariants": true,
+    "sortOrder": 2,
+    "status": "active",
+    "groups": [
+      {
+        "id": "size-apparel",
+        "name": "Apparel",
+        "sortOrder": 1,
+        "values": [
+          {
+            "id": "size-xs",
+            "label": "XS",
+            "value": "xs",
+            "displayValue": "XS",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "size-s",
+            "label": "S",
+            "value": "s",
+            "displayValue": "S",
+            "sortOrder": 2,
+            "colorHex": null
+          },
+          {
+            "id": "size-m",
+            "label": "M",
+            "value": "m",
+            "displayValue": "M",
+            "sortOrder": 3,
+            "colorHex": null
+          },
+          {
+            "id": "size-l",
+            "label": "L",
+            "value": "l",
+            "displayValue": "L",
+            "sortOrder": 4,
+            "colorHex": null
+          },
+          {
+            "id": "size-xl",
+            "label": "XL",
+            "value": "xl",
+            "displayValue": "XL",
+            "sortOrder": 5,
+            "colorHex": null
+          }
+        ]
+      },
+      {
+        "id": "size-eu-shoes",
+        "name": "EU Shoes",
+        "sortOrder": 2,
+        "values": [
+          {
+            "id": "size-40",
+            "label": "40",
+            "value": "40",
+            "displayValue": "40",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "size-41",
+            "label": "41",
+            "value": "41",
+            "displayValue": "41",
+            "sortOrder": 2,
+            "colorHex": null
+          },
+          {
+            "id": "size-42",
+            "label": "42",
+            "value": "42",
+            "displayValue": "42",
+            "sortOrder": 3,
+            "colorHex": null
+          },
+          {
+            "id": "size-43",
+            "label": "43",
+            "value": "43",
+            "displayValue": "43",
+            "sortOrder": 4,
+            "colorHex": null
+          }
+        ]
+      },
+      {
+        "id": "size-one-size",
+        "name": "One Size",
+        "sortOrder": 3,
+        "values": [
+          {
+            "id": "size-osfa",
+            "label": "OSFA",
+            "value": "osfa",
+            "displayValue": "OSFA",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "size-osfm",
+            "label": "OSFM",
+            "value": "osfm",
+            "displayValue": "OSFM",
+            "sortOrder": 2,
+            "colorHex": null
+          },
+          {
+            "id": "size-osfw",
+            "label": "OSFW",
+            "value": "osfw",
+            "displayValue": "OSFW",
+            "sortOrder": 3,
+            "colorHex": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attribute-volume",
+    "name": "Volume",
+    "code": "volume",
+    "displayType": "select",
+    "filterable": true,
+    "usedForVariants": false,
+    "sortOrder": 3,
+    "status": "active",
+    "groups": [
+      {
+        "id": "volume",
+        "name": "Volume",
+        "sortOrder": 1,
+        "values": [
+          {
+            "id": "volume-500ml",
+            "label": "500 ml",
+            "value": "500ml",
+            "displayValue": "500 ml",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "volume-1l",
+            "label": "1 L",
+            "value": "1l",
+            "displayValue": "1 L",
+            "sortOrder": 2,
+            "colorHex": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attribute-grip-size",
+    "name": "Grip Size",
+    "code": "grip-size",
+    "displayType": "button",
+    "filterable": true,
+    "usedForVariants": true,
+    "sortOrder": 4,
+    "status": "active",
+    "groups": [
+      {
+        "id": "grip-size",
+        "name": "Grip Size",
+        "sortOrder": 1,
+        "values": [
+          {
+            "id": "grip-1",
+            "label": "1",
+            "value": "1",
+            "displayValue": "1",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "grip-2",
+            "label": "2",
+            "value": "2",
+            "displayValue": "2",
+            "sortOrder": 2,
+            "colorHex": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "attribute-weight",
+    "name": "Weight",
+    "code": "weight",
+    "displayType": "select",
+    "filterable": true,
+    "usedForVariants": false,
+    "sortOrder": 5,
+    "status": "active",
+    "groups": [
+      {
+        "id": "weight",
+        "name": "Weight",
+        "sortOrder": 1,
+        "values": [
+          {
+            "id": "weight-250g",
+            "label": "250 g",
+            "value": "250g",
+            "displayValue": "250 g",
+            "sortOrder": 1,
+            "colorHex": null
+          },
+          {
+            "id": "weight-500g",
+            "label": "500 g",
+            "value": "500g",
+            "displayValue": "500 g",
+            "sortOrder": 2,
+            "colorHex": null
+          }
+        ]
+      }
+    ]
+  }
+]

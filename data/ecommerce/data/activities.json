@@ -1,0 +1,100 @@
+[
+  {
+    "id": "activity-running",
+    "name": "Running",
+    "slug": "running",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "activity-football",
+    "name": "Football",
+    "slug": "football",
+    "sortOrder": 2,
+    "status": "active"
+  },
+  {
+    "id": "activity-futsal",
+    "name": "Futsal",
+    "slug": "futsal",
+    "sortOrder": 3,
+    "status": "active"
+  },
+  {
+    "id": "activity-sportstyle",
+    "name": "Sportstyle",
+    "slug": "sportstyle",
+    "sortOrder": 4,
+    "status": "active"
+  },
+  {
+    "id": "activity-hyrox",
+    "name": "Hyrox",
+    "slug": "hyrox",
+    "sortOrder": 5,
+    "status": "active"
+  },
+  {
+    "id": "activity-training-gym",
+    "name": "Training & Gym",
+    "slug": "training-gym",
+    "sortOrder": 6,
+    "status": "active"
+  },
+  {
+    "id": "activity-basketball",
+    "name": "Basketball",
+    "slug": "basketball",
+    "sortOrder": 7,
+    "status": "active"
+  },
+  {
+    "id": "activity-golf",
+    "name": "Golf",
+    "slug": "golf",
+    "sortOrder": 8,
+    "status": "active"
+  },
+  {
+    "id": "activity-outdoor",
+    "name": "Outdoor",
+    "slug": "outdoor",
+    "sortOrder": 9,
+    "status": "active"
+  },
+  {
+    "id": "activity-padel",
+    "name": "Padel",
+    "slug": "padel",
+    "sortOrder": 10,
+    "status": "active"
+  },
+  {
+    "id": "activity-pickleball",
+    "name": "Pickleball",
+    "slug": "pickleball",
+    "sortOrder": 11,
+    "status": "active"
+  },
+  {
+    "id": "activity-tennis",
+    "name": "Tennis",
+    "slug": "tennis",
+    "sortOrder": 12,
+    "status": "active"
+  },
+  {
+    "id": "activity-volleyball",
+    "name": "Volleyball",
+    "slug": "volleyball",
+    "sortOrder": 13,
+    "status": "active"
+  },
+  {
+    "id": "activity-yoga-pilates",
+    "name": "Yoga & Pilates",
+    "slug": "yoga-pilates",
+    "sortOrder": 14,
+    "status": "active"
+  }
+]

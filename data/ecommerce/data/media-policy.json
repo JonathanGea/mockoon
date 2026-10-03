@@ -1,0 +1,18 @@
+{
+  "formats": [
+    "image/jpeg",
+    "image/png",
+    "image/webp"
+  ],
+  "extensions": [
+    "jpg",
+    "jpeg",
+    "png",
+    "webp"
+  ],
+  "maxBytes": 5242880,
+  "minEdge": 600,
+  "maxEdge": 4096,
+  "preferredEdge": 1200,
+  "maxImages": 10
+}

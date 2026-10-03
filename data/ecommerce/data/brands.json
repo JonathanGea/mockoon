@@ -1,0 +1,34 @@
+[
+  {
+    "id": "brand-nike",
+    "logoUrl": "/brand-logos/nike.svg",
+    "name": "Nike",
+    "slug": "nike",
+    "description": "Performance footwear and apparel.",
+    "status": "active"
+  },
+  {
+    "id": "brand-adidas",
+    "logoUrl": "/brand-logos/adidas.svg",
+    "name": "Adidas",
+    "slug": "adidas",
+    "description": "Sport and lifestyle essentials.",
+    "status": "active"
+  },
+  {
+    "id": "brand-asics",
+    "logoUrl": "/brand-logos/asics.svg",
+    "name": "ASICS",
+    "slug": "asics",
+    "description": "Running and training footwear.",
+    "status": "active"
+  },
+  {
+    "id": "brand-new-balance",
+    "logoUrl": "/brand-logos/newbalance.svg",
+    "name": "New Balance",
+    "slug": "new-balance",
+    "description": "Comfort-focused performance products.",
+    "status": "active"
+  }
+]

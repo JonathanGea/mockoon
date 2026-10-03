@@ -1,0 +1,90 @@
+[
+  {
+    "id": "category-footwear",
+    "name": "Footwear",
+    "slug": "footwear",
+    "parentId": null,
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-running",
+    "name": "Running",
+    "slug": "running",
+    "parentId": "category-footwear",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-running-shoes",
+    "name": "Running Shoes",
+    "slug": "running-shoes",
+    "parentId": "category-running",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-trail-running",
+    "name": "Trail Running",
+    "slug": "trail-running",
+    "parentId": "category-footwear",
+    "sortOrder": 2,
+    "status": "active"
+  },
+  {
+    "id": "category-trail-shoes",
+    "name": "Trail Shoes",
+    "slug": "trail-shoes",
+    "parentId": "category-trail-running",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-apparel",
+    "name": "Apparel",
+    "slug": "apparel",
+    "parentId": null,
+    "sortOrder": 2,
+    "status": "active"
+  },
+  {
+    "id": "category-training-apparel",
+    "name": "Training",
+    "slug": "training-apparel",
+    "parentId": "category-apparel",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-training-tops",
+    "name": "Training Tops",
+    "slug": "training-tops",
+    "parentId": "category-training-apparel",
+    "sortOrder": 1,
+    "status": "inactive"
+  },
+  {
+    "id": "category-equipment",
+    "name": "Equipment",
+    "slug": "equipment",
+    "parentId": null,
+    "sortOrder": 3,
+    "status": "active"
+  },
+  {
+    "id": "category-football",
+    "name": "Football",
+    "slug": "football-equipment",
+    "parentId": "category-equipment",
+    "sortOrder": 1,
+    "status": "active"
+  },
+  {
+    "id": "category-footballs",
+    "name": "Footballs",
+    "slug": "footballs",
+    "parentId": "category-football",
+    "sortOrder": 1,
+    "status": "active"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "demo-media",
+  "alt": "",
+  "url": "/ecommerce/managed-media/demo.png",
+  "width": 600,
+  "height": 600,
+  "mime": "image/png",
+  "size": 4096,
+  "fingerprint": "mock-placeholder",
+  "state": "ready",
+  "renditions": {
+    "card": "/ecommerce/managed-media/demo.png",
+    "thumbnail": "/ecommerce/managed-media/demo.png",
+    "detail": "/ecommerce/managed-media/demo.png"
+  }
+}

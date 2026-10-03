@@ -1,0 +1,27 @@
+[
+  {
+    "id": "administrator",
+    "name": "Administrator",
+    "system": true,
+    "permissions": [
+      "catalog.manage",
+      "inventory.manage",
+      "orders.manage",
+      "content.manage",
+      "reports.view",
+      "ui-kit.view",
+      "users.view",
+      "users.manage",
+      "roles.view",
+      "roles.manage"
+    ]
+  },
+  {
+    "id": "viewer",
+    "name": "Viewer",
+    "system": false,
+    "permissions": [
+      "users.view"
+    ]
+  }
+]

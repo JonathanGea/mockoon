@@ -23,12 +23,12 @@ Contoh endpoint existing:
 
 | Project | Endpoint |
 | --- | --- |
-| ecommerce | `GET /ecommerce/products`, `GET /ecommerce/products/101`, `POST /ecommerce/orders` |
+| ecommerce | `GET /ecommerce/api/public/content`, `GET /ecommerce/api/admin/products`, `POST /ecommerce/api/public/orders` |
 | church | `GET /church/public/home`, `POST /church/auth/login` |
 | motorcycle | `GET /motorcycle/motors`, `GET /motorcycle/users` |
 | server | `GET /health` → `200 {"status":"ok"}` |
 
-Migrasi namespace: marketplace sebelumnya `/api/...` menjadi `/ecommerce/...`;
+Namespace e-commerce saat ini adalah `/ecommerce/api/...`;
 website sebelumnya tanpa prefix menjadi `/church/...`; template motor sebelumnya
 `/api/...` menjadi `/motorcycle/...`. Perbarui base URL client. Alias URL lama
 tidak disediakan karena dapat menimbulkan konflik antar-project.
@@ -58,7 +58,11 @@ endpoint relatif `products`. Composer menghasilkan `/ecommerce/products`.
 Project baru otomatis ditemukan tanpa perubahan script atau Dockerfile.
 Folder yang bukan `shared` wajib mempunyai `environment.json`.
 
-Server global menggunakan CORS untuk origin `*`, tanpa credential cookies,
+Server global menggunakan CORS yang mencerminkan Origin request dan mendukung
+credential cookies. Preflight mengizinkan header yang diminta browser (termasuk
+`X-Mock-Status`, `X-Media-Owner`, dan `X-File-Name`). Kebijakan CORS yang sama
+diterapkan ke OPTIONS dan response project; header CORS project tidak menimpanya.
+Request tanpa Origin menggunakan fallback `*`. Server menggunakan
 HTTP, proxy disabled, dan latency global nol. Railway menyediakan HTTPS di
 public domain. Source project harus mengaktifkan CORS serta menonaktifkan
 TLS dan proxy. Header project diterapkan ke response (header response menang);
@@ -112,9 +116,10 @@ arbitrer di dalam mock. Gunakan nama bucket dan global variable dengan prefix
 project jika kelak diperlukan, karena semuanya berbagi satu runtime. UUID
 harus unik; copy-paste environment tanpa membuat identifier baru akan ditolak.
 
-Mock existing tetap statis: create/update/delete tidak menyimpan data, autentikasi
-adalah simulasi, dan respons error memerlukan rules agar dapat dipilih berdasarkan
-request. Template POST/PATCH motor mengembalikan request body sebagai JSON.
+E-commerce menggunakan Data Bucket: perubahan produk, order, dan session
+tersimpan dalam memory. Header `X-Mock-Status` memilih skenario error.
+Autentikasi adalah simulasi. Project church dan motorcycle tetap memakai mock
+statis; template POST/PATCH motor mengembalikan request body sebagai JSON.
 Untuk stateful mock, gunakan Data Bucket/CRUD Mockoon; state memory hilang saat
 restart dan tidak dibagi antar-replica.
 
@@ -129,7 +134,8 @@ Validasi menolak konflik method/path, benturan identifier, referensi folder atau
 bucket/callback rusak, prefix tidak konsisten, dan konfigurasi server unsupported.
 Test menjalankan server sungguhan dengan port dinamis, mengakses ketiga project,
 menambahkan project otomatis dan shared fixture dalam workspace sementara,
-memeriksa CORS/Location, serta memastikan shutdown membersihkan generated file.
+memeriksa preflight credential/header khusus, login/logout, update produk,
+order/idempotency, URL gambar upload, serta shutdown yang membersihkan generated file.
 
 ## Docker dan Railway
 

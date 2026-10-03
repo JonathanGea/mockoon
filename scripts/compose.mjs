@@ -5,6 +5,16 @@ import commons from '@mockoon/commons';
 
 const { EnvironmentSchema, HighestMigrationId, Migrations, CORSHeaders } = commons;
 
+// Mockoon handles OPTIONS before project routes, so preflight and actual
+// responses must use the same policy across the combined mock server.
+const corsHeaders = [
+  { key: 'Access-Control-Allow-Origin', value: "{{#if (header 'Origin')}}{{header 'Origin'}}{{else}}*{{/if}}" },
+  { key: 'Access-Control-Allow-Credentials', value: 'true' },
+  CORSHeaders.find((header) => header.key === 'Access-Control-Allow-Methods'),
+  { key: 'Access-Control-Allow-Headers', value: `{{#if (header 'Access-Control-Request-Headers')}}{{header 'Access-Control-Request-Headers'}}{{else}}${CORSHeaders.find((header) => header.key === 'Access-Control-Allow-Headers').value}{{/if}}` },
+];
+const corsKeys = new Set(corsHeaders.map((header) => header.key.toLowerCase()));
+
 function normalize(environment, source) {
   if (!Number.isInteger(environment.lastMigration) || environment.lastMigration > HighestMigrationId) {
     throw new Error(`${source}: unsupported Mockoon schema version`);
@@ -80,7 +90,8 @@ export async function compose(dataDirectory, port) {
     }
     if (!combined) {
       combined = { ...structuredClone(environment), uuid: randomUUID(), name: 'Centralized mock backend',
-        endpointPrefix: '', hostname: '0.0.0.0', port, latency: 0, headers: structuredClone(CORSHeaders),
+        endpointPrefix: '', hostname: '0.0.0.0', port, latency: 0,
+        headers: [...structuredClone(corsHeaders), { key: 'Vary', value: 'Origin, Access-Control-Request-Headers' }],
         routes: [], folders: [], rootChildren: [], data: [], callbacks: [] };
     }
     claim(environment.uuid, source);
@@ -98,6 +109,12 @@ export async function compose(dataDirectory, port) {
       for (const response of route.responses) {
         claim(response.uuid, source);
         response.headers = mergeHeaders(environment.headers, response.headers);
+        // Project-level CORS headers cannot override the shared OPTIONS policy.
+        response.headers = response.headers.filter((header) => !corsKeys.has(header.key.toLowerCase()));
+        const vary = response.headers.find((header) => header.key.toLowerCase() === 'vary');
+        if (vary && vary.value !== '*') {
+          vary.value = [...new Set([...vary.value.split(',').map((value) => value.trim()), 'Origin', 'Access-Control-Request-Headers'])].join(', ');
+        }
         response.latency += environment.latency;
         if (response.filePath && !path.isAbsolute(response.filePath)) {
           response.filePath = path.resolve(path.dirname(source), response.filePath);

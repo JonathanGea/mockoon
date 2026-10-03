@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1000,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 129.99,
+    "inventoryStatus": "INSTOCK",
+    "quantity": 42,
+    "rating": 4
+  },
+  {
+    "id": 1001,
+    "name": "Travel Backpack",
+    "category": "Accessories",
+    "price": 74.5,
+    "inventoryStatus": "LOWSTOCK",
+    "quantity": 8,
+    "rating": 5
+  },
+  {
+    "id": 1002,
+    "name": "Desk Lamp",
+    "category": "Home",
+    "price": 44,
+    "inventoryStatus": "INSTOCK",
+    "quantity": 25,
+    "rating": 4
+  },
+  {
+    "id": 1003,
+    "name": "Ceramic Mug",
+    "category": "Home",
+    "price": 18.5,
+    "inventoryStatus": "OUTOFSTOCK",
+    "quantity": 0,
+    "rating": 3
+  },
+  {
+    "id": 1004,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 159,
+    "inventoryStatus": "INSTOCK",
+    "quantity": 19,
+    "rating": 5
+  },
+  {
+    "id": 1005,
+    "name": "Water Bottle",
+    "category": "Accessories",
+    "price": 28,
+    "inventoryStatus": "LOWSTOCK",
+    "quantity": 5,
+    "rating": 4
+  }
+]

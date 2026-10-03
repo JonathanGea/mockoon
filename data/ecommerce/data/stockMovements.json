@@ -1,0 +1,46 @@
+[
+  {
+    "id": "movement-initial-stock",
+    "variantId": "variant-pegasus-41-black-42",
+    "warehouseId": "warehouse-main",
+    "type": "stock-in",
+    "quantity": 12,
+    "occurredAt": "2026-09-23T09:00:00.000Z",
+    "reversalOfId": null,
+    "reference": "OPENING-2026",
+    "note": "Initial mock stock"
+  },
+  {
+    "id": "movement-initial-stock-white",
+    "variantId": "variant-pegasus-41-white-42",
+    "warehouseId": "warehouse-main",
+    "type": "stock-in",
+    "quantity": 8,
+    "occurredAt": "2026-09-23T09:01:00.000Z",
+    "reversalOfId": null,
+    "reference": "OPENING-2026",
+    "note": "Initial mock stock"
+  },
+  {
+    "id": "movement-initial-stock-adizero",
+    "variantId": "variant-adizero-sl-blue-42",
+    "warehouseId": "warehouse-city",
+    "type": "stock-in",
+    "quantity": 6,
+    "occurredAt": "2026-09-23T09:02:00.000Z",
+    "reversalOfId": null,
+    "reference": "OPENING-2026",
+    "note": "Initial mock stock"
+  },
+  {
+    "id": "movement-initial-stock-kayano",
+    "variantId": "variant-gel-kayano-31-black-42",
+    "warehouseId": "warehouse-main",
+    "type": "stock-in",
+    "quantity": 4,
+    "occurredAt": "2026-09-23T09:03:00.000Z",
+    "reversalOfId": null,
+    "reference": "OPENING-2026",
+    "note": "Initial mock stock"
+  }
+]

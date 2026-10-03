@@ -1,0 +1,25 @@
+{
+  "authorized": true,
+  "localDevelopment": true,
+  "user": {
+    "id": "admin",
+    "name": "Demo administrator",
+    "email": "admin@example.test",
+    "active": true,
+    "roleIds": [
+      "administrator"
+    ]
+  },
+  "permissions": [
+    "catalog.manage",
+    "inventory.manage",
+    "orders.manage",
+    "content.manage",
+    "reports.view",
+    "ui-kit.view",
+    "users.view",
+    "users.manage",
+    "roles.view",
+    "roles.manage"
+  ]
+}

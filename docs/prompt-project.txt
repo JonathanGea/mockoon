@@ -1,0 +1,5 @@
+Rapikan konfigurasi Mockoon existing menjadi satu folder bernama sesuai project, berisi environment.json dan seluruh fixture. Isi API tetap mengikuti kebutuhan project ini.
+
+Pastikan kompatibel dengan Mockoon CLI 9.9.0: endpointPrefix sama dengan nama folder, endpoint relatif tanpa prefix project, UUID valid dan unik, serta seluruh referensi konsisten. Semua fixture harus berada di dalam folder project dengan path relatif dari environment.json. Aktifkan CORS, nonaktifkan proxy/TLS, dan gunakan hostname 0.0.0.0.
+
+Folder harus bisa dijalankan standalone di repository ini dan langsung dicopy ke data/ pada centralized backend tanpa perubahan core application. Verifikasi kompatibilitasnya dan sertakan perintah menjalankan standalone.

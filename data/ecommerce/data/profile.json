@@ -1,0 +1,58 @@
+{
+  "draft": {
+    "profile": {
+      "title": "Tentang template ini",
+      "introduction": "Template Public adalah fondasi netral untuk menyampaikan informasi penting dan memberi pengunjung langkah berikutnya yang jelas.",
+      "purpose": "Menyediakan struktur yang dapat disesuaikan, tanpa menetapkan domain bisnis atau model layanan tertentu.",
+      "principles": [
+        {
+          "title": "Jelas",
+          "description": "Informasi dan tindakan disampaikan dengan bahasa yang mudah dipahami."
+        },
+        {
+          "title": "Terbuka",
+          "description": "Kebijakan dan cara menghubungi kami tersedia dari navigasi pendukung."
+        },
+        {
+          "title": "Inklusif",
+          "description": "Kami mempertimbangkan beragam cara orang membaca, menavigasi, dan berinteraksi."
+        }
+      ]
+    },
+    "contact": {
+      "whatsappNumber": "+6281234567890",
+      "defaultMessage": "Halo, saya ingin bertanya tentang informasi di situs ini.",
+      "title": "Mari mulai percakapan",
+      "introduction": "Hubungi kami melalui WhatsApp untuk pertanyaan atau informasi lebih lanjut."
+    }
+  },
+  "published": {
+    "profile": {
+      "title": "Tentang template ini",
+      "introduction": "Template Public adalah fondasi netral untuk menyampaikan informasi penting dan memberi pengunjung langkah berikutnya yang jelas.",
+      "purpose": "Menyediakan struktur yang dapat disesuaikan, tanpa menetapkan domain bisnis atau model layanan tertentu.",
+      "principles": [
+        {
+          "title": "Jelas",
+          "description": "Informasi dan tindakan disampaikan dengan bahasa yang mudah dipahami."
+        },
+        {
+          "title": "Terbuka",
+          "description": "Kebijakan dan cara menghubungi kami tersedia dari navigasi pendukung."
+        },
+        {
+          "title": "Inklusif",
+          "description": "Kami mempertimbangkan beragam cara orang membaca, menavigasi, dan berinteraksi."
+        }
+      ]
+    },
+    "contact": {
+      "whatsappNumber": "+6281234567890",
+      "defaultMessage": "Halo, saya ingin bertanya tentang informasi di situs ini.",
+      "title": "Mari mulai percakapan",
+      "introduction": "Hubungi kami melalui WhatsApp untuk pertanyaan atau informasi lebih lanjut."
+    }
+  },
+  "savedAt": null,
+  "publishedAt": null
+}

@@ -1,0 +1,22 @@
+{
+  "products": [],
+  "brands": [],
+  "banners": null,
+  "merchandising": {
+    "collections": [],
+    "featuredProductIds": [
+      "product-adidas-ultraboost-light",
+      "product-pegasus-41",
+      "product-asics-core-singlet",
+      "product-new-balance-accelerate-short",
+      "product-fresh-foam-1080"
+    ]
+  },
+  "versions": {
+    "draft": null,
+    "published": null,
+    "savedAt": null,
+    "publishedAt": null
+  },
+  "media": {}
+}

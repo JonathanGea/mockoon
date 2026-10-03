@@ -1,0 +1,16 @@
+[
+  {
+    "id": "warehouse-main",
+    "code": "JKT-01",
+    "name": "Main Warehouse",
+    "location": "Primary location",
+    "status": "active"
+  },
+  {
+    "id": "warehouse-city",
+    "code": "BDG-01",
+    "name": "City Store",
+    "location": "Retail location",
+    "status": "active"
+  }
+]

@@ -56,8 +56,9 @@ atau lokasi output yang diminta pengguna.
 9. Default response harus jelas. Untuk skenario alternatif gunakan rules yang
    benar-benar membedakan request. Respons berlabel `404`/`401` saja tidak
    menghasilkan lookup atau autentikasi. Jika diperlukan pemicu khusus untuk
-   pengujian, gunakan query parameter terdokumentasi seperti `mockScenario`;
-   jangan membutuhkan custom header baru yang tidak dilayani preflight global.
+   pengujian, gunakan query parameter terdokumentasi seperti `mockScenario`
+   atau header seperti `X-Mock-Status`. Preflight global mendukung header yang
+   diminta browser.
 10. Urutkan endpoint statis sebelum parameter/wildcard yang dapat menangkapnya,
     misalnya `users/search` sebelum `users/:id`. Hindari catch-all jika tidak
     dibutuhkan. Jangan membuat duplicate method/path.
@@ -82,8 +83,10 @@ atau lokasi output yang diminta pengguna.
     `inventory-products`. Identifier lintas-project wajib unik. Runtime, state,
     CORS, dan deployment dibagi bersama; namespace bukan isolasi keamanan.
 17. Header environment diterapkan ke response; header response memiliki prioritas.
-    CORS global menggunakan origin `*` tanpa credential cookies dan daftar
-    header request standar. Jangan membuat kebijakan CORS khusus project.
+    Header CORS merupakan pengecualian: server gabungan mengelolanya agar OPTIONS
+    dan response memiliki kebijakan yang sama. Origin request dicerminkan,
+    credential cookies didukung, dan header preflight mengikuti request browser.
+    Source standalone dapat memakai kebijakan serupa untuk kebutuhan client-nya.
 18. Latency environment ditambahkan ke latency response. Jangan memberi latency
     besar tanpa kebutuhan pengujian. Tidak perlu membuat endpoint `/health`:
     server gabungan menyediakan route global tersebut.

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "admin",
+    "name": "Demo administrator",
+    "email": "admin@example.test",
+    "active": true,
+    "roleIds": [
+      "administrator"
+    ]
+  },
+  {
+    "id": "viewer",
+    "name": "Demo viewer",
+    "email": "viewer@example.test",
+    "active": true,
+    "roleIds": [
+      "viewer"
+    ]
+  }
+]

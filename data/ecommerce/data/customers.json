@@ -1,0 +1,14 @@
+[
+  {
+    "id": "customer-ava-chen",
+    "name": "Ava Chen",
+    "email": "ava.chen@example.test",
+    "phone": "+1 555 010 1001"
+  },
+  {
+    "id": "customer-jordan-rivera",
+    "name": "Jordan Rivera",
+    "email": "jordan.rivera@example.test",
+    "phone": "+1 555 010 1002"
+  }
+]
